@@ -1,43 +1,45 @@
-"use client";
+import React from "react";
 
-import { Noto_Serif_Bengali } from "next/font/google";
-const bengali = Noto_Serif_Bengali({ subsets: ["bengali"] });
-
-export const metadata = {
-  title: "জামিয়াতুল লতিফ - হোম",
-  description:
-    "জামিয়াতুল লতিফ মাদরাসা। রূপগঞ্জ, নারায়ণগঞ্জ। একটি ধর্মীয় কওমি শিক্ষা প্রতিষ্ঠান। ঢাকা বিভাগের নারায়ণগঞ্জ জেলার রূপগঞ্জ থানার বরাব এলাকায় অবস্থিত।",
-};
-import * as React from "react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-
-export default function IntroMadrasha() {
-  const [age, setAge] = React.useState("");
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-
+const DropdownMenu = () => {
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">পরিচিতি</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={age}
-          label="Age"
-          onChange={handleChange}
-        >
-          <MenuItem value={10}>মাদরাসা সম্পর্কে</MenuItem>
-          <MenuItem value={20}>শিক্ষকবৃন্দ</MenuItem>
-          <MenuItem value={30}>ছাত্র-সংখ্যা</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
+    <div className="relative inline-block text-left">
+      <div className="group inline-block">
+        <button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+          Hover me
+        </button>
+        <div className="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition ease-out duration-300 opacity-0 transform scale-95 group-hover:opacity-100 group-hover:scale-100">
+          <div
+            className="py-1"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="options-menu"
+          >
+            <a
+              href="#option1"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              role="menuitem"
+            >
+              Option 1
+            </a>
+            <a
+              href="#option2"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              role="menuitem"
+            >
+              Option 2
+            </a>
+            <a
+              href="#option3"
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              role="menuitem"
+            >
+              Option 3
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default DropdownMenu;
