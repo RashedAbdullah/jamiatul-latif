@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       container: {
         center: true,
-        padding: "6rem",
+        padding: "3rem",
       },
     },
   },

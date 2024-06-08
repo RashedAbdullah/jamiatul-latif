@@ -1,8 +1,9 @@
-import { Noto_Serif_Bengali } from "next/font/google";
+import { Hind_Siliguri } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
+import MadrashaThumbnail from "@/components/thumbnail/madrasha-thumbnail";
 
-const bengali = Noto_Serif_Bengali({ subsets: ["bengali"] });
+const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
 export const metadata = {
   title: "জামিয়াতুল লতিফ - হোম",
@@ -10,11 +11,12 @@ export const metadata = {
     "জামিয়াতুল লতিফ মাদরাসা। রূপগঞ্জ, নারায়ণগঞ্জ। একটি ধর্মীয় কওমি শিক্ষা প্রতিষ্ঠান। ঢাকা বিভাগের নারায়ণগঞ্জ জেলার রূপগঞ্জ থানার বরাব এলাকায় অবস্থিত।",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params: { lang } }) {
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className={bengali.className}>
-        <div className="bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div id="modal" className="bg-gradient-to-r from-emerald-50 to-teal-50">
+          <MadrashaThumbnail />
           <Navbar />
           {children}
         </div>

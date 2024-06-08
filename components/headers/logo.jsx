@@ -5,7 +5,7 @@ const MadrashaLogo = ({ lang = "bn" }) => {
   return (
     <div className="flex justify-center align-middle">
       <Link href={`/${lang}`}>
-        <Image src="/BName.png" alt="" height={300} width={450} />
+        <Image src="/BName.png" alt="" height={300} width={300} />
       </Link>
     </div>
   );
