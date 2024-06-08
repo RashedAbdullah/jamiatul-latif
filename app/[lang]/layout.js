@@ -2,6 +2,7 @@ import { Hind_Siliguri } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
 import MadrashaThumbnail from "@/components/thumbnail/madrasha-thumbnail";
+import Footer from "@/components/footer/footer";
 
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children, params: { lang } }) {
           <MadrashaThumbnail />
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

@@ -1,17 +1,40 @@
-const Navigations = () => {
+import { courses } from "@/data/courses";
+import DropDown from "./dropdown";
+import NavTitle from "./nav-title";
+import { AnimatePresence, motion } from "framer-motion";
+import { introductiion } from "@/data/introduction";
+import { notices } from "@/data/notices";
+import { curriculums } from "@/data/curriculum";
+import UserProfile from "./user-profile";
+
+const Navigations = ({ openMenu, lang = "bn" }) => {
+  const intro = introductiion(lang);
+  const course = courses(lang);
+  const notice = notices(lang);
+  const curriculum = curriculums(lang);
   return (
-    <div>
-      <div>
-        <select name="পরিচিতি" id="" className=" rounded p-1">
-          <option value="">পরিচিতি</option>
-          <option value="পরিচিতি">পরিচিতি</option>
-          <option value="পরিচিতি">পরিচিতি</option>
-          <option value="পরিচিতি">পরিচিতি</option>
-          <option value="পরিচিতি">পরিচিতি</option>
-          <option value="পরিচিতি"></option>
-        </select>
-      </div>
-    </div>
+    <>
+      {" "}
+      <AnimatePresence>
+        <motion.nav
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
+          className={`lg:relative lg:flex absolute transition-all duration-300 mr-5 lg:mr-10 bg-green-500 ${
+            openMenu ? "block -right-5" : "hidden"
+          } top-full`}
+        >
+          <DropDown menu={intro} />
+          <DropDown menu={course} />
+          <DropDown menu={curriculum} />
+          <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
+          <DropDown menu={notice} />
+          <NavTitle router={`/${lang}/gallery`}>গ্যালারি</NavTitle>
+          <UserProfile />
+        </motion.nav>
+      </AnimatePresence>
+    </>
   );
 };
 
