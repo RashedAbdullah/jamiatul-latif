@@ -1,6 +1,6 @@
-import { getAllFatwa } from "@/actions/actions";
-import FatwaCard from "./fatwa-card";
+import { getAllFatwa } from "@/actions";
 import FatwaTitle from "./fatwa-title";
+import FatwaCard from "./fatwa-card";
 
 const GetFatwaByCategory = async ({ categoryName }) => {
   const allFatwa = await getAllFatwa();

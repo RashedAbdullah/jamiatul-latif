@@ -14,26 +14,19 @@ const Navigations = ({ openMenu, lang = "bn" }) => {
   const curriculum = curriculums(lang);
   return (
     <>
-      {" "}
-      <AnimatePresence>
-        <motion.nav
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-          className={`lg:relative lg:flex absolute transition-all duration-300 mr-5 lg:mr-10 bg-green-500 ${
-            openMenu ? "block -right-5" : "hidden"
-          } top-full`}
-        >
-          <DropDown menu={intro} />
-          <DropDown menu={course} />
-          <DropDown menu={curriculum} />
-          <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
-          <DropDown menu={notice} />
-          <NavTitle router={`/${lang}/gallery`}>গ্যালারি</NavTitle>
-          <UserProfile />
-        </motion.nav>
-      </AnimatePresence>
+      <nav
+        className={`lg:relative lg:flex absolute transition-all duration-300 mr-5 lg:mr-10 bg-green-500 ${
+          openMenu ? "block -right-5" : "hidden"
+        } top-full`}
+      >
+        <DropDown menu={intro} />
+        <DropDown menu={course} />
+        <DropDown menu={curriculum} />
+        <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
+        <DropDown menu={notice} />
+        <NavTitle router={`/${lang}/gallery`}>গ্যালারি</NavTitle>
+        <UserProfile />
+      </nav>
     </>
   );
 };

@@ -3,6 +3,7 @@ import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
 import MadrashaThumbnail from "@/components/thumbnail/madrasha-thumbnail";
 import Footer from "@/components/footer/footer";
+import { getAllFatwa } from "@/actions";
 
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 

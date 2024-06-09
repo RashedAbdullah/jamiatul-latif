@@ -3,22 +3,24 @@ import MadrashaLogo from "../headers/logo";
 
 const Footer = ({ lang = "bn" }) => {
   return (
-    <footer className="bg-[#22c55e] text-white py-1">
-      <div className="mx-auto px-4 md:px-20">
+    <footer className="bg-[#22c55e] text-white py-6">
+      <div className="container mx-auto px-4 md:px-20">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Logo or Title */}
-          <MadrashaLogo />
+          {/* Logo */}
+          <div className="mb-4 md:mb-0">
+            <MadrashaLogo />
+          </div>
 
           {/* Navigation Links */}
           <div className="p-5">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.564571608182!2d90.51337447518671!3d23.72723867868624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b79802de7ed7%3A0x4d4391adb0703208!2zSmFtaWF0dWwgTGF0aWYgTWFkcmFzYS_gppzgpr7gpq7gpr_gpq_gprzgpr7gpqTgp4HgprIg4Kay4Kak4Ka_4KarIOCmruCmvuCmpuCmsOCmvuCmuOCmvg!5e0!3m2!1sen!2sbd!4v1717868237689!5m2!1sen!2sbd"
-              width="600"
-              height="450"
-              style={{ height: "100px", margin: "10px" }}
-              allowfullscreen=""
+              width="300"
+              height="200"
+              style={{ border: 0 }}
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
 
@@ -31,7 +33,7 @@ const Footer = ({ lang = "bn" }) => {
               aria-label="Facebook"
             >
               <svg
-                className="w-6 h-6 fill-current text-white hover:text-gray-200"
+                className="w-6 h-6 fill-current text-white hover:text-gray-200 transition-colors duration-200"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -45,7 +47,7 @@ const Footer = ({ lang = "bn" }) => {
               aria-label="Twitter"
             >
               <svg
-                className="w-6 h-6 fill-current text-white hover:text-gray-200"
+                className="w-6 h-6 fill-current text-white hover:text-gray-200 transition-colors duration-200"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -59,7 +61,7 @@ const Footer = ({ lang = "bn" }) => {
               aria-label="LinkedIn"
             >
               <svg
-                className="w-6 h-6 fill-current text-white hover:text-gray-200"
+                className="w-6 h-6 fill-current text-white hover:text-gray-200 transition-colors duration-200"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -68,8 +70,8 @@ const Footer = ({ lang = "bn" }) => {
             </a>
           </div>
         </div>
-        <div className="mx-10 mt-5 text-center md:text-left">
-          <p className="text-sm text-gray-200 ">
+        <div className="mt-6 text-center md:text-left">
+          <p className="text-sm text-gray-200">
             &copy; {new Date().getFullYear()} Jamiatul Latif. All rights
             reserved.
           </p>

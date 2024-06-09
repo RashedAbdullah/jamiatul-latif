@@ -8,10 +8,13 @@ import MobileMenu from "./mobile-menu";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <nav className="flex justify-between items-center shadow-lg py-3 bg-green-500 sticky top-0">
+    <nav className="flex justify-between items-center shadow-lg py-3 bg-green-500 sticky top-0 z-10">
       <MadrashaLogo />
       <Navigations openMenu={openMenu} />
-      <MobileMenu onOpenMenu={() => setOpenMenu(!openMenu)} />
+      <MobileMenu
+        onOpenMenu={() => setOpenMenu(!openMenu)}
+        openMenu={openMenu}
+      />
     </nav>
   );
 };

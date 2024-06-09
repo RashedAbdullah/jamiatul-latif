@@ -1,4 +1,3 @@
-// Next.js connection with mongoDB bia mongoose
 import mongoose from "mongoose";
 
 const MONGO_URI = process.env.MONGO_URI;

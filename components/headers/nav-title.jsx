@@ -5,7 +5,7 @@ import { TfiGallery } from "react-icons/tfi";
 import { AiOutlineLogin } from "react-icons/ai";
 
 const NavTitle = ({ children, router = "/" }) => {
-  console.log(children);
+
   const child = () => {
     switch (children) {
       case "গ্যালারি":
