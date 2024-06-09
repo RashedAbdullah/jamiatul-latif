@@ -1,7 +1,6 @@
 import { courses } from "@/data/courses";
 import DropDown from "./dropdown";
 import NavTitle from "./nav-title";
-import { AnimatePresence, motion } from "framer-motion";
 import { introductiion } from "@/data/introduction";
 import { notices } from "@/data/notices";
 import { curriculums } from "@/data/curriculum";
