@@ -1,23 +1,28 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import { RiSchoolLine } from "react-icons/ri";
-const DropDown = ({ menu }) => {
+import { IoIosArrowForward } from "react-icons/io";
+import { FaCalendarDays } from "react-icons/fa6";
+
+const AcademicYearDropDown = ({ lang = "bn" }) => {
   const [open, setOpen] = useState(false);
+
+  const menu = ["2023-24", "2022-23", "2021-22", "2020-21"];
   return (
-    <ul className="flex flex-wrap items-center">
+    <ul className="lg:grid grid-cols-4">
       <li
-        className="py-2 lg:px-2 px-6 w-full relative flex items-center space-x-2 text-white border-b cursor-pointer hover:bg-green-600 transition duration-300"
+        className="py-2 lg:px-2 px-6 relative flex items-center space-x-2 border-b cursor-pointer bg-green-500 hover:bg-green-600 transition duration-300 text-white"
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
       >
         <div className="flex items-center gap-2">
           <div>
-            <RiSchoolLine />
+            <FaCalendarDays />
           </div>
           <div className="text-nowrap" aria-expanded={open}>
-            {menu.title}
+            শিক্ষাবর্ষ নির্বাচন করুন
           </div>
         </div>
         <button
@@ -29,7 +34,7 @@ const DropDown = ({ menu }) => {
           }}
         >
           <span className="sr-only">মেনু সমূহ</span>
-          <IoIosArrowDown />
+          <IoIosArrowForward />
         </button>
         {/* 2nd level menu */}
         <AnimatePresence>
@@ -39,18 +44,15 @@ const DropDown = ({ menu }) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="origin-top-right absolute top-full -left-14 -translate-x-1/2 min-w-[240px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl z-10"
+              className="origin-top-right absolute top-full left-12 -translate-x-1/2 min-w-[240px] bg-white border border-slate-200 p-2 shadow-xl z-10"
             >
-              {menu.categories.map((category) => (
-                <li key={category.bn}>
+              {menu.map((year) => (
+                <li key={year}>
                   <Link
-                    className="text-slate-800 hover:bg-slate-50 flex items-center p-2"
-                    href={category.en}
+                    className="text-slate-800 hover:bg-slate-200 flex items-center p-2 transition-all duration-300"
+                    href={`/${lang}/students/${year}`}
                   >
-                    <div className="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
-                      {category.logo}
-                    </div>
-                    <span className="whitespace-nowrap">{category.bn}</span>
+                    {year}
                   </Link>
                 </li>
               ))}
@@ -62,4 +64,4 @@ const DropDown = ({ menu }) => {
   );
 };
 
-export default DropDown;
+export default AcademicYearDropDown;

@@ -6,37 +6,37 @@ export const courses = (lang = "bn") => {
     logo: <MdLibraryBooks color="#22c55e" />,
     categories: [
       {
-        en: `/${lang}/quran-aducation`,
+        en: `/${lang}/courses/quran-aducation`,
         bn: "কুরআন শিক্ষা কোর্স",
         ar: "",
         logo: <MdLibraryBooks color="#22c55e" />,
       },
       {
-        en: `/${lang}/farz-e-ayeen`,
+        en: `/${lang}/courses/farz-e-ayeen`,
         bn: "ফরজে আইন কোর্স",
         ar: "",
         logo: <MdLibraryBooks color="#22c55e" />,
       },
       {
-        en: `/${lang}/aqeedah`,
+        en: `/${lang}/courses/aqeedah`,
         bn: "আকিদা কোর্স",
         ar: "",
         logo: <MdLibraryBooks color="#22c55e" />,
       },
       {
-        en: `/${lang}/arabic-grammar`,
+        en: `/${lang}/courses/arabic-grammar`,
         bn: "নাহু কোর্স",
         ar: "",
         logo: <MdLibraryBooks color="#22c55e" />,
       },
       {
-        en: `/${lang}/sarf-course`,
+        en: `/${lang}/courses/sarf-course`,
         bn: "ছরফ কোর্স",
         ar: "",
         logo: <MdLibraryBooks color="#22c55e" />,
       },
       {
-        en: `/${lang}/arabic-language`,
+        en: `/${lang}/courses/arabic-language`,
         bn: "আদব কোর্স",
         ar: "",
         logo: <MdLibraryBooks color="#22c55e" />,

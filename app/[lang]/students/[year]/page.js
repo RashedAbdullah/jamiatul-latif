@@ -2,8 +2,9 @@ import PageTitle from "@/components/page-title";
 import SelectAcademicYear from "@/components/students/select-academic-year";
 import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
+import { getEngToBnNumber } from "@/utils/number-converter";
 
-const StudentsPage = ({ params: { year = "2023-24" } }) => {
+const StudentsPage = ({ params: { year } }) => {
   console.log(year);
   console.log(year);
   return (
