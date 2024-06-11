@@ -1,4 +1,3 @@
-
 import AccordionItem from "./accordion-item";
 
 const CurriculumAccordion = ({ items }) => {
