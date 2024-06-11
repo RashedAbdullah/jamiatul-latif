@@ -4,8 +4,6 @@ import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
 
 const StudentsPage = ({ params: { year = "2023-24" } }) => {
-  console.log(year);
-  console.log(year);
   return (
     <div className="container">
       <PageTitle>ছাত্রদের তথ্য বিবরণ ( {year} )</PageTitle>

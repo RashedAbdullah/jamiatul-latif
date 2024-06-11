@@ -5,8 +5,6 @@ import SubTitle from "@/components/sub-title";
 import { getEngToBnNumber } from "@/utils/number-converter";
 
 const StudentsPage = ({ params: { year } }) => {
-  console.log(year);
-  console.log(year);
   return (
     <div className="container">
       <PageTitle>ছাত্রদের তথ্য বিবরণ ( {year} )</PageTitle>

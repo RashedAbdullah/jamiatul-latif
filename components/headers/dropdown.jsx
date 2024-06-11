@@ -38,7 +38,7 @@ const DropDown = ({ menu }) => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.3 }}
               className="origin-top-right absolute top-full -left-14 -translate-x-1/2 min-w-[240px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl z-10"
             >
               {menu.categories.map((category) => (

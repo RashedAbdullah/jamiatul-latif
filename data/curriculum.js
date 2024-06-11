@@ -6,6 +6,12 @@ export const curriculums = (lang = "bn") => {
     logo: "",
     categories: [
       {
+        en: `/${lang}/curriculums`,
+        bn: "পাঠ্যসূচী",
+        ar: "",
+        logo: <IoBookSharp color="#22c55e" />,
+      },
+      {
         en: `/${lang}/departments`,
         bn: "বিভাগসমূহ",
         ar: "",
@@ -13,7 +19,7 @@ export const curriculums = (lang = "bn") => {
       },
       {
         en: `/${lang}/department`,
-        bn: "পরিকল্পিত বিভাগ",
+        bn: "ভবিষ্যত পরিকল্পনা",
         ar: "",
         logo: <IoBookSharp color="#22c55e" />,
       },
