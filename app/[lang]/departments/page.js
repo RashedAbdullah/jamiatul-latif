@@ -1,7 +1,5 @@
-
 import DepartmentAccordion from "@/components/department/department-accordion";
 import PageTitle from "@/components/page-title";
-
 
 const items = [
   {

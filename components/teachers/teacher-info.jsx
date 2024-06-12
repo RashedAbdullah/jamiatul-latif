@@ -4,16 +4,16 @@ const TeacherInfo = () => {
       {" "}
       <div className="text-center py-6 border-b border-green-500">
         <h2 className="font-semibold text-xl">
-          <span>নাম: </span> ‍<span>মাওলানা আলতাফ হোসাইন</span>
+          <span>নাম: </span> ‍<span>হাফেজ মুফতি আবুল কালাম হাফি.</span>
         </h2>
-        <p>সহকারী দারুল ইকামা</p>
+        <p>নাযেমে দারুল ইকামা</p>
       </div>
       <div className="py-6 grid grid-cols-10 gap-2 border-b border-green-500">
         <div className="col-span-3">
           <p>ঠিকানা: </p>
         </div>
         <div className="col-span-7">
-          <p>ছাগলনাইয়া, ফেনী।</p>
+          <p>তারাকান্দা, ময়মনসিংহ।</p>
         </div>
         <div className="col-span-3">
           <p>ফারেগ: </p>
@@ -25,7 +25,7 @@ const TeacherInfo = () => {
           <p>তাখাস্সুস: </p>
         </div>
         <div className="col-span-7">
-          <p>আরবি সাহিত্য</p>
+          <p>ইসলামি আইন</p>
         </div>
         <div className="col-span-3">
           <p>ইমেইল: </p>
