@@ -1,19 +1,15 @@
-import { createUser } from "@/actions/actions";
+import SubTitle from "../sub-title";
 
-const SignUpForm = () => {
+const SigninForm = () => {
   return (
-    <form
-      action={createUser}
-      className="bg-gray-200 lg:p-10 lg:m-10 p-4 m-4 shadow-xl max-w-[40vw rounded-lg"
-    >
-      <h2 className="text-center m-5 text-xl">সাইনআপ করুন</h2>
+    <form>
+      <SubTitle showIcon={false}>সাইনআপ করুন</SubTitle>
       <div className="flex flex-col gap-5">
-        {/* নাম */}
         <div className="grid grid-cols-10">
           <p className="col-span-2 text-end px-3">নাম:</p>
           <div className="col-span-8">
             <input
-              className="w-full py-1 px-3 resize-none focus:outline outline-2 outline-green-500 rounded"
+              className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 border-b border-green-500 bg-transparent transition-all duration-300"
               type="text"
               placeholder="আপনার নাম"
               name="name"
@@ -26,10 +22,23 @@ const SignUpForm = () => {
           <p className="col-span-2 text-end px-3">ইমেইল:</p>
           <div className="col-span-8">
             <input
-              className="w-full py-1 px-3 resize-none focus:outline outline-2 outline-green-500 rounded"
+              className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 border-b border-green-500 bg-transparent transition-all duration-300"
               type="email"
               placeholder="আপনার ইমেইল"
               name="email"
+            />
+          </div>
+        </div>
+
+        {/* নাম্বার */}
+        <div className="grid grid-cols-10">
+          <p className="col-span-2 text-end px-3">ফোন:</p>
+          <div className="col-span-8">
+            <input
+              className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 border-b border-green-500 bg-transparent transition-all duration-300"
+              type="text"
+              placeholder="আপনার ফোন নাম্বার"
+              name="number"
             />
           </div>
         </div>
@@ -39,9 +48,9 @@ const SignUpForm = () => {
           <p className="col-span-2 text-end px-3">পাসওয়ার্ড:</p>
           <div className="col-span-8">
             <input
-              className="w-full py-1 px-3 resize-none focus:outline outline-2 outline-green-500 rounded"
+              className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 bg-transparent border-b border-green-500"
               type="password"
-              placeholder="আপনার পাসওয়ার্ড"
+              placeholder="পাসওয়ার্ড সেট করুন"
               name="passowrd"
             />
           </div>
@@ -49,45 +58,20 @@ const SignUpForm = () => {
 
         {/* কনফার্ম পাসওয়ার্ড */}
         <div className="grid grid-cols-10">
-          <p className="col-span-2 text-end px-3">কনফার্ম:</p>
+          <p className="col-span-2 text-end px-3">পাসওয়ার্ড:</p>
           <div className="col-span-8">
             <input
-              className="w-full py-1 px-3 resize-none focus:outline outline-2 outline-green-500 rounded"
+              className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 bg-transparent border-b border-green-500"
               type="password"
               placeholder="পাসওয়ার্ড কনফার্ম করুন"
+              name="conf-passowrd"
             />
           </div>
         </div>
 
-        {/* ঠিকানা */}
-        <div className="grid grid-cols-10">
-          <p className="col-span-2 text-end px-3">ঠিকানা:</p>
-          <div className="col-span-8">
-            <input
-              className="w-full py-1 px-3 resize-none focus:outline outline-2 outline-green-500 rounded"
-              type="text"
-              placeholder="আপনার ঠিকানা"
-              name="address"
-            />
-          </div>
-        </div>
-
-        {/* মোবাইল */}
-        <div className="grid grid-cols-10">
-          <p className="col-span-2 text-end px-3">মোবাইল:</p>
-          <div className="col-span-8">
-            <input
-              className="w-full py-1 px-3 resize-none focus:outline outline-2 outline-green-500 rounded"
-              type="text"
-              placeholder="আপনার ফোন নাম্বার"
-              name="phone"
-            />
-          </div>
-        </div>
-
-        <div className="text-end">
-          <button className="bg-green-500 text-white py-2 px-10 mt-3 rounded">
-            জমা দিন
+        <div className="text-center">
+          <button className="bg-green-500 hover:bg-green-600 transition-all duration-300 text-white py-2 px-10 mt-3 shadow-lg">
+            সাবমিট করুন
           </button>
         </div>
       </div>
@@ -95,4 +79,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default SigninForm;

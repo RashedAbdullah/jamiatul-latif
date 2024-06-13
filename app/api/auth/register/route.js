@@ -1,11 +1,11 @@
-import { databseConnection } from "@/database/connection";
-import { userModel } from "@/models/user-model";
+import { connectMongo } from "@/database/connection";
+import { UserModel } from "@/models/user-model";
 import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 
 const POST = async (req) => {
   try {
-    await databseConnection();
+    await connectMongo();
     const { name, email, password } = await req.json();
     const hashedPassword = await bcrypt.hash(password, 5);
     const newUser = {
@@ -15,7 +15,7 @@ const POST = async (req) => {
     };
 
     // Create new user:
-    await userModel.create(newUser);
+    await UserModel.create(newUser);
 
     return new NextResponse("User has been created", {
       status: 201,

@@ -1,11 +1,10 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import FacebookProvider from "next-auth/providers/facebook";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import CredentialProviders from "next-auth/providers/credentials";
 import bcryptjs from "bcryptjs";
-import { userModel } from "./models/user-model";
-import { databseConnection } from "./database/connection";
+import { UserModel } from "./models/user-model";
+import { connectMongo } from "./database/connection";
 import { clientPromise } from "./database/client-promise";
 
 export const {
@@ -28,10 +27,10 @@ export const {
       },
       async authorize(credentials) {
         if (credentials === null) return null;
-        await databseConnection();
+        await connectMongo();
 
         try {
-          const user = await userModel.findOne({
+          const user = await UserModel.findOne({
             email: credentials?.email,
           });
           if (user) {
@@ -56,10 +55,6 @@ export const {
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       allowDangerousEmailAccountLinking: true,
-    }),
-    FacebookProvider({
-      clientId: process.env.FB_CLIENT_ID,
-      clientSecret: process.env.FB_CLIENT_SECRET,
     }),
   ],
 });
