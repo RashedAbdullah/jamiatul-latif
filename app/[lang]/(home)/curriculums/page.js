@@ -1,7 +1,6 @@
 import CurriculumAccordion from "@/components/curriculums/curriculum-accordion";
 import CurriculumsInfo from "@/components/curriculums/curriculums-info";
 import PageTitle from "@/components/page-title";
-import { BsInfoCircleFill } from "react-icons/bs";
 
 const items = [
   {

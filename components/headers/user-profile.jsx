@@ -9,7 +9,6 @@ const UserProfile = ({ lang = "bn", user = true }) => {
   useEffect(() => {
     const getSession = async () => {
       const session = await auth();
-      console.log(session);
     };
     getSession();
   }, []);
