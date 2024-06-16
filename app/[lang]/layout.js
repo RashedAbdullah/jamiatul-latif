@@ -17,7 +17,10 @@ export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <body className={bengali.className}>
-        <div id="modal" className="bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div
+          id="modal"
+          className="bg-gradient-to-r from-emerald-50 to-teal-50 text-slate-700"
+        >
           <MadrashaThumbnail />
           <Navbar />
           {children}
