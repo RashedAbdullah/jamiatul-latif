@@ -18,7 +18,7 @@ export const curriculums = (lang = "bn") => {
         logo: <IoBookSharp color="#22c55e" />,
       },
       {
-        en: `/${lang}/department`,
+        en: `/${lang}/future-plans`,
         bn: "ভবিষ্যত পরিকল্পনা",
         ar: "",
         logo: <IoBookSharp color="#22c55e" />,

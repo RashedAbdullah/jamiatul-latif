@@ -6,12 +6,6 @@ import NavTitle from "./nav-title";
 import { useEffect } from "react";
 
 const UserProfile = ({ lang = "bn", user = true }) => {
-  useEffect(() => {
-    const getSession = async () => {
-      const session = await auth();
-    };
-    getSession();
-  }, []);
   return (
     <div>
       <div className="">
