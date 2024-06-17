@@ -1,9 +1,6 @@
-import { auth } from "@/auth";
-
 import Image from "next/image";
 import Link from "next/link";
 import NavTitle from "./nav-title";
-import { useEffect } from "react";
 
 const UserProfile = ({ lang = "bn", user = true }) => {
   return (

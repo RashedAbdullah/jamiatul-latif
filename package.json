@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.5",
     "@formatjs/intl-localematcher": "^0.5.4",
     "@headlessui/react": "^2.0.4",
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "framer-motion": "^11.2.10",
     "mongodb": "^6.7.0",
