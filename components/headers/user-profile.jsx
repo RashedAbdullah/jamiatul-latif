@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavTitle from "./nav-title";
+import { auth } from "@/auth";
 
 const UserProfile = ({ lang = "bn", user = true }) => {
   return (

@@ -15,7 +15,7 @@ const UserSchema = new mongoose.Schema({
       "Please fill a valid email address",
     ],
   },
-  phone: {
+  number: {
     type: String,
     required: false,
   },
@@ -25,6 +25,6 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-const userModel = mongoose.models.users || mongoose.model("user", UserSchema);
+const userModel = mongoose.models.users || mongoose.model("users", UserSchema);
 
 export { userModel };

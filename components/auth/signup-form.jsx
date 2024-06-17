@@ -27,6 +27,7 @@ const SignupForm = ({ lang = "bn" }) => {
         body: JSON.stringify({ name, email, number, password }),
       });
       response.status === 201 && router.push(`/${lang}/signin`);
+      console.log(response.status);
     } catch (err) {
       setError(err.message);
     }
@@ -84,7 +85,7 @@ const SignupForm = ({ lang = "bn" }) => {
                 className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 bg-transparent border-b border-green-500"
                 type="password"
                 placeholder="পাসওয়ার্ড সেট করুন"
-                name="passowrd"
+                name="password"
               />
             </div>
           </div>
@@ -97,7 +98,7 @@ const SignupForm = ({ lang = "bn" }) => {
                 className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 bg-transparent border-b border-green-500"
                 type="password"
                 placeholder="পাসওয়ার্ড কনফার্ম করুন"
-                name="conf-passowrd"
+                name="conf-password"
               />
             </div>
           </div>

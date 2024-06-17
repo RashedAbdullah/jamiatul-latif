@@ -4,6 +4,7 @@ import Navbar from "@/components/headers/navbar";
 import MadrashaThumbnail from "@/components/thumbnail/madrasha-thumbnail";
 import Footer from "@/components/footer/footer";
 import { getAllFatwa } from "@/actions";
+import { auth } from "@/auth";
 
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
@@ -14,6 +15,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, params: { lang } }) {
+
   return (
     <html lang={lang}>
       <body className={bengali.className}>

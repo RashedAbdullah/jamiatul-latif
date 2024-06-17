@@ -1,28 +1,30 @@
-// import { connectMongo } from "@/database/connection";
-// import { UserModel } from "@/models/user-model";
-// import bcrypt from "bcryptjs";
-// import { NextResponse } from "next/server";
+import { connectMongo } from "@/database/connection";
+import { userModel } from "@/models/user-model";
 
-// const POST = async (req) => {
-//   try {
-//     await connectMongo();
-//     const { name, email, password } = await req.json();
-//     const hashedPassword = await bcrypt.hash(password, 5);
-//     const newUser = {
-//       name,
-//       email,
-//       password: hashedPassword,
-//     };
+import bcrypt from "bcryptjs";
+import { NextResponse } from "next/server";
 
-//     // Create new user:
-//     await UserModel.create(newUser);
+const POST = async (req) => {
+  try {
+    await connectMongo();
+    const { name, email, number, password } = await req.json();
+    const hashedPassword = await bcrypt.hash(password, 5);
+    const newUser = {
+      name,
+      email,
+      number,
+      password: hashedPassword,
+    };
 
-//     return new NextResponse("User has been created", {
-//       status: 201,
-//     });
-//   } catch (err) {
-//     return new NextResponse(err.message, { status: 500 });
-//   }
-// };
+    // Create new user:
+    await userModel.create(newUser);
 
-// export { POST };
+    return new NextResponse("User has been created", {
+      status: 201,
+    });
+  } catch (err) {
+    return new NextResponse(err.message, { status: 500 });
+  }
+};
+
+export { POST };
