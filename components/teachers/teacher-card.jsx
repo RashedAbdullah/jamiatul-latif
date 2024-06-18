@@ -7,7 +7,7 @@ const TeacherCard = ({ teacher }) => {
   return (
     <div className="bg-white shadow lg:grid grid-cols-2 gap-4 p-6">
       <div className="lg:border-r lg:pr-2">
-        <TeacherAvatar />
+        <TeacherAvatar avatar={teacher.iamge} name={teacher.name} />
         <AboutTeacher aboutTeacher={teacher.about} />
       </div>
       <div className="p-6">
