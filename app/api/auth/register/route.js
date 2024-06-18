@@ -15,7 +15,6 @@ const POST = async (req) => {
       number,
       password: hashedPassword,
     };
-    console.log(newUser);
 
     // Create new user:
     await userModel.create(newUser);

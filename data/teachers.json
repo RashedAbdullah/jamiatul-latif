@@ -14,11 +14,18 @@
     "degree": "আল ফিকহুল ইসলামী",
     "email": "ibrahimnomani@gmail.com",
     "number": "01810445445",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "https://web.facebook.com/profile.php?id=61553468340135",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://web.facebook.com/profile.php?id=61553468340135"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -37,11 +44,18 @@
     "degree": "আল ফিকহুল ইসলামী",
     "email": "habibullah@gmail.com",
     "number": "01892705646",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "https://web.facebook.com/habibulla672522",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://web.facebook.com/habibulla672522"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -60,11 +74,18 @@
     "degree": "আল ফিকহুল ইসলামী",
     "email": "usmangoni@gmail.com",
     "number": "01705045411",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "https://web.facebook.com/osman5411",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://web.facebook.com/osman5411"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -83,11 +104,18 @@
     "degree": "আল ফিকহুল ইসলামী",
     "email": "fajlealim@gmail.com",
     "number": "01613989720",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "https://web.facebook.com/profile.php?id=100015534901960",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://web.facebook.com/profile.php?id=100015534901960"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -106,11 +134,18 @@
     "degree": "আল ফিকহুল ইসলামী",
     "email": "",
     "number": "01752841030",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": ""
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -129,11 +164,18 @@
     "degree": "আরবি সাহিত্য",
     "email": "",
     "number": "01818498639",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "https://web.facebook.com/profile.php?id=100006002508006",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://web.facebook.com/profile.php?id=100006002508006"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -152,11 +194,18 @@
     "degree": "আল ফিকহুল ইসলামী",
     "email": "",
     "number": "01783450172",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "https://web.facebook.com/sanaullah234",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://web.facebook.com/sanaullah234"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -175,11 +224,18 @@
     "degree": "আরবি সাহিত্য",
     "email": "",
     "number": "01857685616",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "https://web.facebook.com/Rashed4Abdullah",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://web.facebook.com/Rashed4Abdullah"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   },
@@ -194,15 +250,82 @@
       "resignation_date": ""
     },
     "address": "হাজীগঞ্জ, চাঁদপুর, বাংলাদেশ।",
-    "masters": "জামিয়া শারইয়্যাহ মালিবাগ, ঢাকা।",
+    "masters": "দারুল উলুম মইনুল ইসলাম হাটহাজারী মাদরাসা",
     "degree": "",
     "email": "",
     "number": "01619003776",
-    "socilas": [
+    "socials": [
       {
-        "facebook": "",
-        "twitter": "",
-        "telegram": ""
+        "name": "facebook",
+        "link": "https://www.facebook.com/profile.php?id=100091406247751"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "name": "হাফেজ মাওলানা রুহুল আমীন",
+    "post": "হাফেজ সাহেব",
+    "image": "",
+    "about": "হাফেজ মাওলানা রুহুল আমীন জামিয়াতুল লতিফের হিফজ বিভাগের শিক্ষক। তিনি অত্র জামিয়া প্রতিষ্ঠা করেন বিশাল এক লক্ষকে সামনে রেখে। তা হল, অত্র জামিয়া যেন কওমি নেসাবের পুরনো যে সৌন্দর্য আছে তা যেন পুনরুজ্জীবিত করে তোলা যায়।",
+    "joined_date": "",
+    "resignation": {
+      "resigned": false,
+      "resignation_date": ""
+    },
+    "address": "ডেমরা, ঢাকা, বাংলাদেশ।",
+    "masters": "..., মক্কিনগর, ঢাকা।",
+    "degree": "",
+    "email": "",
+    "number": "01314084917",
+    "socials": [
+      {
+        "name": "facebook",
+        "link": "https://www.facebook.com/rafin.sinha"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "name": "হাফেজ মাওলানা রায়হান",
+    "post": "হাফেজ সাহেব",
+    "image": "",
+    "about": "হাফেজ মাওলানা রায়হান জামিয়াতুল লতিফের হিফজ বিভাগের শিক্ষক। তিনি অত্র জামিয়া প্রতিষ্ঠা করেন বিশাল এক লক্ষকে সামনে রেখে। তা হল, অত্র জামিয়া যেন কওমি নেসাবের পুরনো যে সৌন্দর্য আছে তা যেন পুনরুজ্জীবিত করে তোলা যায়।",
+    "joined_date": "",
+    "resignation": {
+      "resigned": false,
+      "resignation_date": ""
+    },
+    "address": "পীরগঞ্জ, রংপুর, বাংলাদেশ।",
+    "masters": "দারুল উলুম মইনুল ইসলাম হাটহাজারী মাদরাসা",
+    "degree": "",
+    "email": "",
+    "number": "01717203408",
+    "socials": [
+      {
+        "name": "facebook",
+        "link": "https://web.facebook.com/osman5411"
+      },
+      {
+        "name": "twitter",
+        "link": ""
+      },
+      {
+        "name": "telegram",
+        "link": ""
       }
     ]
   }

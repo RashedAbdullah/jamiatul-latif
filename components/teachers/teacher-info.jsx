@@ -1,43 +1,43 @@
-const TeacherInfo = () => {
+const TeacherInfo = ({ info }) => {
   return (
     <>
       {" "}
       <div className="text-center py-6 border-b border-green-500">
         <h2 className="font-semibold text-xl">
-          <span>নাম: </span> ‍<span>হাফেজ মুফতি আবুল কালাম হাফি.</span>
+          <span>নাম: </span> ‍<span>{info.name}</span>
         </h2>
-        <p>নাযেমে দারুল ইকামা</p>
+        <p>{info.post}</p>
       </div>
       <div className="py-6 grid grid-cols-10 gap-2 border-b border-green-500">
         <div className="col-span-3">
           <p>ঠিকানা: </p>
         </div>
         <div className="col-span-7">
-          <p>তারাকান্দা, ময়মনসিংহ।</p>
+          <p>{info.address}</p>
         </div>
         <div className="col-span-3">
           <p>ফারেগ: </p>
         </div>
         <div className="col-span-7">
-          <p>জামিয়া ইসলামিয়া পটিয়া, চট্টগ্রাম।</p>
+          <p>{info.masters}</p>
         </div>
         <div className="col-span-3">
           <p>তাখাস্সুস: </p>
         </div>
         <div className="col-span-7">
-          <p>ইসলামি আইন</p>
+          <p>{info.degree}</p>
         </div>
         <div className="col-span-3">
           <p>ইমেইল: </p>
         </div>
         <div className="col-span-7">
-          <p>maarashed40@gamil.com</p>
+          <p>{info.email}</p>
         </div>
         <div className="col-span-3">
           <p>মোবাইল: </p>
         </div>
         <div className="col-span-7">
-          <p>+8801857685616</p>
+          <p>{info.number}</p>
         </div>
       </div>
     </>
