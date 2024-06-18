@@ -23,7 +23,7 @@ const NavTitle = ({ children, router = "/" }) => {
 
   return (
     <ul className="flex flex-wrap items-center">
-      <li className={`py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 text-white border-b hover:bg-green-600 transition duration-300 cursor-pointer ${children === "লগইন" && "bg-white text-green-500 hover:bg-green-500 hover:text-white"}`}>
+      <li className={`py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 text-white border-b hover:bg-green-600 transition duration-300 cursor-pointer ${children === "লগইন" && "bg-green-600"}`}>
         <Link href={router}>
           <div className="flex items-center gap-2">
             <div>{child()}</div>

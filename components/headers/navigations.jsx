@@ -6,7 +6,7 @@ import { notices } from "@/data/notices";
 import { curriculums } from "@/data/curriculum";
 import UserProfile from "./user-profile";
 
-const Navigations = ({ openMenu, lang = "bn" }) => {
+const Navigations = ({ openMenu, lang = "bn", user }) => {
   const intro = introductiion(lang);
   const course = courses(lang);
   const notice = notices(lang);
@@ -24,7 +24,7 @@ const Navigations = ({ openMenu, lang = "bn" }) => {
         <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={notice} />
         <NavTitle router={`/${lang}/gallery`}>গ্যালারি</NavTitle>
-        <UserProfile />
+        <UserProfile user={user} />
       </nav>
     </>
   );
