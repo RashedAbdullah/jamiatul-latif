@@ -1,11 +1,8 @@
 const TeacherInfo = ({ info }) => {
   return (
     <>
-      {" "}
       <div className="text-center py-6 border-b border-green-500">
-        <h2 className="font-semibold text-xl">
-          <span>নাম: </span> ‍<span>{info.name}</span>
-        </h2>
+        <h2 className="font-semibold text-xl">{info.name}</h2>
         <p>{info.post}</p>
       </div>
       <div className="py-6 grid grid-cols-10 gap-2 border-b border-green-500">
