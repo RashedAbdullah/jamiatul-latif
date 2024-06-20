@@ -12,26 +12,35 @@
         "address": "ভাংগা, ফরিদপুর",
         "phone": "01609003776",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "902",
@@ -42,26 +51,35 @@
         "address": "গৌরীপুর, ময়মনসিংহ",
         "phone": "01609003776",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "903",
@@ -72,26 +90,35 @@
         "address": "কবিরহাট, নোয়াখালী",
         "phone": "01610583696",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "904",
@@ -102,26 +129,35 @@
         "address": "যশোর সদর, যশোর",
         "phone": "01753843196",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "905",
@@ -132,26 +168,35 @@
         "address": "মুলাদী, বরিশাল",
         "phone": "01568308296",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "906",
@@ -162,26 +207,35 @@
         "address": "মুলাদী, বরিশাল",
         "phone": "01615850028",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "907",
@@ -192,26 +246,35 @@
         "address": "মুলাদী, বরিশাল",
         "phone": "01775365229",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "908",
@@ -222,26 +285,35 @@
         "address": "কামালনগর, লক্ষীপুর",
         "phone": "01830278873",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "909",
@@ -252,26 +324,35 @@
         "address": "বেগমগঞ্জ, নোয়াখালী",
         "phone": "01605786575",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -288,26 +369,35 @@
         "address": "কলমাকান্দা, নেত্রকোণা",
         "phone": "01967394402",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "802",
@@ -318,26 +408,35 @@
         "address": "ফেনী সদর, ফেনী",
         "phone": "01851714295",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "803",
@@ -348,26 +447,35 @@
         "address": "নিকলী, কিশোরগঞ্জ",
         "phone": "01614951341",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "804",
@@ -378,26 +486,35 @@
         "address": "মদনপুর, নেত্রকোনা",
         "phone": "01921841866",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "805",
@@ -408,26 +525,35 @@
         "address": "কটিয়াদী, কিশোরগঞ্জ",
         "phone": "01714238111",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "806",
@@ -438,26 +564,35 @@
         "address": "শ্রীপুর, গাজীপুর",
         "phone": "01949040570",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "807",
@@ -468,26 +603,35 @@
         "address": "রাজিবপুর, কুড়িগ্রাম",
         "phone": "01930517890",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "808",
@@ -498,26 +642,35 @@
         "address": "লক্ষীপুর সদর, লক্ষীপুর",
         "phone": "01811317170",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "809",
@@ -528,26 +681,35 @@
         "address": "রূপগঞ্জ, নারায়ণগঞ্জ",
         "phone": "01911749816",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "810",
@@ -558,26 +720,35 @@
         "address": "কামালনগর, লক্ষীপুর",
         "phone": "01854491233",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "811",
@@ -588,26 +759,35 @@
         "address": "তারাকান্দা, ময়মনসিংহ",
         "phone": "01626191749",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -624,26 +804,35 @@
         "address": "লক্ষীপুর সদর, লক্ষীপুর",
         "phone": "01818498639",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "702",
@@ -654,26 +843,35 @@
         "address": "শ্রীপুর, গাজীপুর",
         "phone": "01766304541",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       },
       {
         "dakhila": "703",
@@ -684,26 +882,1736 @@
         "address": "নান্দাইল, ময়মনসিংহ",
         "phone": "01766304541",
         "opinion": "",
-        "results": {
-          "first": [
-            {
-              "book": "",
-              "number": 34
-            }
-          ],
-          "second": [
-            {
-              "book": "",
-              "number": 45
-            }
-          ],
-          "third": [
-            {
-              "book": "",
-              "number": 76
-            }
-          ]
-        }
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "705",
+        "name": "মো. হোসাইন",
+        "avatar": "",
+        "father": "হারিসুল ইসলাম",
+        "class": "ছানাবিয়া ১ম বর্ষ",
+        "address": "বানারীপাড়া, বরিশাল",
+        "phone": "01833737936",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "707",
+        "name": "জুনায়েদ শেখ",
+        "avatar": "",
+        "father": "আলমগীর শেখ",
+        "class": "ছানাবিয়া ১ম বর্ষ",
+        "address": "হাজীগঞ্জ, চাঁদপুর",
+        "phone": "01317251189",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "708",
+        "name": "রাশেদুল ইসলাম",
+        "avatar": "",
+        "father": "শাহ জাহান",
+        "class": "ছানাবিয়া ১ম বর্ষ",
+        "address": "তারাকান্দা, ময়মনসিংহ",
+        "phone": "01787098165",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "709",
+        "name": "হামিদুল ইসলাম",
+        "avatar": "",
+        "father": "আমশের আলী",
+        "class": "ছানাবিয়া ১ম বর্ষ",
+        "address": "রাজিবপুর, কুড়িগ্রাম",
+        "phone": "01912780530",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "710",
+        "name": "আহসানুল্লাহ",
+        "avatar": "",
+        "father": "আবুল কালাম",
+        "class": "ছানাবিয়া ১ম বর্ষ",
+        "address": "তারাকান্দা, ময়মনসিংহ",
+        "phone": "01752841030",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "711",
+        "name": "আহমদ আরিফ",
+        "avatar": "",
+        "father": "জাকির হোসাইন",
+        "class": "ছানাবিয়া ১ম বর্ষ",
+        "address": "সুবর্ণচর, নোয়াখালী",
+        "phone": "01810445445",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "712",
+        "name": "ইকবাল হোসাইন রাসেল",
+        "avatar": "",
+        "father": "মীর আহমদ",
+        "class": "ছানাবিয়া ১ম বর্ষ",
+        "address": "চৌদ্দগ্রাম, কুমিল্লা",
+        "phone": "01787584674",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "className": "মুতাওয়াস্সিতাহ ৩য় বর্ষ",
+    "academicYear": "2024-25",
+    "students": [
+      {
+        "dakhila": "601",
+        "name": "মাহফুজুর রহমান",
+        "avatar": "",
+        "father": "ফিরোজ আহমদ",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "হালুয়াঘাট, ময়মনসিংহ",
+        "phone": "01910672522",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "602",
+        "name": "আব্দুল্লাহ শাহী",
+        "avatar": "",
+        "father": "আব্দুল্লাহ শেখ",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "সোনাগাজী, ফেনী",
+        "phone": "01810445445",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "603",
+        "name": "আরিফুল ইসলাম",
+        "avatar": "",
+        "father": "কবির মিয়া",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "বানিয়াচং, হবিগঞ্জ",
+        "phone": "01319370914",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "604",
+        "name": "মো. মাহমুদ",
+        "avatar": "",
+        "father": "কাইত উল্লাহ",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "রূপগঞ্জ, নারায়ণগঞ্জ",
+        "phone": "01959761917",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "605",
+        "name": "আকিব মাহমুদ",
+        "avatar": "",
+        "father": "রফিকুল ইসলাম",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "তারাকান্দা, ময়মনসিংহ",
+        "phone": "01752841030",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "606",
+        "name": "ইলিয়াস",
+        "avatar": "",
+        "father": "ইসমাইল আলী",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "হালুয়াঘাট, ময়মনসিংহ",
+        "phone": "01922575348",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "607",
+        "name": "রায়হান আহমদ",
+        "avatar": "",
+        "father": "আব্দুল আহাদ",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "আখাউড়া, ব্রাহ্মণবাড়িয়া",
+        "phone": "01783450172",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "608",
+        "name": "রিয়াজ আহমদ",
+        "avatar": "",
+        "father": "মোখলেসুর রহমান",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "ফুলপুর, ময়মনসিংহ",
+        "phone": "01713540564",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "609",
+        "name": "আহমদ আবরার",
+        "avatar": "",
+        "father": "মাহিদ মিয়া",
+        "class": "মুতা: ৩য় বর্ষ",
+        "address": "বানিয়াচং, হবিগঞ্জ",
+        "phone": "01901672522",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "className": "মুতাওয়াস্সিতাহ ২য় বর্ষ",
+    "academicYear": "2024-25",
+    "students": [
+      {
+        "dakhila": "501",
+        "name": "আশিকুর রহমান",
+        "avatar": "",
+        "father": "শফিকুল ইসলাম",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "কিশোরগঞ্জ, নীলফামারী",
+        "phone": "01761106566",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "502",
+        "name": "মো. মুসআব",
+        "avatar": "",
+        "father": "মনির হোসেন",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "সিদ্ধিরগঞ্জ, নারায়ণগঞ্জ",
+        "phone": "01922783670",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "503",
+        "name": "মাহতাব হোসাইন রিফাত",
+        "avatar": "",
+        "father": "মাহবুবুর রহমান",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "ফুলপুর, ময়মনসিংহ",
+        "phone": "01729696248",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "504",
+        "name": "আবির হোসাইন জাবেদ",
+        "avatar": "",
+        "father": "মোস্তফা কামাল",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "শান্তির হাট, নোয়াখালী",
+        "phone": "01590011905",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "505",
+        "name": "ইমাম হাসান",
+        "avatar": "",
+        "father": "শাহে আলম",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "দৌলতখান, ভোলা",
+        "phone": "01977868541",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "506",
+        "name": "আবরার মাহফুজ ফাইয়াজ",
+        "avatar": "",
+        "father": "মুফতি জাফর আহমদ",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "নারায়ণগঞ্জ সদর, নারায়ণগঞ্জ",
+        "phone": "01911861035",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "507",
+        "name": "আল-আমিন শিকদার",
+        "avatar": "",
+        "father": "রতন শিকদার",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "কাপাসিয়া, গাজীপুর",
+        "phone": "01734072617",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "509",
+        "name": "তোফায়েল আহমদ",
+        "avatar": "",
+        "father": "আবুল কালাম",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "ফরিদগঞ্জ, চাঁদপুর",
+        "phone": "01820025800",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "511",
+        "name": "তাওহীদুল ইসলাম",
+        "avatar": "",
+        "father": "আব্দুল গাফ্ফার",
+        "class": "মুতা: ২য় বর্ষ",
+        "address": "ঝাউদিয়া, কুষ্টিয়া",
+        "phone": "01717807540",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "className": "মুতাওয়াস্সিতাহ ১ম বর্ষ",
+    "academicYear": "2024-25",
+    "students": [
+      {
+        "dakhila": "401",
+        "name": "সালমান ফার্সী",
+        "avatar": "",
+        "father": "ইলিয়াস",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "কাপাসিয়া, গাজীপুর",
+        "phone": "01937900205",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "402",
+        "name": "তানজিমুল ইসলাম",
+        "avatar": "",
+        "father": "বরকতুল্লাহ",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "রূপগঞ্জ, নারায়ণগঞ্জ",
+        "phone": "01879552545",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "403",
+        "name": "শুআইব",
+        "avatar": "",
+        "father": "আমজাদ হোসেন",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "ইসলামপুর, জামালপুর",
+        "phone": "01736107170",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "404",
+        "name": "সায়েম",
+        "avatar": "",
+        "father": "আব্দুস সাত্তার",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "রামগঞ্জ, লক্ষীপুর",
+        "phone": "01765308102",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "405",
+        "name": "আনসারুল ইসলাম",
+        "avatar": "",
+        "father": "আনারুল হক",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "রাণীশংকৈল, ঠাকুরগাঁও",
+        "phone": "01783046848",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "406",
+        "name": "ইয়াসিন আরাফাত",
+        "avatar": "",
+        "father": "খুরশিদ আলম",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "শেরপুর সদর, শেরপুর",
+        "phone": "01864981454",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "407",
+        "name": "মাহমুদুল হাসান",
+        "avatar": "",
+        "father": "আবুল কালাম",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "বরুড়া, কুমিল্লা",
+        "phone": "01843676976",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "408",
+        "name": "আব্দুর রহমান",
+        "avatar": "",
+        "father": "মাফসের আলী",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "মুলাদী, বরিশাল",
+        "phone": "01789067253",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "409",
+        "name": "মো. সিয়াম",
+        "avatar": "",
+        "father": "আফসার আলী",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "ঘাটাইল, টাঙ্গাইল",
+        "phone": "01749802180",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "410",
+        "name": "আমির হামজা",
+        "avatar": "",
+        "father": "নুর হোসেন",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "বরগুনা সদর, বরগুনা",
+        "phone": "01733850654",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "411",
+        "name": "হোজাইফা মাহমুদ",
+        "avatar": "",
+        "father": "মোসাদ্দেক হোসাইন",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "ভেড়ামারা, কুষ্টিয়া",
+        "phone": "01705045411",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "412",
+        "name": "মো. আরিফ",
+        "avatar": "",
+        "father": "আবুল কালাম",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "হাজিরহাট, নোয়াখালী",
+        "phone": "01609880573",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "413",
+        "name": "ছাকিবুল হাসান",
+        "avatar": "",
+        "father": "শাহীন হোসেন",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "মাদারগঞ্জ, জামালপুর",
+        "phone": "01304464497",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "414",
+        "name": "আবু বকর",
+        "avatar": "",
+        "father": "মো. সেলিম",
+        "class": "মুতা: ১ম বর্ষ",
+        "address": "বেতাগী, বরগুনা",
+        "phone": "01778381163",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "className": "ইবতেদাইয়্যাহ",
+    "academicYear": "2024-25",
+    "students": [
+      {
+        "dakhila": "301",
+        "name": "রাকিবুল ইসলাম",
+        "avatar": "",
+        "father": "শাহ জাহান",
+        "class": "ইবতেদাইয়্যাহ",
+        "address": "নাঙ্গলকোট, কুমিল্লা",
+        "phone": "01600118489",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "302",
+        "name": "সাকিবুল হাসান",
+        "avatar": "",
+        "father": "দুলাল মিয়া",
+        "class": "ইবতেদাইয়্যাহ",
+        "address": "চৌদ্দগ্রাম, কুমিল্লা",
+        "phone": "01600118489",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "303",
+        "name": "জিহাদ মিয়া",
+        "avatar": "",
+        "father": "সাইফুল ইসলাম",
+        "class": "ইবতেদাইয়্যাহ",
+        "address": "রূপগঞ্জ, নারায়ণগঞ্জ",
+        "phone": "01734379832",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dakhila": "304",
+        "name": "আসাদুল্লাহ",
+        "avatar": "",
+        "father": "ফোরকান",
+        "class": "ইবতেদাইয়্যাহ",
+        "address": "বরগুনা সদর, বরগুনা",
+        "phone": "01782202214",
+        "opinion": "",
+        "results": [
+          {
+            "examName": "১ম সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "২য় সাময়ীক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          },
+          {
+            "examName": "বার্ষিক পরীক্ষা",
+            "numbers": [
+              {
+                "book": "",
+                "number": 34
+              }
+            ]
+          }
+        ]
       }
     ]
   }
