@@ -3,6 +3,7 @@
 import { signIn } from "@/auth";
 import { connectMongo } from "@/database/connection";
 import { FatwaModel } from "@/models/fatwa-model";
+import { studentModel } from "@/models/student-model";
 import { teacherModel } from "@/models/teacher-model";
 import {
   replaceMongoIdInArray,
@@ -34,6 +35,32 @@ const getTeachers = async () => {
   }
 };
 
+const getStudents = async () => {
+  try {
+    await connectMongo();
+
+    const students = await studentModel.find().lean();
+    return replaceMongoIdInArray(students);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const getStudentByDakhila = async (dakhila) => {
+  try {
+    await connectMongo();
+
+    const studentByDakhila = await studentModel
+      .findOne({
+        "students.dakhila": dakhila,
+      })
+      .lean();
+    return replaceMongoIdInObject(studentByDakhila);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const getAllFatwa = async () => {
   try {
     await connectMongo();
@@ -56,4 +83,11 @@ const getFatwaById = async (fatwaId) => {
   }
 };
 
-export { handleSignin, getTeachers, getAllFatwa, getFatwaById };
+export {
+  handleSignin,
+  getTeachers,
+  getStudents,
+  getStudentByDakhila,
+  getAllFatwa,
+  getFatwaById,
+};
