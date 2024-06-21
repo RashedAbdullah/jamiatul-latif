@@ -48,8 +48,6 @@ strong {
   background: #555; /* Color of the scrollbar thumb when hovered */
 }
 
-
-
 .example-container {
   width: 100vw;
   height: 100vh;
@@ -85,8 +83,6 @@ strong {
   left: 10px;
   transform: scale(-1);
 }
-
-
 
 .refresh {
   padding: 10px;
