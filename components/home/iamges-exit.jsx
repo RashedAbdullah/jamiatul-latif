@@ -1,92 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { wrap } from "popmotion";
-import { images } from "@/data/images";
+import HomeTexts from "./home-texts";
 
-const variants = {
-  enter: (direction) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-};
+const images = ["/jamia_pic.jpg", "/header-bg-sm.png", "/jamia_pic.jpg"];
 
-/**
- * Experimenting with distilling swipe offset and velocity into a single variable, so the
- * less distance a user has swiped, the more velocity they need to register as a swipe.
- * Should accomodate longer swipes and short flicks without having binary checks on
- * just distance thresholds and velocity > 0.
- */
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset, velocity) => {
-  return Math.abs(offset) * velocity;
-};
+const BackgroundImages = () => {
+  const [currentImage, setCurrentImage] = useState(0);
 
-export const ImagesExit = () => {
-  const [[page, direction], setPage] = useState([0, 0]);
-  const imageIndex = wrap(0, images.length, page);
-
-  const paginate = (newDirection) => {
-    setPage([page + newDirection, newDirection]);
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <>
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          className="absolute max-w-96 -z-50"
-          key={page}
-          src={images[imageIndex]}
-          custom={direction}
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.4 },
-          }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-        />
+    <div className="relative min-h-screen">
+      <AnimatePresence>
+        <motion.div
+          key={currentImage}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${images[currentImage]})` }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="absolute inset-0 bg-black opacity-50 top-full"></div>
+          <HomeTexts />
+        </motion.div>
       </AnimatePresence>
-      <div
-        className="next hover:bg-green-500 hover:text-white transition-all duration-300"
-        onClick={() => paginate(1)}
-      >
-        {"‣"}
-      </div>
-      <div
-        className="prev hover:bg-green-500 hover:text-white transition-all duration-300"
-        onClick={() => paginate(-1)}
-      >
-        {"‣"}
-      </div>
-    </>
+    </div>
   );
 };
+
+export default BackgroundImages;

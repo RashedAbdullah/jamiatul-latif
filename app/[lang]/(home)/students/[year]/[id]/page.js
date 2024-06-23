@@ -1,4 +1,5 @@
 import { getStudentByDakhila } from "@/actions";
+import GetResultPdf from "@/components/students/result-pdf";
 import StudentOverView from "@/components/students/student-overview";
 import StudentResultTable from "@/components/students/student-table";
 import StudentsCard from "@/components/students/students-card";
@@ -9,6 +10,16 @@ const SingleStudentPage = async ({ params: { id, lang } }) => {
   const studentByDakhila = student.students.filter(
     (student) => student.dakhila === id
   );
+
+  const studentData = {
+    name: "John Doe",
+    rollNumber: "123456",
+    subjects: [
+      { book: "Mathematics", number: 85 },
+      { book: "Science", number: 90 },
+      { book: "English", number: 88 },
+    ],
+  };
 
   return (
     <div className="container my-5">
@@ -23,6 +34,7 @@ const SingleStudentPage = async ({ params: { id, lang } }) => {
           <StudentOverView opinion={studentByDakhila[0].opinion} />
         </div>
       </div>
+      <GetResultPdf studentData={studentData} />
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 import { signIn } from "@/auth";
 import { connectMongo } from "@/database/connection";
+import { curriculumModel } from "@/models/curriculum-model";
 import { FatwaModel } from "@/models/fatwa-model";
 import { studentModel } from "@/models/student-model";
 import { teacherModel } from "@/models/teacher-model";
@@ -61,6 +62,17 @@ const getStudentByDakhila = async (dakhila) => {
   }
 };
 
+const getCurriculums = async () => {
+  try {
+    await connectMongo();
+
+    const curriculums = await curriculumModel.find().lean();
+    return replaceMongoIdInArray(curriculums);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const getAllFatwa = async () => {
   try {
     await connectMongo();
@@ -88,6 +100,7 @@ export {
   getTeachers,
   getStudents,
   getStudentByDakhila,
+  getCurriculums,
   getAllFatwa,
   getFatwaById,
 };
