@@ -7,6 +7,7 @@ export const introductiion = (lang = "bn") => {
   return {
     title: "পরিচিতি",
     logo: <IoIosArrowDown color="#22c55e" />,
+    href: "/about-madrasha",
     categories: [
       {
         en: `/${lang}/about-madrasha`,

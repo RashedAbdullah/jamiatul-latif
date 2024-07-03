@@ -4,6 +4,7 @@ export const curriculums = (lang = "bn") => {
   return {
     title: "শিক্ষা কারিকুলাম",
     logo: "",
+    href: "/curriculums",
     categories: [
       {
         en: `/${lang}/curriculums`,

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { RiSchoolLine } from "react-icons/ri";
 const DropDown = ({ menu }) => {
+  console.log(menu);
   const [open, setOpen] = useState(false);
   return (
     <ul className="flex flex-wrap items-center">
@@ -12,14 +13,16 @@ const DropDown = ({ menu }) => {
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
       >
-        <div className="flex items-center gap-2">
-          <div>
-            <RiSchoolLine />
+        <Link href={`${menu.href}`}>
+          <div className="flex items-center gap-2">
+            <div>
+              <RiSchoolLine />
+            </div>
+            <div className="text-nowrap" aria-expanded={open}>
+              {menu.title}
+            </div>
           </div>
-          <div className="text-nowrap" aria-expanded={open}>
-            {menu.title}
-          </div>
-        </div>
+        </Link>
         <button
           className="shrink-0 p-1"
           aria-expanded={open}

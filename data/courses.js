@@ -4,6 +4,7 @@ export const courses = (lang = "bn") => {
   return {
     title: "অনলাইন কোর্সসমূহ",
     logo: <MdLibraryBooks color="#22c55e" />,
+    href: "/courses",
     categories: [
       {
         en: `/${lang}/courses/quran-aducation`,

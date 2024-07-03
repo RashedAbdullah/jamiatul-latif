@@ -1,17 +1,16 @@
-import HomeTexts from "@/components/home/home-texts";
-import BackgroundImages from "@/components/home/iamges-exit";
-
 export default function Home() {
   return (
     <main>
-      {/* <div
+      <div
         className="relative min-h-screen bg-cover bg-center"
         style={{ backgroundImage: "url('/jamia_pic.jpg')" }}
-      > */}
-      <BackgroundImages />
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-     
-      {/* </div> */}
+      ></div>
+      <div className="bg-primary text-secondary">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum ipsam
+        deleniti, in rem pariatur quis modi aliquam qui, laboriosam dolorem
+        culpa reiciendis incidunt voluptate nulla beatae eum dolores ea
+        adipisci.
+      </div>
     </main>
   );
 }

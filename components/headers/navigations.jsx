@@ -23,7 +23,7 @@ const Navigations = ({ openMenu, lang = "bn", user }) => {
         <DropDown menu={curriculum} />
         <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={notice} />
-        <NavTitle router={`/${lang}/gallery`}>গ্যালারি</NavTitle>
+        <NavTitle router={`/${lang}/blogs`}>প্রবন্ধ</NavTitle>
         <UserProfile user={user} />
       </nav>
     </>
