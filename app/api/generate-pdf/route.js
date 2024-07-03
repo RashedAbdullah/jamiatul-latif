@@ -2,7 +2,7 @@ import { generateStudentResultPDF } from "@/utils/get-result-pdf";
 import { NextResponse } from "next/server";
 
 const POST = async (req, res) => {
-  console.log(req);
+
 
   try {
     const studentData = req.body;

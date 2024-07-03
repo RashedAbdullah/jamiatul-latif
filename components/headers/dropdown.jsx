@@ -4,7 +4,7 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { RiSchoolLine } from "react-icons/ri";
 const DropDown = ({ menu }) => {
-  console.log(menu);
+
   const [open, setOpen] = useState(false);
   return (
     <ul className="flex flex-wrap items-center">
