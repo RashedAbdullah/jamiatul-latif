@@ -9,7 +9,7 @@ const DropDown = ({ menu }) => {
   return (
     <ul className="flex flex-wrap items-center">
       <li
-        className="py-2 lg:px-2 px-6 w-full relative flex items-center space-x-2 text-white border-b cursor-pointer hover:bg-green-600 transition duration-300"
+        className="py-2 lg:px-2 px-6 w-full relative flex items-center space-x-2 cursor-pointer hover:bg-primary hover:text-white transition duration-300"
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
       >

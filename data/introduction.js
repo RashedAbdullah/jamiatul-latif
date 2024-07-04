@@ -6,26 +6,26 @@ import { IoIosArrowDown } from "react-icons/io";
 export const introductiion = (lang = "bn") => {
   return {
     title: "পরিচিতি",
-    logo: <IoIosArrowDown color="#22c55e" />,
+    logo: <IoIosArrowDown color="#334155" />,
     href: "/about-madrasha",
     categories: [
       {
         en: `/${lang}/about-madrasha`,
         bn: "প্রতিষ্ঠান পরিচিতি",
         ar: "",
-        logo: <RiSchoolFill color="#22c55e" />,
+        logo: <RiSchoolFill color="#334155" />,
       },
       {
         en: `/${lang}/teachers`,
         bn: "শিক্ষক পরিচিতি",
         ar: "",
-        logo: <FaChalkboardTeacher color="#22c55e" />,
+        logo: <FaChalkboardTeacher color="#334155" />,
       },
       {
         en: `/${lang}/students`,
         bn: "ছাত্রদের তথ্য বিবরণ",
         ar: "",
-        logo: <PiStudentFill color="#22c55e" />,
+        logo: <PiStudentFill color="#334155" />,
       },
     ],
   };

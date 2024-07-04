@@ -23,8 +23,8 @@ const NavTitle = ({ children, router = "/" }) => {
   return (
     <ul className="flex flex-wrap items-center">
       <li
-        className={`py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 text-white border-b hover:bg-green-600 transition duration-300 cursor-pointer ${
-          children === "লগইন" && "bg-green-600"
+        className={`py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 hover:text-white hover:bg-slate-800 transition duration-300 cursor-pointer ${
+          children === "লগইন" && "bg-slate-800 text-white rounded-lg"
         }`}
       >
         <Link href={router}>

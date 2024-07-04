@@ -6,7 +6,7 @@ const TeachersPage = async () => {
   const teachers = await getTeachers();
 
   return (
-    <div className="text-slate-700">
+    <div className="text-primary">
       <PageTitle>শিক্ষক পরিচিতি</PageTitle>
       <div className="container grid lg:grid-cols-2 grid-cols-1 gap-5 mb-5">
         {teachers.map((teacher) => (

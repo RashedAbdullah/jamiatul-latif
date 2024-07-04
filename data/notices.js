@@ -10,7 +10,7 @@ export const notices = (lang = "bn") => {
         en: `/${lang}/notices/admission`,
         bn: "ভর্তি তথ্য",
         ar: "",
-        logo: <MdCastForEducation color="#22c55e" />,
+        logo: <MdCastForEducation color="#334155" />,
       },
     ],
   };

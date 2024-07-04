@@ -22,7 +22,7 @@ const UserProfile = ({ lang = "bn", user }) => {
                 />
               </div>
             ) : (
-              <p className="py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 text-green-500 border-b transition duration-300 cursor-pointer bg-white hover:bg-green-500 hover:text-white">
+              <p className="py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 border-b transition duration-300 cursor-pointer bg-white hover:bg-primary hover:text-white">
                 {user.name}
               </p>
             )}

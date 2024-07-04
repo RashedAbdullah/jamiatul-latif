@@ -5,6 +5,8 @@ import { introductiion } from "@/data/introduction";
 import { notices } from "@/data/notices";
 import { curriculums } from "@/data/curriculum";
 import UserProfile from "./user-profile";
+import NavSearch from "./search";
+import MadrashaLogo from "./logo";
 
 const Navigations = ({ openMenu, lang = "bn", user }) => {
   const intro = introductiion(lang);
@@ -14,10 +16,12 @@ const Navigations = ({ openMenu, lang = "bn", user }) => {
   return (
     <>
       <nav
-        className={`lg:relative lg:flex absolute transition-all duration-300 mr-5 lg:mr-10 bg-green-500 ${
+        className={`lg:relative lg:flex justify-between items-center align-middle absolute transition-all duration-300 text-primary container lg:bg-transparent bg-white ${
           openMenu ? "block -right-5" : "hidden"
         } top-full`}
       >
+       <MadrashaLogo/>
+        <NavSearch />
         <DropDown menu={intro} />
         <DropDown menu={course} />
         <DropDown menu={curriculum} />

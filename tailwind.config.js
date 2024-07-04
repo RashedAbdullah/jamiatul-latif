@@ -28,7 +28,7 @@ module.exports = {
         },
       },
       colors: {
-        primary: "#E0F7FA",
+        primary: "#334155",
         secondary: "#002366",
       },
       animation: {

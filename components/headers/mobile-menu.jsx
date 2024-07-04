@@ -1,6 +1,5 @@
-import { TiThMenu } from "react-icons/ti";
-import { MdClose } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const MobileMenu = ({ onOpenMenu, openMenu }) => {
   return (
@@ -8,7 +7,7 @@ const MobileMenu = ({ onOpenMenu, openMenu }) => {
       <div className="block lg:hidden mr-5 text-2xl">
         <button
           onClick={onOpenMenu}
-          className="relative flex items-center justify-center w-12 h-12 bg-green-500 rounded-full"
+          className="relative flex items-center justify-center w-10 h-10 bg-primary rounded-full"
         >
           <AnimatePresence initial={false} mode="wait">
             {openMenu ? (
@@ -20,7 +19,7 @@ const MobileMenu = ({ onOpenMenu, openMenu }) => {
                 transition={{ duration: 0.3 }}
                 className="absolute"
               >
-                <MdClose color="white" size={28} />
+                <X color="white" strokeWidth={3} size={24} />
               </motion.div>
             ) : (
               <motion.div
@@ -31,7 +30,7 @@ const MobileMenu = ({ onOpenMenu, openMenu }) => {
                 transition={{ duration: 0.3 }}
                 className="absolute"
               >
-                <TiThMenu color="white" size={24} />
+                <Menu color="white" strokeWidth={3} size={24} />
               </motion.div>
             )}
           </AnimatePresence>

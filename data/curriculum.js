@@ -10,19 +10,19 @@ export const curriculums = (lang = "bn") => {
         en: `/${lang}/curriculums`,
         bn: "পাঠ্যসূচী",
         ar: "",
-        logo: <IoBookSharp color="#22c55e" />,
+        logo: <IoBookSharp color="#334155" />,
       },
       {
         en: `/${lang}/departments`,
         bn: "বিভাগসমূহ",
         ar: "",
-        logo: <IoBookSharp color="#22c55e" />,
+        logo: <IoBookSharp color="#334155" />,
       },
       {
         en: `/${lang}/future-plans`,
         bn: "ভবিষ্যত পরিকল্পনা",
         ar: "",
-        logo: <IoBookSharp color="#22c55e" />,
+        logo: <IoBookSharp color="#334155" />,
       },
     ],
   };

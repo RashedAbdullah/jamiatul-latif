@@ -13,7 +13,7 @@ const AccordionItem = ({ title, content }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center">
-          <h2 className="text-xl font-semibold text-slate-700">{title}</h2>
+          <h2 className="text-xl font-semibold text-primary">{title}</h2>
           <motion.div
             initial={{ rotate: 0 }}
             animate={{ rotate: isOpen ? 180 : 0 }}
