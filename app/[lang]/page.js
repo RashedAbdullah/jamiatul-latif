@@ -6,7 +6,7 @@ export default function Home() {
       <div className="grid grid-cols-2">
         <div className="flex flex-col justify-center gap-14 min-h-[70vh]">
           <div>
-            <h2 className="lg:text-3xl md:text-xl text-lg">
+            <h2 className="lg:text-4xl md:text-2xl text-xl">
               নিছক জ্ঞানের বাইরে বাতাস রয়েছে, <strong>জমিয়াতুল লতিফে</strong>,
               আমরা মনকে আলোকিত করি এবং আত্মাকে ঈশ্বরের সন্ধানে উদ্বুদ্ধ করি।
             </h2>
