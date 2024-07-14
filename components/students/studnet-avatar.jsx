@@ -14,7 +14,7 @@ const StudentAvatar = ({ avatar }) => {
         />
       ) : (
         <div className="rounded-full h-40 w-40 overflow-hidden">
-          <PiStudent className="h-full w-full hover:text-green-500 transition-all duration-300" />
+          <PiStudent className="h-full w-full text-slate-800" />
         </div>
       )}
     </div>

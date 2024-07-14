@@ -5,6 +5,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 export default function PopoverDemo({ lang = "bn" }) {
@@ -18,7 +19,9 @@ export default function PopoverDemo({ lang = "bn" }) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline">শিক্ষাবর্ষ</Button>
+        <Button variant="outline">
+          শিক্ষাবর্ষ <ChevronDown size={15}/>
+        </Button>
       </PopoverTrigger>
       <PopoverContent className="w-40">
         {years.map((year) => (

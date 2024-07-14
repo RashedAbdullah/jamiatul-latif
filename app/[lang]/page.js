@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import jamiaPic from "@/public/jamia_pic.jpg";
+import Image from "next/image";
 
-export default function Home() {
+export default function Home({ params: { lang } }) {
   return (
     <main className="container">
       <div className="grid grid-cols-2">
@@ -19,12 +22,37 @@ export default function Home() {
               করি এবং আত্মাকে ঈশ্বরের সন্ধানে উদ্বুদ্ধ করি।
             </p>
           </div>
-          <div>
-            <Button>অনুদান দিন</Button>{" "}
-            <Button variant="outline">আরও জানুন</Button>
+
+          {/* Buttons */}
+          <div className="flex gap-3">
+            <div>
+              <Link href={`${lang}/donate`}>
+                <Button>অনুদান দিন</Button>
+              </Link>
+            </div>
+            <div>
+              <Link href={`${lang}/about-madrasha`}>
+                <Button variant="outline">আরও জানুন</Button>
+              </Link>
+            </div>
           </div>
         </div>
-        <div></div>
+        <div className="flex">
+          <div>
+            <Image
+              src={jamiaPic}
+              alt="Jamia picture"
+              className="rounded-full"
+              placeholder="blur"
+            />
+          </div>
+          <div>
+            <Image src={jamiaPic} alt="Jamia picture" />
+          </div>
+          <div>
+            <Image src={jamiaPic} alt="Jamia picture" />
+          </div>
+        </div>
       </div>
 
       {/* বেসিক মাদরাসা ইনফো */}

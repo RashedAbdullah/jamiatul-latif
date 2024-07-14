@@ -1,43 +1,47 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const MobileMenu = ({ onOpenMenu, openMenu }) => {
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import DropDown from "./dropdown";
+import { introductiion } from "@/data/introduction";
+import { courses } from "@/data/courses";
+import { notices } from "@/data/notices";
+import { curriculums } from "@/data/curriculum";
+import NavTitle from "./nav-title";
+
+export default async function SheetDemo({ lang = "bn" }) {
+  const intro = await introductiion(lang);
+  const course = courses(lang);
+  const notice = notices(lang);
+  const curriculum = curriculums(lang);
   return (
-    <div>
-      <div className="block lg:hidden mr-5 text-2xl">
-        <button
-          onClick={onOpenMenu}
-          className="relative flex items-center justify-center w-10 h-10 bg-primary rounded-full"
-        >
-          <AnimatePresence initial={false} mode="wait">
-            {openMenu ? (
-              <motion.div
-                key="close"
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.3 }}
-                className="absolute"
-              >
-                <X color="white" strokeWidth={3} size={24} />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="menu"
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.3 }}
-                className="absolute"
-              >
-                <Menu color="white" strokeWidth={3} size={24} />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </button>
-      </div>
-    </div>
+    <Sheet>
+      <SheetTrigger asChild>
+        <Button variant="outline" className="lg:hidden">
+          <Menu size={25} />
+        </Button>
+      </SheetTrigger>
+      <SheetContent>
+        <SheetHeader>
+          <SheetTitle>জামিয়াতুল লতিফ</SheetTitle>
+          <SheetDescription>জামিয়াতুল লতিফ, রূপগঞ্জ, নারায়ণগঞ্জ।</SheetDescription>
+        </SheetHeader>
+        <div>
+          <DropDown menu={intro} />
+          <DropDown menu={course} />
+          <DropDown menu={notice} />
+          <DropDown menu={curriculum} />
+          <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
+          <NavTitle router={`/${lang}/blogs`}>প্রবন্ধ</NavTitle>
+        </div>
+      </SheetContent>
+    </Sheet>
   );
-};
-
-export default MobileMenu;
+}

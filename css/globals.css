@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-strong{
-    font-weight: bold;
-    color: rgb(59, 74, 90);
+strong {
+  font-weight: bold;
+  color: rgb(59, 74, 90);
+}
+
+::selection{
+    background-color: #334155;
+    color: white;
 }

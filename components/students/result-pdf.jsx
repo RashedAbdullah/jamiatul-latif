@@ -26,7 +26,7 @@ const GetResultPdf = ({ studentData }) => {
     <div className="flex justify-end ">
       <button
         onClick={handleDownload}
-        className="flex justify-center items-center align-middle gap-2 bg-green-500 text-white py-1 px-3 shadow-md"
+        className="flex justify-center items-center align-middle gap-2 bg-slate-800 text-white py-1 px-3 shadow-md"
       >
         <IoIosPrint />
         প্রিন্ট করুন

@@ -8,7 +8,7 @@ import UserProfile from "./user-profile";
 import NavSearch from "./search";
 import MadrashaLogo from "./logo";
 
-const Navigations = ({ openMenu, lang = "bn", user }) => {
+const Navigations = ({ lang = "bn", user }) => {
   const intro = introductiion(lang);
   const course = courses(lang);
   const notice = notices(lang);
@@ -16,11 +16,9 @@ const Navigations = ({ openMenu, lang = "bn", user }) => {
   return (
     <>
       <nav
-        className={`lg:relative lg:flex justify-between items-center align-middle absolute transition-all duration-300 text-primary container lg:bg-transparent bg-white ${
-          openMenu ? "block -right-5" : "hidden"
-        } top-full`}
+        className={`lg:relative lg:flex justify-between items-center align-middle absolute transition-all duration-300 text-primary container lg:bg-transparent bg-white hidden top-full`}
       >
-       <MadrashaLogo/>
+        <MadrashaLogo />
         <NavSearch />
         <DropDown menu={intro} />
         <DropDown menu={course} />

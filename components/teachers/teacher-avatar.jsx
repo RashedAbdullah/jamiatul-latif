@@ -16,7 +16,7 @@ const TeacherAvatar = ({ lang = "bn", avatar, name }) => {
             className="rounded-full h-52 w-52"
           />
         ) : (
-          <GrUserManager className="h-44 w-44 hover:text-green-500 transition-all duration-300" />
+          <GrUserManager className="h-44 w-44 hover:text-slate-800 transition-all duration-300" />
         )}
       </Link>
     </div>

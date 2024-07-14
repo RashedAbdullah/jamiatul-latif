@@ -1,9 +1,10 @@
+import { BookOpenCheck } from "lucide-react";
 import { MdLibraryBooks } from "react-icons/md";
 
 export const courses = (lang = "bn") => {
   return {
     title: "অনলাইন কোর্সসমূহ",
-    logo: <MdLibraryBooks color="#334155" />,
+    logo: <BookOpenCheck color="#334155" />,
     href: "/courses",
     categories: [
       {
