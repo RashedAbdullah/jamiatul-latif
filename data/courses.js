@@ -4,7 +4,7 @@ import { MdLibraryBooks } from "react-icons/md";
 export const courses = (lang = "bn") => {
   return {
     title: "অনলাইন কোর্সসমূহ",
-    logo: <BookOpenCheck color="#334155" />,
+    logo: <BookOpenCheck size={18} color="#334155" />,
     href: "/courses",
     categories: [
       {

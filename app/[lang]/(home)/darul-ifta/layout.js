@@ -1,5 +1,6 @@
 import CategoriesOptions from "@/components/darul-ifta/categories-options";
 
+
 export const metadata = {
   title: "দারুল ইফতা",
   description:
@@ -8,9 +9,9 @@ export const metadata = {
 
 export default function LayoutIfta({ children, params: { lang } }) {
   return (
-    <div>
-     
+    <div className="relative">
       <CategoriesOptions />
+      
       {children}
     </div>
   );

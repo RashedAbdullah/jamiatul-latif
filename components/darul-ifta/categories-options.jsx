@@ -1,5 +1,7 @@
 "use client";
-// Import necessary libraries
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "tailwindcss/tailwind.css";
@@ -29,7 +31,6 @@ const SelectDropdown = ({ lang = "bn" }) => {
     }, {})
   );
 
-
   const handleOptionClick = (optionEn, optionBn) => {
     setSelectedOption(optionBn);
     router.push(`/${lang}/darul-ifta/${optionEn}`);
@@ -39,8 +40,13 @@ const SelectDropdown = ({ lang = "bn" }) => {
   return (
     <div className="flex justify-center">
       <div className="relative min-w-56 mt-6">
+        <div className="">
+          <Link href={`/${lang}/ask-fatwa`}>
+            <Button className="w-full">ফতোয়া জিজ্ঞেস করুন</Button>
+          </Link>
+        </div>
         <div
-          className="border border-gray-300 rounded p-2 cursor-pointer flex justify-between items-center bg-green-500 text-white shadow"
+          className="border border-gray-300 rounded p-2 cursor-pointer flex justify-between items-center bg-slate-800 text-white shadow"
           onClick={() => setIsOpen(!isOpen)}
         >
           {selectedOption}

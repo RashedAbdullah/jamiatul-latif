@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Home({ params: { lang } }) {
   return (
     <main className="container">
-      <div className="grid grid-cols-2">
+      <div className="lg:grid grid-cols-2 flex flex-col-reverse">
         <div className="flex flex-col justify-center gap-14 min-h-[70vh]">
           <div>
             <h2 className="lg:text-4xl md:text-2xl text-xl">
@@ -56,22 +56,22 @@ export default function Home({ params: { lang } }) {
       </div>
 
       {/* বেসিক মাদরাসা ইনফো */}
-      <div className="flex justify-between">
+      <div className="lg:flex justify-between">
         <div className="p-4">
           <h3 className="text-4xl">১১০+</h3>
           <h3>মোট ছাত্র সংখ্যা</h3>
         </div>
-        <div className="border-r-2"></div>
+        <div className="lg:border-r-2 border-b-2"></div>
         <div className="p-4">
           <h3 className="text-4xl">১৫+</h3>
           <h3>শিক্ষক সংখ্যা</h3>
         </div>
-        <div className="border-r-2"></div>
+        <div className="lg:border-r-2 border-b-2"></div>
         <div className="p-4">
           <h3 className="text-4xl">৫+</h3>
           <h3>স্টাপ ও কর্মচারি সংখ্যা</h3>
         </div>
-        <div className="border-r-2"></div>
+        <div className="lg:border-r-2 border-b-2"></div>
         <div className="p-4">
           <h3 className="text-4xl">৪+</h3>
           <h3>মাদরাসার বয়স</h3>

@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { Button } from "../ui/button";
+import { MoveRight } from "lucide-react";
 
 const FatwaCard = ({ fatwa, lang = "bn" }) => {
   return (
-    <div className="bg-white p-5 rounded shadow-lg">
+    <div className="bg-white p-5 shadow">
       <h2 className="text-lg font-semibold">
         {fatwa.questioner} - {fatwa.address}
       </h2>
@@ -20,9 +21,9 @@ const FatwaCard = ({ fatwa, lang = "bn" }) => {
       </div>
       <div className="flex justify-end mt-2">
         <Link href={`/${lang}/darul-ifta/${fatwa.categoryEn}/${fatwa.id}`}>
-          <button className="mt-1 bg-green-500 text-white px-5 py-2 text-sm rounded-lg flex gap-1 items-center justify-center hover:bg-green-800 transition duration-300">
-            বিস্তারিত <MdKeyboardDoubleArrowRight />
-          </button>
+          <Button className="flex gap-2">
+            বিস্তারিত <MoveRight />
+          </Button>
         </Link>
       </div>
     </div>
