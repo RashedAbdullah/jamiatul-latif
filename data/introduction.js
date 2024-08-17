@@ -27,6 +27,12 @@ export const introductiion = (lang = "bn") => {
         ar: "",
         logo: <PiStudentFill color="#334155" />,
       },
+      {
+        en: `/${lang}/results`,
+        bn: "পরীক্ষার ফলাফল",
+        ar: "",
+        logo: <PiStudentFill color="#334155" />,
+      },
     ],
   };
 };

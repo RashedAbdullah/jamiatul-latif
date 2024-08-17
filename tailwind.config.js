@@ -27,6 +27,9 @@ module.exports = {
           to: { height: "0" },
         },
       },
+      fontFamily: {
+        NotoSerifBengali: ["Noto Serif Bengali"],
+      },
       colors: {
         primary: "#334155",
         secondary: "#002366",
