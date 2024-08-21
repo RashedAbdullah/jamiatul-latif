@@ -25,7 +25,7 @@ const ResultTable = async () => {
           <Table>
             {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
             <TableHeader>
-              <TableRow>
+              <TableRow className="bg-slate-100">
                 <TableHead className="text-center border">ক্র.</TableHead>
                 <TableHead className="text-center border">নাম</TableHead>
                 <TableHead className="text-center border">দাখিলা</TableHead>

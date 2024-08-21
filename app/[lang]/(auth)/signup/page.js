@@ -7,8 +7,8 @@ const SignupPage = ({ lang = "bn" }) => {
     <div className="contain py-16">
       <div className="max-w-lg mx-auto shadow px-6 py-7 overflow-hidden">
         <SignUpForm />
-        <SocialLogin />
-        <p className="mt-4 text-center text-gray-600">
+        {/* <SocialLogin /> */}
+        {/* <p className="mt-4 text-center text-gray-600">
           কোন একাউন্ট নেই?{" "}
           <Link
             href={`/${lang}/signup`}
@@ -16,7 +16,7 @@ const SignupPage = ({ lang = "bn" }) => {
           >
             রেজিস্টার করুন
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );

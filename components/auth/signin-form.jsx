@@ -4,6 +4,7 @@ import { handleSignin } from "@/actions";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import SubTitle from "../sub-title";
+import { Button } from "../ui/button";
 
 const SigninForm = ({ lang = "bn" }) => {
   const [error, setError] = useState();
@@ -28,6 +29,7 @@ const SigninForm = ({ lang = "bn" }) => {
       {error && <div className="text-center text-sm text-red-500">{error}</div>}
       <form onSubmit={handleSubmit}>
         <SubTitle showIcon={false}>সাইনইস করুন</SubTitle>
+        <p className="text-center text-red-500 text-sm">( কেবল এডমিনেরে জন্য প্রযোজ্য )</p>
         <div className="flex flex-col gap-5">
           {/* ইমেইল */}
           <div className="grid grid-cols-10">
@@ -56,9 +58,7 @@ const SigninForm = ({ lang = "bn" }) => {
           </div>
 
           <div className="text-center">
-            <button className="bg-green-500 hover:bg-green-600 transition-all duration-300 text-white py-2 px-10 mt-3 shadow-lg">
-              সাবমিট করুন
-            </button>
+            <Button>সাবমিট করুন</Button>
           </div>
         </div>
       </form>

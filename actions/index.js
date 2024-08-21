@@ -47,6 +47,17 @@ const getStudents = async () => {
   }
 };
 
+const getStudentsByClass = async (classId) => {
+  try {
+    await connectMongo();
+
+    const studentByclass = await studentModel.findById(classId).lean();
+    return replaceMongoIdInObject(studentByclass);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const getStudentByDakhila = async (dakhila) => {
   try {
     await connectMongo();
@@ -99,6 +110,7 @@ export {
   handleSignin,
   getTeachers,
   getStudents,
+  getStudentsByClass,
   getStudentByDakhila,
   getCurriculums,
   getAllFatwa,

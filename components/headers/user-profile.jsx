@@ -8,24 +8,12 @@ const UserProfile = ({ lang = "bn", user }) => {
       <div className="">
         {user ? (
           <Link
-            href={`/${lang}/user/${user?.name?.replaceAll(" ", "_")}`}
+            href={`/${lang}/dashboard`}
             className="flex items-center gap-2 ml-4 p-1"
           >
-            {user?.iamge ? (
-              <div>
-                <Image
-                  src={user?.iamge}
-                  alt="user avatar"
-                  height={400}
-                  width={400}
-                  className="rounded-full h-10 w-10"
-                />
-              </div>
-            ) : (
-              <p className="py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 border-b transition duration-300 cursor-pointer bg-white hover:bg-primary hover:text-white">
-                {user.name}
-              </p>
-            )}
+            <p className="py-2 lg:px-4 px-6 w-full relative flex items-center space-x-2 transition duration-300 cursor-pointer bg-primary text-white hover:bg-slate-900">
+            ড্যাশবোর্ড
+            </p>
           </Link>
         ) : (
           <NavTitle
