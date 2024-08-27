@@ -7,7 +7,7 @@ import Link from "next/link";
 const SignInPage = ({ lang = "bn" }) => {
   return (
     <div className="contain py-16">
-      <div className="max-w-lg mx-auto shadow px-6 py-7 overflow-hidden">
+      <div className="max-w-lg mx-auto px-6 py-20 overflow-hidden">
         <SigninForm />
         {/* <SocialLogin /> */}
         {/* <p className="mt-4 text-center text-gray-600">

@@ -7,6 +7,7 @@ import { curriculums } from "@/data/curriculum";
 import UserProfile from "./user-profile";
 import NavSearch from "./search";
 import MadrashaLogo from "./logo";
+import AdminDialog from "./admin-dialog";
 
 const Navigations = ({ lang = "bn", user }) => {
   const intro = introductiion(lang);
@@ -26,7 +27,7 @@ const Navigations = ({ lang = "bn", user }) => {
         <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={notice} />
         <NavTitle router={`/${lang}/blogs`}>প্রবন্ধ</NavTitle>
-        <UserProfile user={user} />
+        <AdminDialog />
       </nav>
     </>
   );

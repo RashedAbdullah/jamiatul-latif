@@ -28,15 +28,17 @@ const SigninForm = ({ lang = "bn" }) => {
     <>
       {error && <div className="text-center text-sm text-red-500">{error}</div>}
       <form onSubmit={handleSubmit}>
-        <SubTitle showIcon={false}>সাইনইস করুন</SubTitle>
-        <p className="text-center text-red-500 text-sm">( কেবল এডমিনেরে জন্য প্রযোজ্য )</p>
+        <SubTitle showIcon={false}>সাইন-ইন করুন</SubTitle>
+        <p className="text-center text-red-500 text-sm mb-10">
+          ( কেবল এডমিনের জন্য প্রযোজ্য )
+        </p>
         <div className="flex flex-col gap-5">
           {/* ইমেইল */}
           <div className="grid grid-cols-10">
             <p className="col-span-2 text-end px-3">ইমেইল:</p>
             <div className="col-span-8">
               <input
-                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 border-b border-green-500 bg-transparent transition-all duration-300"
+                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-slate-500 border-b border-slate-500 bg-transparent transition-all duration-300"
                 type="email"
                 placeholder="আপনার ইমেইল"
                 name="email"
@@ -49,7 +51,7 @@ const SigninForm = ({ lang = "bn" }) => {
             <p className="col-span-2 text-end px-3">পাসওয়ার্ড:</p>
             <div className="col-span-8">
               <input
-                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 bg-transparent border-b border-green-500"
+                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-slate-500 bg-transparent border-b border-slate-500"
                 type="password"
                 placeholder="আপনার পাসওয়ার্ড"
                 name="password"

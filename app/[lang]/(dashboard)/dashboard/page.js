@@ -1,19 +1,11 @@
 import { auth } from "@/auth";
-import SignoutComp from "@/components/headers/signout";
+// import SignoutComp from "@/components/headers/signout";
 
-const DashboardPage = async () => {
-  const session = await auth();
-
-  if (!session) {
-    redirect("/signin");
-  }
-
+const DashboardPage = () => {
   return (
     <div>
       <div>
-        <div>
-        
-        </div>
+        <div></div>
       </div>
     </div>
   );

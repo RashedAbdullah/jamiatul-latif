@@ -1,7 +1,6 @@
 import DashboardResultTable from "../_components/dashboard-result-table";
 
-const DashboardResultPageByClass = ({ params: { byclass } }) => {
-  
+const DashboardResultPageByClass = async ({ params: { byclass } }) => {
   return (
     <div>
       <DashboardResultTable id={byclass} />

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const DashboardResultPage = async ({ params: { lang = "bn" } }) => {
   const results = await getStudents();
-  console.log(results);
+
   return (
     <div>
       {results.map((className) => (
