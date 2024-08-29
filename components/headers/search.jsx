@@ -14,9 +14,9 @@ const NavSearch = () => {
     <div className="lg:block flex justify-center">
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline" className="px-2 flex gap-20">
-            <span className="text-gray-500">সার্চ করুন</span>
+          <Button variant="outline" className="px-2 flex gap-2 pr-14">
             <Search size={15} />
+            <span className="text-gray-500">অনুসন্ধান করুন . . .</span>
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">

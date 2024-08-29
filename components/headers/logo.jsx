@@ -8,7 +8,7 @@ const MadrashaLogo = ({ lang = "bn", classes }) => {
     >
       <Link href={`/${lang}`} className="text-2xl font-semibold text-slate-600">
         {/* <Image src="/BName.png" alt="" height={300} width={250} /> */}
-        জামিয়াতুল লতিফ
+        জামিয়াতুল লতিফ রূপগঞ্জ
       </Link>
     </div>
   );

@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 export const introductiion = (lang = "bn") => {
   return {
-    title: "পরিচিতি",
+    title: "আমাদের সম্পর্কে",
     logo: <IoIosArrowDown color="#334155" />,
     href: "/about-madrasha",
     categories: [

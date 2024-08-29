@@ -23,7 +23,7 @@ export default async function RootLayout({ children, params: { lang } }) {
           {/* <MadrashaThumbnail /> */}
           <Navbar user={session?.user} />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>

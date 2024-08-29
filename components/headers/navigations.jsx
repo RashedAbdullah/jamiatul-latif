@@ -22,11 +22,11 @@ const Navigations = ({ lang = "bn", user }) => {
         <MadrashaLogo />
         <NavSearch />
         <DropDown menu={intro} />
-        <DropDown menu={course} />
+        <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া</NavTitle>
         <DropDown menu={curriculum} />
-        <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={notice} />
-        <NavTitle router={`/${lang}/blogs`}>প্রবন্ধ</NavTitle>
+        <DropDown menu={course} />
+        {/* <NavTitle router={`/${lang}/blogs`}>প্রবন্ধ</NavTitle> */}
         <AdminDialog />
       </nav>
     </>

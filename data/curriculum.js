@@ -2,7 +2,7 @@ import { IoBookSharp } from "react-icons/io5";
 
 export const curriculums = (lang = "bn") => {
   return {
-    title: "শিক্ষা কারিকুলাম",
+    title: "পাঠ্যক্রম",
     logo: "",
     href: "/curriculums",
     categories: [
