@@ -9,7 +9,7 @@ const HomaPageCourses = () => {
           <h2 className="text-[#083042]">কোর্সসমূহ</h2>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-10 mt-6">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-6">
         <CourseCard />
         <CourseCard />
         <CourseCard />
