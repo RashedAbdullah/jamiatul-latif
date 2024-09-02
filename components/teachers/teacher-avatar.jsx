@@ -2,11 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { GrUserManager } from "react-icons/gr";
 
-const TeacherAvatar = ({ lang = "bn", avatar, name }) => {
-
+const TeacherAvatar = ({ lang = "bn", avatar, name, id }) => {
   return (
     <div className="flex justify-center my-2">
-      <Link href={`/${lang}/teachers/${name}`}>
+      <Link href={`/${lang}/teachers/${id}`}>
         {avatar ? (
           <Image
             src={avatar}

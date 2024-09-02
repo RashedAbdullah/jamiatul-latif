@@ -36,6 +36,17 @@ const getTeachers = async () => {
   }
 };
 
+const getSingleTeacher = async (teacherId) => {
+  try {
+    await connectMongo();
+
+    const teacher = await teacherModel.findById(teacherId).lean();
+    return replaceMongoIdInObject(teacher);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const getStudents = async () => {
   try {
     await connectMongo();
@@ -109,6 +120,7 @@ const getFatwaById = async (fatwaId) => {
 export {
   handleSignin,
   getTeachers,
+  getSingleTeacher,
   getStudents,
   getStudentsByClass,
   getStudentByDakhila,

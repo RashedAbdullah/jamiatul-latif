@@ -9,10 +9,14 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "i.ibb.co",
-    },
+      },
       {
         protocol: "https",
         hostname: "scontent.fdac11-1.fna.fbcdn.net",
+      },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
       },
     ],
   },

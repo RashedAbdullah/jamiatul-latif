@@ -25,6 +25,7 @@
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.2.0",
     "framer-motion": "^11.2.10",
     "lucide-react": "^0.400.0",
     "mongodb": "^6.7.0",
