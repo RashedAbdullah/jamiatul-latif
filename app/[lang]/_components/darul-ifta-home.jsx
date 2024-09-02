@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const DarulIftaHome = () => {
   return (
-    <div className="grid grid-cols-2 gap-10">
+    <div className="lg:grid grid-cols-2 gap-10">
       <div>
         <Image src={ifta_book} alt="Jamia picture" placeholder="blur" />
       </div>
