@@ -16,7 +16,7 @@ const HomePageTeachers = async ({ lang = "bn" }) => {
   return (
     <div>
       <div>
-        <PageTitle>সম্মানিত উস্তাুযবৃন্দ</PageTitle>
+        <PageTitle>শিক্ষকবৃন্দ</PageTitle>
       </div>
       <div className="flex justify-center items-center">
         <Carousel className="w-full">

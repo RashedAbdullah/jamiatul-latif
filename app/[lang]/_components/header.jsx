@@ -4,13 +4,13 @@ import Link from "next/link";
 import book from "@/public/book.png";
 import darululum from "@/public/darululum.png";
 import reader from "@/public/reader.png";
-
+import homeImage from "@/public/home_image.jpeg"
 const HeaderInfo = ({ lang = "bn" }) => {
   return (
     <div className="lg:grid grid-cols-2 flex flex-col-reverse">
-      <div className="flex flex-col justify-center gap-14 min-h-[70vh]">
+      <div className="flex flex-col justify-center gap-14 md:min-h-[70vh] min-h-[40vh]">
         <div>
-          <h2 className="lg:text-4xl md:text-2xl text-xl">
+          <h2 className="lg:text-4xl text-2xl">
             জ্ঞান কেবল সূচনা, জ্ঞানের পরেই রয়েছে প্রজ্ঞা{" "}
             <strong>জমিয়াতুল লতিফে</strong> আমরা মনকে করি আলোকিত এবং আত্মাকে
             করি প্রভুর পথে অনুপ্রাণিত।
@@ -38,7 +38,7 @@ const HeaderInfo = ({ lang = "bn" }) => {
         </div>
       </div>
       <div className="flex justify-center gap-5 mt-10">
-        <div>
+        <div className="md:block hidden">
           <Image
             src={book}
             alt="Jamia picture"
@@ -46,11 +46,14 @@ const HeaderInfo = ({ lang = "bn" }) => {
             placeholder="blur"
           />
         </div>
-        <div className="mt-10">
+        <div className="mt-10 md:block hidden">
           <Image src={reader} alt="Jamia picture" />
         </div>
-        <div>
-          <Image src={darululum} alt="Jamia picture" />
+        <div className="md:block hidden">
+          <Image src={darululum} alt="Jamia picture"/>
+        </div>
+        <div className="sm:hidden">
+        <Image src={homeImage} alt="Jamia picture"/>
         </div>
       </div>
     </div>
