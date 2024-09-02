@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 
 const DarulIftaHome = () => {
   return (
-    <div className="lg:grid grid-cols-2 gap-10">
+    <div className="md:grid  grid-cols-2 gap-10">
       <div>
         <Image src={ifta_book} alt="Jamia picture" placeholder="blur" />
       </div>
       <div className="flex flex-col justify-center gap-5">
-        <div className="text-2xl font-semibold">
+        <div className="text-2xl font-semibold text-center md:text-start mt-10 md:mt-0">
           <h2>ফতোয়া বিভাগ</h2>
         </div>
         <div>
@@ -20,9 +20,9 @@ const DarulIftaHome = () => {
             ফতোয়া প্রদান করেন।
           </p>
         </div>
-        <div className="flex gap-4">
-        <Button>আপনার জিজ্ঞাসা</Button>
-        <Button variant="secondary">ইফতার প্রবন্ধ পড়ুন</Button>
+        <div className="flex gap-4 justify-center md:justify-start">
+          <Button>আপনার জিজ্ঞাসা</Button>
+          <Button variant="secondary">ইফতার প্রবন্ধ পড়ুন</Button>
         </div>
       </div>
     </div>

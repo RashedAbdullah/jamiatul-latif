@@ -30,7 +30,7 @@ const HomePageTeachers = async ({ lang = "bn" }) => {
                   <Card>
                     <CardContent className="flex aspect-square items-center justify-center p-6">
                       <div
-                        className={`h-[400px]  w-[500px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
+                        className={`h-[400px] w-[400px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
                         style={{ backgroundImage: `url(${teacher.image})` }}
                       >
                         <div className="backdrop-blur-md w-full p-2">
@@ -39,7 +39,7 @@ const HomePageTeachers = async ({ lang = "bn" }) => {
                               {teacher.name}
                             </h2>
                           </div>
-                          <div className="flex justify-between text-gray-700">
+                          <div className="flex justify-between text-gray-300">
                             <p>{teacher.post}</p>
                             <Link
                               className="underline"
@@ -56,7 +56,7 @@ const HomePageTeachers = async ({ lang = "bn" }) => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
+          <CarouselPrevious className="" />
           <CarouselNext />
         </Carousel>
       </div>
