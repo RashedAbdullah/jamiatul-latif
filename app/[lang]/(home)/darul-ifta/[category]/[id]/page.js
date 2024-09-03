@@ -5,7 +5,7 @@ const SingleFatwaPage = async ({ params: { id } }) => {
   const fatwaById = await getFatwaById(id);
 
   return (
-    <div className="lg:mx-20 mx-10 my-10 ">
+    <div className="container">
       <div className="lg:grid grid-cols-4 gap-5">
         <div className="flex flex-col gap-5 col-span-3 bg-white min-h-[80vh] p-10 rounded shadow-lg">
           {/* Category */}

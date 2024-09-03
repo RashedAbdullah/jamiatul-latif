@@ -1,4 +1,3 @@
-import { getStudents } from "@/actions";
 import SubTitle from "@/components/sub-title";
 
 import {
@@ -13,15 +12,13 @@ import { getNumberValue } from "@/utils/get-student-value";
 import { getEngToBnNumber } from "@/utils/number-converter";
 import { Fragment } from "react";
 
-const ResultTable = async () => {
-  const results = await getStudents();
-
+const ResultTable = ({ results, examNo = 0 }) => {
   return (
     <div>
       {results.map((classes) => {
         // Step 1: Calculate total number for each student and store it in a new property
         classes.students.forEach((student) => {
-          student.total = student.results[0].numbers.reduce(
+          student.total = student.results[Number(examNo)].numbers.reduce(
             (acc, curr) => acc + curr.number,
             0
           );
@@ -47,13 +44,15 @@ const ResultTable = async () => {
                   <TableHead className="text-center border">ক্র.</TableHead>
                   <TableHead className="text-center border">নাম</TableHead>
                   <TableHead className="text-center border">দাখিলা</TableHead>
-                  {classes.students[0].results[0].numbers.map((result) => (
-                    <Fragment key={result.book}>
-                      <TableHead className="w-full border py-2">
-                        {result.book}
-                      </TableHead>
-                    </Fragment>
-                  ))}
+                  {classes.students[0].results[Number(examNo)].numbers.map(
+                    (result) => (
+                      <Fragment key={result.book}>
+                        <TableHead className="w-full border py-2">
+                          {result.book}
+                        </TableHead>
+                      </Fragment>
+                    )
+                  )}
                   <TableHead className="text-center border">মোট</TableHead>
                   <TableHead className="text-center border">গড়</TableHead>
                   <TableHead className="text-center border">মান</TableHead>
@@ -72,7 +71,7 @@ const ResultTable = async () => {
                     <TableCell className="w-8 border-x font-NotoSerifBengali">
                       {getEngToBnNumber(student.dakhila)}
                     </TableCell>
-                    {student.results[0].numbers.map((result) => (
+                    {student.results[Number(examNo)].numbers.map((result) => (
                       <Fragment key={result.book}>
                         <TableCell
                           className={`w-full border-r font-NotoSerifBengali ${
@@ -88,12 +87,13 @@ const ResultTable = async () => {
                     </TableCell>
                     <TableCell className="w-full text-center border-r font-NotoSerifBengali">
                       {getEngToBnNumber(
-                        student.total / student.results[0].numbers.length
+                        student.total /
+                          student.results[Number(examNo)].numbers.length
                       )}
                     </TableCell>
                     <TableCell className="w-full text-center border-r font-NotoSerifBengali">
                       {/* Student Ranking */}
-                      {getNumberValue(student.results[0].numbers)}
+                      {getNumberValue(student.results[Number(examNo)].numbers)}
                     </TableCell>
                     <TableCell className="w-full text-center border-r font-NotoSerifBengali">
                       {/* Student Ranking */}

@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -8,7 +7,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
-export default function PopoverDemo({ lang = "bn" }) {
+export default function SelectAcademicYear({ lang = "bn", navlink }) {
   const years = [
     { bn: "২০২৪-২৫", en: "2024-25" },
     { bn: "২০২৩-২৪", en: "2023-24" },
@@ -20,7 +19,7 @@ export default function PopoverDemo({ lang = "bn" }) {
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline">
-          শিক্ষাবর্ষ <ChevronDown size={15}/>
+          শিক্ষাবর্ষ নির্বাচন করুন <ChevronDown size={15} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-40">
@@ -29,7 +28,7 @@ export default function PopoverDemo({ lang = "bn" }) {
             <li>
               <Link
                 className="py-1 px-3 hover:bg-gray-100 block"
-                href={`/${lang}/students/${year.en}`}
+                href={`/${lang}/${navlink}/${year.en}`}
               >
                 {year.bn}
               </Link>

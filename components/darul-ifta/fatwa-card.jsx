@@ -4,7 +4,7 @@ import { MoveRight } from "lucide-react";
 
 const FatwaCard = ({ fatwa, lang = "bn" }) => {
   return (
-    <div className="bg-white p-5 shadow">
+    <div className="bg-white p-5 border shadow">
       <h2 className="text-lg font-semibold">
         {fatwa.questioner} - {fatwa.address}
       </h2>

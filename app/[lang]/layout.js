@@ -1,7 +1,6 @@
 import { Hind_Siliguri } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
-import MadrashaThumbnail from "@/components/thumbnail/madrasha-thumbnail";
 import Footer from "@/components/footer/footer";
 import { auth } from "@/auth";
 
@@ -20,7 +19,6 @@ export default async function RootLayout({ children, params: { lang } }) {
     <html lang={lang}>
       <body className={bengali.className}>
         <div>
-          {/* <MadrashaThumbnail /> */}
           <Navbar user={session?.user} />
           {children}
           <Footer />

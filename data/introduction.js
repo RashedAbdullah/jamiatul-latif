@@ -28,7 +28,7 @@ export const introductiion = (lang = "bn") => {
         logo: <PiStudentFill color="#334155" />,
       },
       {
-        en: `/${lang}/results`,
+        en: `/${lang}/results/2024-25`,
         bn: "পরীক্ষার ফলাফল",
         ar: "",
         logo: <PiStudentFill color="#334155" />,

@@ -10,7 +10,7 @@ const GetFatwaByCategory = async ({ categoryName }) => {
   );
 
   return (
-    <div className="lg:px-20 px-10 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 my-5 gap-10">
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 my-5 gap-10">
       <div className="col-span-4">
         {fatwasByCategory.length > 0 ? (
           <FatwaTitle

@@ -39,12 +39,7 @@ const SelectDropdown = ({ lang = "bn" }) => {
 
   return (
     <div className="flex justify-center">
-      <div className="relative min-w-56 mt-6">
-        <div className="">
-          <Link href={`/${lang}/ask-fatwa`}>
-            <Button className="w-full">ফতোয়া জিজ্ঞেস করুন</Button>
-          </Link>
-        </div>
+      <div className="relative min-w-56">
         <div
           className="border border-gray-300 rounded p-2 cursor-pointer flex justify-between items-center bg-slate-800 text-white shadow"
           onClick={() => setIsOpen(!isOpen)}

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import ifta_book from "@/public/ifta_book.png";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-const DarulIftaHome = () => {
+const DarulIftaHome = ({ lang = "bn" }) => {
   return (
     <div className="md:grid  grid-cols-2 gap-10">
       <div>
@@ -21,8 +22,12 @@ const DarulIftaHome = () => {
           </p>
         </div>
         <div className="flex gap-4 justify-center md:justify-start">
-          <Button>আপনার জিজ্ঞাসা</Button>
-          <Button variant="secondary">ইফতার প্রবন্ধ পড়ুন</Button>
+          <Link href={`/${lang}/ask-fatwa`}>
+            <Button>আপনার জিজ্ঞাসা</Button>
+          </Link>
+          <Link href={`/${lang}/darul-ifta`}>
+            <Button variant="secondary">ইফতার প্রবন্ধ পড়ুন</Button>
+          </Link>
         </div>
       </div>
     </div>

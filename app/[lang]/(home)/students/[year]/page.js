@@ -1,6 +1,5 @@
 import { getStudents } from "@/actions";
 import PageTitle from "@/components/page-title";
-import SelectAcademicYear from "@/components/students/select-academic-year";
 import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
 
@@ -22,7 +21,7 @@ const StudentsPage = async ({ params: { year: academicYear } }) => {
   return (
     <div className="container">
       <PageTitle>ছাত্রদের তথ্য বিবরণ ( {selectYear(academicYear)} )</PageTitle>
-      <SelectAcademicYear />
+
       {studentsByYear.length ? (
         studentsByYear.map((student) => (
           <div key={student.className}>

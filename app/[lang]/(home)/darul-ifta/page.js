@@ -3,8 +3,8 @@ import GetFatwaByCategory from "@/components/darul-ifta/get-fatwa-by-category";
 
 const DarulIftaPage = () => {
   return (
-    <div>
-      <IftaThumbnail />
+    <div className="container">
+      {/* <IftaThumbnail /> */}
       <GetFatwaByCategory />
     </div>
   );
