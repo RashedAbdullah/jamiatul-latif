@@ -5,6 +5,10 @@ const TeacherSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  teacherSerial: {
+    type: Number,
+    required: true,
+  },
   post: {
     type: String,
     required: true,

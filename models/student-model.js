@@ -5,6 +5,10 @@ const StudentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  classSerial: {
+    type: Number,
+    required: true,
+  },
   academicYear: {
     type: String,
     required: true,

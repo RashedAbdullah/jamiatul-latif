@@ -1,3 +1,4 @@
+import { getStudents } from "@/actions";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -7,29 +8,25 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
-export default function SelectExam({ lang = "bn", path }) {
-  console.log(path);
-  const exams = [
-    { bn: "প্রথম সাময়ীক পরীক্ষা", en: 0 },
-    { bn: "দ্বিতীয় সাময়ীক পরীক্ষা", en: 1 },
-    { bn: "বার্ষিক পরীক্ষা", en: 2 },
-  ];
+export default async function SelectClass({ lang = "bn", path }) {
+  const classes = await getStudents();
+
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline">
-          পরীক্ষা নির্বাচন করুন <ChevronDown size={15} />
+          জামাত নির্বাচন করুন <ChevronDown size={15} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-52">
-        {exams.map((exam) => (
-          <ul key={exam.en}>
+        {classes.map((cls) => (
+          <ul key={cls.className}>
             <li>
               <Link
                 className="py-1 px-3 hover:bg-gray-100 block"
-                href={`/${lang}/results/2024-25//${exam.en}`}
+                href={`/${lang}/results/2024-25//${cls.id}`}
               >
-                {exam.bn}
+                {cls.className}
               </Link>
             </li>
           </ul>

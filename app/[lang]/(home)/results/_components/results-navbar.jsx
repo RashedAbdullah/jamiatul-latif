@@ -1,5 +1,5 @@
 import SelectAcademicYear from "@/components/students/select-academic-year";
-import SelectExam from "./selectExam";
+import SelectExam from "./selectClass";
 
 const ResultsNavbar = () => {
   return (
