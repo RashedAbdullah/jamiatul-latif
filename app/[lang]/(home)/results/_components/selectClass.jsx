@@ -19,18 +19,20 @@ export default async function SelectClass({ lang = "bn", path }) {
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-52">
-        {classes.map((cls) => (
-          <ul key={cls.className}>
-            <li>
-              <Link
-                className="py-1 px-3 hover:bg-gray-100 block"
-                href={`/${lang}/results/2024-25//${cls.id}`}
-              >
-                {cls.className}
-              </Link>
-            </li>
-          </ul>
-        ))}
+        {classes
+          .sort((a, b) => a.classSerial - b.classSerial)
+          .map((cls) => (
+            <ul key={cls.className}>
+              <li>
+                <Link
+                  className="py-1 px-3 hover:bg-gray-100 block"
+                  href={`/${lang}/results/2024-25//${cls.id}`}
+                >
+                  {cls.className}
+                </Link>
+              </li>
+            </ul>
+          ))}
       </PopoverContent>
     </Popover>
   );

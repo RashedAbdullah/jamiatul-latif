@@ -23,16 +23,18 @@ const StudentsPage = async ({ params: { year: academicYear } }) => {
       <PageTitle>ছাত্রদের তথ্য বিবরণ ( {selectYear(academicYear)} )</PageTitle>
 
       {studentsByYear.length ? (
-        studentsByYear.map((student) => (
-          <div key={student.className}>
-            <SubTitle>{student.className}</SubTitle>
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
-              {student.students.map((student) => (
-                <StudentsCard key={student.dakhila} student={student} />
-              ))}
+        studentsByYear
+          .sort((a, b) => a.classSerial - b.classSerial)
+          .map((student) => (
+            <div key={student.className}>
+              <SubTitle>{student.className}</SubTitle>
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
+                {student.students.map((student) => (
+                  <StudentsCard key={student.dakhila} student={student} />
+                ))}
+              </div>
             </div>
-          </div>
-        ))
+          ))
       ) : (
         <div className="text-center p-20">
           <h2 className="text-2xl text-gray-500">

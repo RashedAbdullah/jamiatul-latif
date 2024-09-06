@@ -9,9 +9,11 @@ const TeachersPage = async () => {
     <div className="text-primary">
       <PageTitle>শিক্ষক পরিচিতি</PageTitle>
       <div className="container grid lg:grid-cols-2 grid-cols-1 gap-5 mb-5">
-        {teachers.map((teacher) => (
-          <TeacherCard key={teacher.id} teacher={teacher} />
-        ))}
+        {teachers
+          .sort((a, b) => a.teacherSerial - b.teacherSerial)
+          .map((teacher) => (
+            <TeacherCard key={teacher.id} teacher={teacher} />
+          ))}
       </div>
     </div>
   );

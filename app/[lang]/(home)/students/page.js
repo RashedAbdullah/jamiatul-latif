@@ -5,6 +5,7 @@ import SubTitle from "@/components/sub-title";
 
 const StudentsPage = async ({ params: { year = "2024-25" } }) => {
   const students = await getStudents();
+
   const selectYear = (year) => {
     if (year === "2024-25") return "২০২৪-২৫";
     else if (year === "2023-24") return "২০২৩-২৪";
@@ -21,16 +22,18 @@ const StudentsPage = async ({ params: { year = "2024-25" } }) => {
   return (
     <div className="container">
       <PageTitle>ছাত্রদের তথ্য বিবরণ ( {selectYear(year)} )</PageTitle>
-      {studentsByYear.map((student) => (
-        <div key={student.className}>
-          <SubTitle>{student.className}</SubTitle>
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
-            {student.students.map((student) => (
-              <StudentsCard key={student.dakhila} student={student} />
-            ))}
+      {studentsByYear
+        .sort((a, b) => a.classSerial - b.classSerial)
+        .map((student) => (
+          <div key={student.className}>
+            <SubTitle>{student.className}</SubTitle>
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
+              {student.students.map((student) => (
+                <StudentsCard key={student.dakhila} student={student} />
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 };
