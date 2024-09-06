@@ -1,19 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import { GrUserManager } from "react-icons/gr";
 
-const TeacherAvatar = ({ lang = "bn", avatar, name, id }) => {
+const TeacherAvatar = ({ lang = "bn", avatar, id }) => {
   return (
     <div className="flex justify-center my-2">
       <Link href={`/${lang}/teachers/${id}`}>
         {avatar ? (
-          <Image
-            src={avatar}
-            alt="user avatar"
-            height={400}
-            width={400}
-            className="rounded-full h-52 w-52"
-          />
+          <div
+            className={`h-[230px] w-[230px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
+            style={{ backgroundImage: `url(${avatar})` }}
+          ></div>
         ) : (
           <GrUserManager className="h-44 w-44 hover:text-slate-800 transition-all duration-300" />
         )}
