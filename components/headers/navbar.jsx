@@ -4,12 +4,14 @@ import MobileMenu from "./mobile-menu";
 
 const Navbar = ({ user }) => {
   return (
-    <nav className="flex justify-between items-center py-4 sticky top-0 z-10 backdrop-blur-lg container">
-      <MadrashaLogo />
+    <div className="border-b border-primary sticky top-0 z-10 backdrop-blur-lg">
+      <nav className="flex justify-between items-center py-4 container">
+        <MadrashaLogo />
 
-      <Navigations user={user} />
-      <MobileMenu />
-    </nav>
+        <Navigations user={user} />
+        <MobileMenu />
+      </nav>
+    </div>
   );
 };
 

@@ -18,7 +18,7 @@ export default async function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <body className={bengali.className}>
-        <div>
+        <div className="bg-[#e6eaec] text-[#083042]">
           <Navbar user={session?.user} />
           {children}
           <Footer />

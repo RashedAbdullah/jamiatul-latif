@@ -9,7 +9,6 @@ import HomaPageCourses from "./_components/courses";
 import HomePageTeachers from "./_components/teachers";
 
 export default function Home({ params: { lang } }) {
-  // mongodb+srv://jamiatullatifdarulifta:q3TShx2W8TuHeynh@jamaitaullatif.z7dqkyn.mongodb.net/darul_ifta?retryWrites=true&w=majority&appName=jamaitaullatif
   return (
     <main className="container flex flex-col gap-20">
       <HeaderInfo />

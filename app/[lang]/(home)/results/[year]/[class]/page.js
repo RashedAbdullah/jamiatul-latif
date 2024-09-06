@@ -52,30 +52,44 @@ const ExamPage = async ({ params: { year: academicYear, class: byClass } }) => {
           <div>
             <SubTitle>{studentsByClass.className}</SubTitle>
             <SubTitle> প্রথম সাময়ীক পরীক্ষা</SubTitle>
-            <Table>
+            <Table className="bg-slate-300">
               <TableHeader>
-                <TableRow className="bg-slate-100">
-                  <TableHead className="text-center border">ক্র.</TableHead>
-                  <TableHead className="text-center border">নাম</TableHead>
-                  <TableHead className="text-center border">দাখিলা</TableHead>
+                <TableRow className="bg-slate-600">
+                  <TableHead className="text-center border text-white">
+                    ক্র.
+                  </TableHead>
+                  <TableHead className="text-center border text-white">
+                    নাম
+                  </TableHead>
+                  <TableHead className="text-center border text-white">
+                    দাখিলা
+                  </TableHead>
                   {studentsByClass.students[0].results[0].numbers.map(
                     (result) => (
                       <Fragment key={result.book}>
-                        <TableHead className="w-full border py-2">
+                        <TableHead className="w-full border py-2 text-white">
                           {result.book}
                         </TableHead>
                       </Fragment>
                     )
                   )}
-                  <TableHead className="text-center border">মোট</TableHead>
-                  <TableHead className="text-center border">গড়</TableHead>
-                  <TableHead className="text-center border">মান</TableHead>
-                  <TableHead className="text-center border">সিরিয়াল</TableHead>
+                  <TableHead className="text-center border text-white">
+                    মোট
+                  </TableHead>
+                  <TableHead className="text-center border text-white">
+                    গড়
+                  </TableHead>
+                  <TableHead className="text-center border text-white">
+                    মান
+                  </TableHead>
+                  <TableHead className="text-center border text-white">
+                    সিরিয়াল
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {studentsByClass.students.map((student, ind) => (
-                  <TableRow key={student.dakhila}>
+                  <TableRow key={student.dakhila} className="hover:bg-gray-100">
                     <TableCell className="w-8 border-x font-NotoSerifBengali">
                       {getEngToBnNumber(ind + 1)}
                     </TableCell>
