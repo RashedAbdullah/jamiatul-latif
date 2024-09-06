@@ -4,9 +4,7 @@ import NavTitle from "./nav-title";
 import { introductiion } from "@/data/introduction";
 import { notices } from "@/data/notices";
 import { curriculums } from "@/data/curriculum";
-import UserProfile from "./user-profile";
 import NavSearch from "./search";
-import MadrashaLogo from "./logo";
 import AdminDialog from "./admin-dialog";
 
 const Navigations = ({ lang = "bn", user }) => {
@@ -17,16 +15,14 @@ const Navigations = ({ lang = "bn", user }) => {
   return (
     <>
       <nav
-        className={`lg:relative lg:flex justify-between items-center align-middle absolute transition-all duration-300 text-primary container lg:bg-transparent bg-white hidden top-full`}
+        className={`lg:relative lg:flex justify-between items-center align-middle absolute transition-all duration-300 text-primary hidden top-full`}
       >
-        <MadrashaLogo />
         <NavSearch />
         <DropDown menu={intro} />
-        <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া</NavTitle>
+        <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={curriculum} />
         <DropDown menu={notice} />
         <DropDown menu={course} />
-        {/* <NavTitle router={`/${lang}/blogs`}>প্রবন্ধ</NavTitle> */}
         <AdminDialog />
       </nav>
     </>

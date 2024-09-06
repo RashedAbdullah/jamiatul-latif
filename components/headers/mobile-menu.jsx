@@ -16,8 +16,8 @@ import { notices } from "@/data/notices";
 import { curriculums } from "@/data/curriculum";
 import NavTitle from "./nav-title";
 
-export default async function SheetDemo({ lang = "bn" }) {
-  const intro = await introductiion(lang);
+export default function MobileMenu({ lang = "bn" }) {
+  const intro = introductiion(lang);
   const course = courses(lang);
   const notice = notices(lang);
   const curriculum = curriculums(lang);
@@ -31,7 +31,9 @@ export default async function SheetDemo({ lang = "bn" }) {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>জামিয়াতুল লতিফ</SheetTitle>
-          <SheetDescription>জামিয়াতুল লতিফ, রূপগঞ্জ, নারায়ণগঞ্জ।</SheetDescription>
+          <SheetDescription>
+            জামিয়াতুল লতিফ, রূপগঞ্জ, নারায়ণগঞ্জ।
+          </SheetDescription>
         </SheetHeader>
         <div>
           <DropDown menu={intro} />
