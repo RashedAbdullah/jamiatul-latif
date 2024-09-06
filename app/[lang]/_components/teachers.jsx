@@ -33,13 +33,13 @@ const HomePageTeachers = async ({ lang = "bn" }) => {
                         className={`h-[400px] w-[400px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
                         style={{ backgroundImage: `url(${teacher.image})` }}
                       >
-                        <div className="backdrop-blur-md w-full p-2">
+                        <div className="bg-primary text-white bg-opacity-60 w-full p-2">
                           <div>
-                            <h2 className="text-white text-xl font-semibold">
+                            <h2 className="text-xl font-semibold">
                               {teacher.name}
                             </h2>
                           </div>
-                          <div className="flex justify-between text-gray-300">
+                          <div className="flex justify-between mt-1">
                             <p>{teacher.post}</p>
                             <Link
                               className="underline"
