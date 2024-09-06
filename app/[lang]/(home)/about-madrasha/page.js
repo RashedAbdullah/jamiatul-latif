@@ -39,7 +39,7 @@ const AboutPage = () => {
       <div>
         <ul>
           {aboutMadrasha.map((about, ind) => (
-            <li key={ind} className="grid grid-cols-12 p-2 bg-white">
+            <li key={ind} className="grid grid-cols-12 p-2">
               <p className="md:col-span-2 col-span-3 font-semibold">
                 {about.title}:
               </p>

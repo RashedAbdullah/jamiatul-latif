@@ -9,13 +9,14 @@ const HeaderInfo = ({ lang = "bn" }) => {
   return (
     <div className="lg:grid grid-cols-2 lg:gap-10 flex flex-col-reverse">
       <div className="flex flex-col justify-center gap-14 md:min-h-[70vh] min-h-[40vh]">
-        <div className="">
-          <h2 className="lg:text-4xl text-2xl">
+        <div>
+          <h2 className="text-2xl md:text-4xl leading-normal md:leading-snug">
             জ্ঞান কেবল সূচনা, জ্ঞানের পরেই রয়েছে প্রজ্ঞা{" "}
             <strong>জমিয়াতুল লতিফে</strong> আমরা মনকে করি আলোকিত এবং আত্মাকে
             করি প্রভুর পথে অনুপ্রাণিত।
           </h2>
         </div>
+
         <div>
           <p>
             ইলম ও গবেষণার পথে আমাদের সাথে যোগ দিন। আমরা আলোকিত{" "}

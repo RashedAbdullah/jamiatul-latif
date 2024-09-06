@@ -8,10 +8,11 @@ const AnimateNumbers = ({ number }) => {
   const rounded = useTransform(count, Math.round);
 
   useEffect(() => {
-    const animation = animate(count, number, { duration: 3 });
+    const animation = animate(count, number, { duration: 5 });
 
     return animation.stop;
   }, []);
+  3;
 
   return <motion.span>{rounded}</motion.span>;
 };
