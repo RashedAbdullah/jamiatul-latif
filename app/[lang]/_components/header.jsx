@@ -29,7 +29,7 @@ const HeaderInfo = ({ lang = "bn" }) => {
           {/* Buttons */}
           <div className="flex gap-3 mt-3">
             <div>
-              <Link href={`${lang}/donate`}>
+              <Link href={`/`}>
                 <Button>অনুদান দিন</Button>
               </Link>
             </div>

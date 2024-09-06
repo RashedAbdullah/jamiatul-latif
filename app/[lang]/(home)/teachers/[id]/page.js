@@ -18,7 +18,7 @@ const SingleTeacherPage = async ({ params: { id, lang } }) => {
         <div className="lg:border-r lg:pr-2">
           <div className="flex justify-center items-center align-middle">
             <div
-              className={`h-[500px] w-[500px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
+              className={`md:h-[500px] md:w-[500px] h-[400px] w-[400px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
               style={{ backgroundImage: `url(${teacher.image})` }}
             ></div>
           </div>
