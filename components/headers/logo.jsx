@@ -6,7 +6,7 @@ const MadrashaLogo = ({ lang = "bn", classes }) => {
     <div
       className={`flex justify-center align-middle items-center px-2 ${classes}`}
     >
-      <Link href={`/${lang}`} className="text-2xl font-semibold text-slate-600">
+      <Link href={`/${lang}`} className="text-2xl font-semibold text-slate-600 text-nowrap">
         জামিয়াতুল লতিফ রূপগঞ্জ
       </Link>
     </div>
