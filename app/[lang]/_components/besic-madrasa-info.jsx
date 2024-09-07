@@ -12,21 +12,21 @@ const BesicMadrashaInfo = () => {
       <div className="lg:border-r-2 border-b-2"></div>
       <div className="p-4">
         <h3 className="text-4xl font-NotoSerifBengali">
-          <AnimateNumbers number={15} />+
+          <AnimateNumbers number={12} />+
         </h3>
         <h3>অভিজ্ঞ শিক্ষকবৃন্দ</h3>
       </div>
       <div className="lg:border-r-2 border-b-2"></div>
       <div className="p-4">
         <h3 className="text-4xl font-NotoSerifBengali">
-          <AnimateNumbers number={5} />+
+          <AnimateNumbers number={3} />+
         </h3>
         <h3>স্টাপ ও কর্মচারি সংখ্যা</h3>
       </div>
       <div className="lg:border-r-2 border-b-2"></div>
       <div className="p-4">
         <h3 className="text-4xl font-NotoSerifBengali">
-          <AnimateNumbers number={4} />+
+          <AnimateNumbers number={3} />+
         </h3>
         <h3>প্রতিষ্ঠার পর থেকে অভিজ্ঞতার বছর</h3>
       </div>
