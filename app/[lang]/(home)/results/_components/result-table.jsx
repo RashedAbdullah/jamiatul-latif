@@ -94,7 +94,7 @@ const ResultTable = ({ results, examNo = 0 }) => {
                         <Fragment key={result.book}>
                           <TableCell
                             className={`w-full border-r font-NotoSerifBengali ${
-                              result.number < 40 && "text-red-500"
+                              result.number < 33 && "bg-red-300"
                             } text-center`}
                           >
                             {getEngToBnNumber(result.number)}
