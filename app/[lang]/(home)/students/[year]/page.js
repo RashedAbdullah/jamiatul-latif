@@ -1,36 +1,49 @@
+import { getSingleYearByYear } from "@/actions/year";
 import PageTitle from "@/components/page-title";
 import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
+import StudentsNavbar from "../_components/students-navbar";
+import { getClasses } from "@/actions/classes";
+import { getStudentsByYear } from "@/actions/students";
 
-const StudentsPage = async ({ params: { year: academicYear } }) => {
+const StudentsPage = async ({ params: { year } }) => {
+  const academicYear = decodeURIComponent(year);
 
-  // const students = await getStudents();
+  const yearByYear = await getSingleYearByYear(academicYear);
+
+  const classes = await getClasses();
+
+  const studentsForYear = await getStudentsByYear(yearByYear.id);
 
   return (
     <div className="container">
-      <PageTitle>ছাত্রদের তথ্য বিবরণ </PageTitle>
+      <StudentsNavbar />
+      <PageTitle>
+        শিক্ষাবর্ষ <span className="font-NotoSerifBengali">{academicYear}</span>
+      </PageTitle>
 
-      {/* {studentsByYear.length ? (
-        studentsByYear
-          .sort((a, b) => a.classSerial - b.classSerial)
-          .map((student) => (
-            <div key={student.className}>
-              <SubTitle>{student.className}</SubTitle>
+      {await Promise.all(
+        classes.map((cls) => {
+          const studentsInClass = studentsForYear.filter((student) => {
+            return student.classNameId._id.toString() === cls.id;
+          });
+
+          return (
+            <div key={cls.id}>
+              <SubTitle>{cls.class}</SubTitle>
               <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
-                {student.students.map((student) => (
-                  <StudentsCard key={student.dakhila} student={student} />
-                ))}
+                {studentsInClass.length > 0 ? (
+                  studentsInClass.map((student) => (
+                    <StudentsCard key={student.dakhila} student={student} />
+                  ))
+                ) : (
+                  <p>কোন ছাত্র খুজেঁ পাওয়া যায় নি।</p>
+                )}
               </div>
             </div>
-          ))
-      ) : ( */}
-        <div className="text-center p-20">
-          <h2 className="text-2xl text-gray-500">
-            {/* {selectYear(academicYear)} শিক্ষাবর্ষের কোন ছাত্র খুঁজে পাওয়া যায়
-            নি। */}
-          </h2>
-        </div>
-      {/* )} */}
+          );
+        })
+      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import StudentAvatar from "./studnet-avatar";
 import StudentInfo from "./student-info";
 
 const StudentsCard = ({ lang = "bn", student }) => {
-  console.log(student);
+
   return (
     <Link
       href={`/${lang}/students/${student.academicYearId.academicYear}/${student.dakhila}`}

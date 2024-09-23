@@ -86,7 +86,7 @@ const getStudentBYDakhila = async (dakhilaNo) => {
     await connectMongo();
 
     const studentByDakhila = await studentModel
-      .find({
+      .findOne({
         dakhila: dakhilaNo,
       })
       .populate({
@@ -105,9 +105,40 @@ const getStudentBYDakhila = async (dakhilaNo) => {
   }
 };
 
+
+const getStudentsByYearAndClass = async (yearId, classId) => {
+ try {
+   await connectMongo();
+
+   const studentsByClss = await studentModel
+     .find({
+       classNameId: {
+         _id: new mongoose.Types.ObjectId(yearId),
+       },
+       academicYearId: {
+         _id: new mongoose.Types.ObjectId(classId),
+       },
+     })
+     .populate({
+       path: "classNameId",
+       model: classModel,
+     })
+     .populate({
+       path: "academicYearId",
+       model: academicYearModel,
+     })
+     .lean();
+
+   return replaceMongoIdInArray(studentsByClss);
+ } catch (err) {
+   console.error("Error fetching students by year:", err.message);
+ }
+}
+
 export {
   getStudents,
   getStudentsByYear,
   getStudentsByClass,
   getStudentBYDakhila,
+  getStudentsByYearAndClass,
 };

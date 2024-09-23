@@ -17,7 +17,7 @@ const getYear = async () => {
   }
 };
 
-const getSingleYear = async (yearId) => {
+const getSingleYearById = async (yearId) => {
   try {
     await connectMongo();
 
@@ -29,4 +29,20 @@ const getSingleYear = async (yearId) => {
   }
 };
 
-export { getYear, getSingleYear };
+const getSingleYearByYear = async (academicYear) => {
+  try {
+    await connectMongo();
+
+    const year = await academicYearModel
+      .findOne({
+        academicYear,
+      })
+      .lean();
+
+    return replaceMongoIdInObject(year);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export { getYear, getSingleYearById, getSingleYearByYear };
