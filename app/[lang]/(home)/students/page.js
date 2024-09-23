@@ -1,39 +1,35 @@
-import { getStudents } from "@/actions";
-import PageTitle from "@/components/page-title";
+import { getClasses } from "@/actions/classes";
+import { getStudentsByClass } from "@/actions/students";
 import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
+import StudentsNavbar from "./_components/students-navbar";
 
-const StudentsPage = async ({ params: { year = "2024-25" } }) => {
-  const students = await getStudents();
-
-  const selectYear = (year) => {
-    if (year === "2024-25") return "২০২৪-২৫";
-    else if (year === "2023-24") return "২০২৩-২৪";
-    else if (year === "2022-23") return "২০২২-২৩";
-    else if (year === "2021-22") return "২০২১-২২";
-    else if (year === "2020-21") return "২০২০-২১";
-    else return "২০২৩-২৪";
-  };
-
-  const studentsByYear = students.filter((years) => {
-    return years.academicYear == year;
-  });
+const StudentsPage = async ({ params: { lang } }) => {
+  const classes = await getClasses();
 
   return (
     <div className="container">
-      <PageTitle>ছাত্রদের তথ্য বিবরণ ( {selectYear(year)} )</PageTitle>
-      {studentsByYear
-        .sort((a, b) => a.classSerial - b.classSerial)
-        .map((student) => (
-          <div key={student.className}>
-            <SubTitle>{student.className}</SubTitle>
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
-              {student.students.map((student) => (
-                <StudentsCard key={student.dakhila} student={student} />
-              ))}
+      <StudentsNavbar />
+      {await Promise.all(
+        classes.map(async (cls) => {
+          const studentsInClass = await getStudentsByClass(cls.id);
+
+          return (
+            <div key={cls.id}>
+              <SubTitle>{cls.class}</SubTitle>
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
+                {studentsInClass.length > 0 ? (
+                  studentsInClass.map((student) => (
+                    <StudentsCard key={student.dakhila} student={student} />
+                  ))
+                ) : (
+                  <p>কোন ছাত্র খুজেঁ পাওয়া যায় নি।</p>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })
+      )}
     </div>
   );
 };

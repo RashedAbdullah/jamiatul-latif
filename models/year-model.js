@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const academicYearSchema = new mongoose.Schema({
-  academicYearSchema: {
+  academicYear: {
     type: String,
     required: true,
   },

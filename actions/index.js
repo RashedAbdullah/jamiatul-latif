@@ -6,6 +6,7 @@ import { curriculumModel } from "@/models/curriculum-model";
 import { FatwaModel } from "@/models/fatwa-model";
 import { studentModel } from "@/models/student-model";
 import { teacherModel } from "@/models/teacher-model";
+import { classModel } from "@/models/class-model";
 import {
   replaceMongoIdInArray,
   replaceMongoIdInObject,
@@ -47,38 +48,12 @@ const getSingleTeacher = async (teacherId) => {
   }
 };
 
-const getStudents = async () => {
-  try {
-    await connectMongo();
-
-    const students = await studentModel.find().lean();
-    return replaceMongoIdInArray(students);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
 const getStudentsByClass = async (classId) => {
   try {
     await connectMongo();
 
     const studentByclass = await studentModel.findById(classId).lean();
     return replaceMongoIdInObject(studentByclass);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
-const getStudentByDakhila = async (dakhila) => {
-  try {
-    await connectMongo();
-
-    const studentByDakhila = await studentModel
-      .findOne({
-        "students.dakhila": dakhila,
-      })
-      .lean();
-    return replaceMongoIdInObject(studentByDakhila);
   } catch (err) {
     console.log(err.message);
   }
@@ -121,9 +96,7 @@ export {
   handleSignin,
   getTeachers,
   getSingleTeacher,
-  getStudents,
   getStudentsByClass,
-  getStudentByDakhila,
   getCurriculums,
   getAllFatwa,
   getFatwaById,

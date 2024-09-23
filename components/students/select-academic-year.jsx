@@ -1,3 +1,4 @@
+import { getYear } from "@/actions/year";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -7,14 +8,8 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
-export default function SelectAcademicYear({ lang = "bn", navlink }) {
-  const years = [
-    { bn: "২০২৪-২৫", en: "2024-25" },
-    { bn: "২০২৩-২৪", en: "2023-24" },
-    { bn: "২০২২-২৩", en: "2022-23" },
-    { bn: "২০২১-২২", en: "2021-22" },
-    { bn: "২০২০-২১", en: "2020-21" },
-  ];
+export default async function SelectAcademicYear({ lang = "bn", navlink }) {
+  const years = await getYear();
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -28,9 +23,9 @@ export default function SelectAcademicYear({ lang = "bn", navlink }) {
             <li>
               <Link
                 className="py-1 px-3 hover:bg-gray-100 block"
-                href={`/${lang}/${navlink}/${year.en}`}
+                href={`/${lang}/${navlink}/${year.academicYear}`}
               >
-                {year.bn}
+                {year.academicYear}
               </Link>
             </li>
           </ul>

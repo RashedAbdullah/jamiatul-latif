@@ -5,6 +5,7 @@ import { getStudents } from "@/actions";
 
 const ResultsPage = async ({ params: { year = "2024-25" } }) => {
   const students = await getStudents();
+  console.log(students)
   const selectYear = (year) => {
     if (year === "2024-25") return "২০২৪-২৫";
     else if (year === "2023-24") return "২০২৩-২৪";
