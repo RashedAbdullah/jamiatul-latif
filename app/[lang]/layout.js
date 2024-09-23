@@ -3,6 +3,7 @@ import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
 import Footer from "@/components/footer/footer";
 import { auth } from "@/auth";
+import { Toaster } from "@/components/ui/sonner";
 
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
@@ -20,6 +21,7 @@ export default async function RootLayout({ children, params: { lang } }) {
       <body className={bengali.className}>
         <div className="bg-[#e6eaec] text-[#083042] min-h-screen">
           <Navbar user={session?.user} />
+          <Toaster />
           {children}
           <Footer />
         </div>

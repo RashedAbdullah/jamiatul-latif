@@ -84,7 +84,11 @@ const ResultTable = ({ results, examNo = 0 }) => {
                       <TableCell className="w-8 border-x font-NotoSerifBengali">
                         {getEngToBnNumber(ind + 1)}
                       </TableCell>
-                      <TableCell className="w-full border-r">
+                      <TableCell
+                        className={`w-full border-r ${
+                          student.total === 0 && "text-red-500"
+                        }`}
+                      >
                         {student.name}
                       </TableCell>
                       <TableCell className="w-8 border-x font-NotoSerifBengali">
@@ -94,31 +98,43 @@ const ResultTable = ({ results, examNo = 0 }) => {
                         <Fragment key={result.book}>
                           <TableCell
                             className={`w-full border-r font-NotoSerifBengali ${
-                              result.number < 33 && "bg-red-300"
+                              result.number < 40 &&
+                              result.number !== 0 &&
+                              "text-red-500"
                             } text-center`}
                           >
-                            {getEngToBnNumber(result.number)}
+                            {result.number === 0
+                              ? "অনু."
+                              : getEngToBnNumber(result.number)}
                           </TableCell>
                         </Fragment>
                       ))}
                       <TableCell className="w-full text-center border-r font-NotoSerifBengali">
-                        {getEngToBnNumber(student.total)}
+                        {student.total === 0
+                          ? "অনু."
+                          : getEngToBnNumber(student.total)}
                       </TableCell>
                       <TableCell className="w-full text-center border-r font-NotoSerifBengali">
-                        {getEngToBnNumber(
-                          student.total /
-                            student.results[Number(examNo)].numbers.length
-                        )}
+                        {student.total === 0
+                          ? "অনু."
+                          : getEngToBnNumber(
+                              student.total /
+                                student.results[Number(examNo)].numbers.length
+                            )}
                       </TableCell>
                       <TableCell className="w-full text-center border-r font-NotoSerifBengali">
                         {/* Student Ranking */}
-                        {getNumberValue(
-                          student.results[Number(examNo)].numbers
-                        )}
+                        {student.total === 0
+                          ? "অনু."
+                          : getNumberValue(
+                              student.results[Number(examNo)].numbers
+                            )}
                       </TableCell>
                       <TableCell className="w-full text-center border-r font-NotoSerifBengali">
                         {/* Student Ranking */}
-                        {getEngToBnNumber(student.rank)}
+                        {student.total === 0
+                          ? "অনু."
+                          : getEngToBnNumber(student.rank)}
                       </TableCell>
                     </TableRow>
                   ))}

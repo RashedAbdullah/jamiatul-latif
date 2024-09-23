@@ -29,7 +29,7 @@ const HeaderInfo = ({ lang = "bn" }) => {
           {/* Buttons */}
           <div className="flex gap-3 mt-3">
             <div>
-              <Link href={`/`}>
+              <Link href={`/get-opinion`}>
                 <Button>মতামত দিন</Button>
               </Link>
             </div>
