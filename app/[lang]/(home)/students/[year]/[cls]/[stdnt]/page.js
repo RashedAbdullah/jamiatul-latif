@@ -5,8 +5,8 @@ import StudentResultTable from "@/components/students/student-table";
 import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
 
-const SingleStudentPage = async ({ params: { id, lang = "bn" } }) => {
-  const studebtByDakhila = await getStudentBYDakhila(id);
+const SingleStudentPage = async ({ params: { stdnt, lang = "bn" } }) => {
+  const studebtByDakhila = await getStudentBYDakhila(stdnt);
 
   return (
     <div className="container my-5">

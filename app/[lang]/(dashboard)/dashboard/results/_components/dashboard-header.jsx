@@ -6,7 +6,7 @@ import SignoutComp from "@/components/headers/signout";
 const DashboardHeader = () => {
   return (
     <div>
-      <ul className="flex justify-between align-middle items-center py-2 bg-green-500 px-4">
+      <ul className="flex justify-between align-middle items-center py-2 bg-slate-800 px-4">
         <li className="flex gap-1 font-semibold text-white">
           <LayoutDashboardIcon /> ড্যাশবোর্ড
         </li>

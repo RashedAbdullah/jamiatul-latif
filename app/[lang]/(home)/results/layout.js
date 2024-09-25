@@ -1,13 +1,5 @@
-import React from "react";
-import ResultsNavbar from "./_components/results-navbar";
-
 const ResultsLayout = ({ children, params: { lang } }) => {
-  return (
-    <>
-      <ResultsNavbar />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 };
 
 export default ResultsLayout;

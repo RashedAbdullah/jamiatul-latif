@@ -1,5 +1,5 @@
-export const getNumberValue = (arr) => {
-  const sum = arr.reduce((acc, obj) => acc + obj.number, 0);
+const getNumberValue = (arr) => {
+  const sum = arr.reduce((acc, obj) => acc + obj.mark, 0);
   const average = sum / arr.length;
 
   if (average > 79 && average < 100) {
@@ -14,3 +14,10 @@ export const getNumberValue = (arr) => {
     return "রাসিব";
   }
 };
+
+const getTotalMarks = (marks) => {
+  const totalMarks = marks.reduce((acc, mark) => acc + mark.mark, 0);
+  return totalMarks;
+};
+
+export { getNumberValue, getTotalMarks };

@@ -2,26 +2,21 @@ import { getSingleYearByYear } from "@/actions/year";
 import PageTitle from "@/components/page-title";
 import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
-import StudentsNavbar from "../_components/students-navbar";
 import { getClasses } from "@/actions/classes";
 import { getStudentsByYear } from "@/actions/students";
 
 const StudentsPage = async ({ params: { year } }) => {
   const academicYear = decodeURIComponent(year);
-
   const yearByYear = await getSingleYearByYear(academicYear);
-
   const classes = await getClasses();
-
   const studentsForYear = await getStudentsByYear(yearByYear.id);
 
   return (
     <div className="container">
-      <StudentsNavbar />
       <PageTitle>
         শিক্ষাবর্ষ <span className="font-NotoSerifBengali">{academicYear}</span>
       </PageTitle>
-
+   1
       {await Promise.all(
         classes.map((cls) => {
           const studentsInClass = studentsForYear.filter((student) => {

@@ -1,12 +1,12 @@
 import SelectAcademicYear from "@/components/students/select-academic-year";
-import SelectClass from "./selectClass";
+import SelectClass from "@/components/students/select-class";
 
-const ResultsNavbar = () => {
+const ResultsNavbar = ({ singleClass = false }) => {
   return (
     <div className="bg-slate-800 py-3">
-      <div className="container flex justify-center gap-10">
+      <div className="container flex justify-center gap-5">
         <SelectAcademicYear navlink={"results"} />
-        <SelectClass />
+        {singleClass && <SelectClass navlink={"results"} />}
       </div>
     </div>
   );

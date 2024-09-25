@@ -2,10 +2,6 @@ import { BookCheck } from "lucide-react";
 
 export const dashboardMenu = [
   {
-    dash: "ফলাফল",
-    icon: <BookCheck />,
-  },
-  {
     dash: "ছাত্রদের তথ্য",
     icon: <BookCheck />,
   },

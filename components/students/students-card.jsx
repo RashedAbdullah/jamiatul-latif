@@ -3,10 +3,11 @@ import StudentAvatar from "./studnet-avatar";
 import StudentInfo from "./student-info";
 
 const StudentsCard = ({ lang = "bn", student }) => {
-
   return (
     <Link
-      href={`/${lang}/students/${student.academicYearId.academicYear}/${student.dakhila}`}
+      href={`/${lang}/students/${
+        student.academicYearId.academicYear
+      }/${student.classNameId.class.replace(/ /g, "-")}/${student.dakhila}`}
     >
       <div className="shadow p-4 bg-white hover:shadow-lg transition-all duration-300">
         <StudentAvatar avatar={student.avatar} />

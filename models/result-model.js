@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
 
 const ResultSchema = new mongoose.Schema({
-  classId: {
-    type: mongoose.Schema.ObjectId,
-    ref: "classes",
-  },
   studentId: {
     type: mongoose.Schema.ObjectId,
     ref: "Student",
@@ -17,7 +13,7 @@ const ResultSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "Year",
   },
-  results: {
+  marks: {
     type: Array,
     required: true,
   },
