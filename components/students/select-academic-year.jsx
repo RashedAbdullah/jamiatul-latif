@@ -18,14 +18,14 @@ export default async function SelectAcademicYear({ lang = "bn", navlink }) {
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-40">
-        {years.map((year) => (
-          <ul key={year.en}>
+        {years.map((yr) => (
+          <ul key={yr.id}>
             <li>
               <Link
                 className="py-1 px-3 hover:bg-gray-100 block"
-                href={`/${lang}/${navlink}/${year.academicYear}`}
+                href={`/${lang}/${navlink}/${yr.academicYear}`}
               >
-                {year.academicYear}
+                {yr.academicYear}
               </Link>
             </li>
           </ul>

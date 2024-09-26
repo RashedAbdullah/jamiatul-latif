@@ -13,6 +13,10 @@ const ResultSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "Year",
   },
+  classId: {
+    type: mongoose.Schema.ObjectId,
+    ref: "classes",
+  },
   marks: {
     type: Array,
     required: true,

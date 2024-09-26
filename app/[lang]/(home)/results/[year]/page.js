@@ -28,7 +28,7 @@ const ResultsByYearPage = async ({ params: { year: yr } }) => {
                 result.studentId.classNameId.toString() === cls.id &&
                 result.examNameId.examName === exam.examName
             );
-            console.log(filteredResults);
+         
             return (
               <div key={exam.id}>
                 <SubTitle>{exam.examName} </SubTitle>

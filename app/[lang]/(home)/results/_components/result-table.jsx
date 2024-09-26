@@ -13,6 +13,7 @@ import { getEngToBnNumber } from "@/utils/number-converter";
 import { Fragment } from "react";
 
 const ResultTable = ({ results }) => {
+
   const sortedResults = results
     .map((student) => ({
       ...student,
@@ -32,7 +33,7 @@ const ResultTable = ({ results }) => {
             <TableHead className="text-center border text-white">
               দাখিলা
             </TableHead>
-            {results[0].marks.map((mark) => (
+            {results[0]?.marks.map((mark) => (
               <Fragment key={mark.book}>
                 <TableHead className="w-full border py-2 text-center text-white">
                   {mark.book}

@@ -38,7 +38,7 @@ const getSingleYearByYear = async (academicYear) => {
         academicYear,
       })
       .lean();
-    // console.log(year);
+
     return replaceMongoIdInObject(year);
   } catch (err) {
     console.log(err.message);

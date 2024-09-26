@@ -55,7 +55,7 @@ const getStudentsByYear = async (yearId) => {
   }
 };
 
-const getStudentsByClass = async (classId) => {
+const getStudentsByYearAndClass = async (classId, yearId) => {
   try {
     await connectMongo();
 
@@ -63,6 +63,9 @@ const getStudentsByClass = async (classId) => {
       .find({
         classNameId: {
           _id: new mongoose.Types.ObjectId(classId),
+        },
+        academicYearId: {
+          _id: new mongoose.Types.ObjectId(yearId),
         },
       })
       .populate({
@@ -108,6 +111,6 @@ const getStudentBYDakhila = async (dakhilaNo) => {
 export {
   getStudents,
   getStudentsByYear,
-  getStudentsByClass,
+  getStudentsByYearAndClass,
   getStudentBYDakhila,
 };

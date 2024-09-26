@@ -96,7 +96,6 @@ export {
   handleSignin,
   getTeachers,
   getSingleTeacher,
-  getStudentsByClass,
   getCurriculums,
   getAllFatwa,
   getFatwaById,

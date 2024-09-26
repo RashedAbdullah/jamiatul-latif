@@ -16,11 +16,14 @@ const StudentsPage = async ({ params: { year } }) => {
       <PageTitle>
         শিক্ষাবর্ষ <span className="font-NotoSerifBengali">{academicYear}</span>
       </PageTitle>
-   1
+
       {await Promise.all(
         classes.map((cls) => {
           const studentsInClass = studentsForYear.filter((student) => {
-            return student.classNameId._id.toString() === cls.id;
+            return (
+              student.classNameId._id.toString() === cls.id &&
+              student.academicYearId._id.toString() === yearByYear.id
+            );
           });
 
           return (
@@ -29,7 +32,7 @@ const StudentsPage = async ({ params: { year } }) => {
               <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
                 {studentsInClass.length > 0 ? (
                   studentsInClass.map((student) => (
-                    <StudentsCard key={student.dakhila} student={student} />
+                    <StudentsCard key={student.id} student={student} />
                   ))
                 ) : (
                   <p>কোন ছাত্র খুজেঁ পাওয়া যায় নি।</p>

@@ -1,8 +1,9 @@
 import { getClasses } from "@/actions/classes";
-import { getStudentsByClass } from "@/actions/students";
+
 import StudentsCard from "@/components/students/students-card";
 import SubTitle from "@/components/sub-title";
 import StudentsNavbar from "./_components/students-navbar";
+import { getStudentsByYearAndClass } from "@/actions/students";
 
 const StudentsPage = async ({ params: { lang } }) => {
   const classes = await getClasses();
@@ -13,7 +14,10 @@ const StudentsPage = async ({ params: { lang } }) => {
       <div className="container">
         {await Promise.all(
           classes.map(async (cls) => {
-            const studentsInClass = await getStudentsByClass(cls.id);
+            const studentsInClass = await getStudentsByYearAndClass(
+              cls.id,
+              "66f13d0337317a1fbb7e7ff7"
+            );
 
             return (
               <div key={cls.id}>

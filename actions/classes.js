@@ -21,9 +21,10 @@ const getSingleClassByClss = async (cls) => {
     await connectMongo();
 
     const clss = await classModel.findOne({ class: cls }).lean();
+
     return replaceMongoIdInObject(clss);
   } catch (err) {
-    console.log(err.message);
+    console.log(`Single class error: ${err}`);
   }
 };
-export { getClasses };
+export { getClasses, getSingleClassByClss };

@@ -1,4 +1,5 @@
-import { getStudentsByClass } from "@/actions";
+
+import { getStudentsByYearAndClass } from "@/actions/students";
 import SubTitle from "@/components/sub-title";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,7 +16,7 @@ import { getEngToBnNumber } from "@/utils/number-converter";
 import { Fragment } from "react";
 
 const DashboardResultTable = async ({ id }) => {
-  const results = await getStudentsByClass(id);
+  const results = await getStudentsByYearAndClass(id);
 
   return (
     <div>

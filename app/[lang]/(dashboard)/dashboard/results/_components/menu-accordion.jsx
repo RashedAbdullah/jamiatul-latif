@@ -1,5 +1,3 @@
-import { getClasses } from "@/actions/classes";
-import { getStudentsByYear } from "@/actions/students";
 import {
   Accordion,
   AccordionContent,
@@ -10,31 +8,165 @@ import { MoveRight } from "lucide-react";
 import Link from "next/link";
 
 const MenuAccordion = async ({ menu, lang = "bn" }) => {
-  const classes = await getClasses();
-  const studentsByYear = await getStudentsByYear()
-
+  const getMenu = () => {
+    if (menu.dash === "ছাত্রদের তথ্য") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              ছাত্র যোগ করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              ছাত্র তথ্য আপডেট করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              ফলাফল যুক্ত করুন
+            </Link>
+          </li>
+        </ul>
+      );
+    } else if (menu.dash === "শিক্ষক ইনফো") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              শিক্ষক যোগ করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              শিক্ষক আপডেট করুন
+            </Link>
+          </li>
+        </ul>
+      );
+    } else if (menu.dash === "ফতোয়া বিভাগ") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              ফতোয়া যুক্ত করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              ফতোয়া আপডেট করুন
+            </Link>
+          </li>
+        </ul>
+      );
+    } else if (menu.dash === "নোটিশ বোর্ড") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              নোটিশ দিন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              নোটিশ আপডেট করুন
+            </Link>
+          </li>
+        </ul>
+      );
+    } else if (menu.dash === "পাঠ্যক্রম") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              পাঠ্যসূচী আপডেট করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              বিভাগসমূহ আপডেট করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              নতুন বিভাগ যুক্ত করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              ভবিষ্যৎ পরিকল্পনা যুক্ত করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              ভবিষ্যৎ পরিকল্পনা আপডেট করুন
+            </Link>
+          </li>
+        </ul>
+      );
+    }
+  };
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>{menu.dash}</AccordionTrigger>
-        <AccordionContent>
-          <ul>
-            <li>
-              {/* {results.map((className) => (
-                <Link
-                  className="grid grid-cols-12 hover:bg-slate-800 transition duration-300 p-2"
-                  key={className.className}
-                  href={`/${lang}/dashboard/results/${className.id}`}
-                >
-                  <div className="col-span-8">{className.className}</div>
-                  <div className="col-span-2">
-                    <MoveRight />
-                  </div>
-                </Link>
-              ))} */}
-            </li>
-          </ul>
-        </AccordionContent>
+        <AccordionContent>{getMenu()}</AccordionContent>
       </AccordionItem>
     </Accordion>
   );

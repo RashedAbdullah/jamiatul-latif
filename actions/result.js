@@ -1,4 +1,5 @@
 import { connectMongo } from "@/database/connection";
+import { classModel } from "@/models/class-model";
 import { examModel } from "@/models/exam-model";
 import { ResultModel } from "@/models/result-model";
 import { studentModel } from "@/models/student-model";
@@ -22,6 +23,10 @@ const getResults = async () => {
       .populate({
         path: "yearId",
         model: academicYearModel,
+      })
+      .populate({
+        path: "classId",
+        model: classModel,
       })
       .lean();
     return replaceMongoIdInArray(students);
@@ -51,6 +56,10 @@ const getResultsByYear = async (yearId) => {
         path: "yearId",
         model: academicYearModel,
       })
+      .populate({
+        path: "classId",
+        model: classModel,
+      })
       .lean();
 
     return replaceMongoIdInArray(results);
@@ -59,7 +68,7 @@ const getResultsByYear = async (yearId) => {
   }
 };
 
-const getResultsByClass = async (yearId, cls) => {
+const getResultsByYearAndClass = async (yearId, classId) => {
   try {
     await connectMongo();
 
@@ -67,7 +76,9 @@ const getResultsByClass = async (yearId, cls) => {
       yearId: {
         _id: new mongoose.Types.ObjectId(yearId),
       },
-      classId: {},
+      classId: {
+        _id: new mongoose.Types.ObjectId(classId),
+      },
     })
       .populate({
         path: "studentId",
@@ -81,36 +92,15 @@ const getResultsByClass = async (yearId, cls) => {
         path: "yearId",
         model: academicYearModel,
       })
+      .populate({
+        path: "classId",
+        model: classModel,
+      })
       .lean();
 
     return replaceMongoIdInArray(results);
   } catch (err) {
     console.log(err.message);
-  }
-};
-
-const getResultsByYearAndClass = async (year, className) => {
-  try {
-    await connectMongo();
-
-    const results = await ResultModel.find({
-      "studentId.academicYearId.academicYear": year, // Match the year
-      "studentId.classNameId.class": className, // Match the class
-    })
-      .populate({
-        path: "studentId",
-        model: studentModel,
-      })
-      .populate({
-        path: "examNameId",
-        model: examModel,
-      })
-      .lean();
-
-    return results; // Ensure the result array is returned
-  } catch (err) {
-    console.error(err.message);
-    return [];
   }
 };
 

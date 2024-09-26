@@ -1,12 +1,9 @@
 import { auth } from "@/auth";
-// import SignoutComp from "@/components/headers/signout";
 
 const DashboardPage = () => {
   return (
-    <div>
-      <div>
-        <div></div>
-      </div>
+    <div className="max-h-[85vh]">
+      <div>Dashboard</div>
     </div>
   );
 };
