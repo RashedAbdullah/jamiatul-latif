@@ -160,6 +160,52 @@ const MenuAccordion = async ({ menu, lang = "bn" }) => {
           </li>
         </ul>
       );
+    } else if (menu.dash === "মাদর্রাসা পরিচিতি") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              মাদর্রাসা পরিচিতি আপডেট করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              মাদর্রাসা পরিচিতি যুক্ত করুন
+            </Link>
+          </li>
+        </ul>
+      );
+    } else if (menu.dash === "কোর্স সমূহ") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              কোর্স আপডেট করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href=""
+            >
+              <MoveRight />
+              নতুন কোর্স যুক্ত করুন
+            </Link>
+          </li>
+        </ul>
+      );
     }
   };
   return (

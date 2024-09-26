@@ -1,7 +1,7 @@
 import PageTitle from "@/components/page-title";
 import Link from "next/link";
-import DashboardHeader from "./results/_components/dashboard-header";
-import DeashboardMenu from "./results/_components/dashboard-menu";
+import DashboardHeader from "../_components/dashboard-header";
+import DeashboardMenu from "../_components/dashboard-menu";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 

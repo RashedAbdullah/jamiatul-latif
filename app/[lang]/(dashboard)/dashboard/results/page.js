@@ -1,19 +1,9 @@
-import { getStudents } from "@/actions";
-import Link from "next/link";
+import SubTitle from "@/components/sub-title";
 
-const DashboardResultPage = async ({ params: { lang = "bn" } }) => {
-  const results = await getStudents();
-
+const DashboardResultPage = async ({ params }) => {
   return (
     <div>
-      {results.map((className) => (
-        <Link
-          key={className.className}
-          href={`/${lang}/dashboard/results/${className.id}`}
-        >
-          {className.className}
-        </Link>
-      ))}
+      <SubTitle>ফলাফল যুক্ত করুন</SubTitle>
     </div>
   );
 };
