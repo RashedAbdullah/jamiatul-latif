@@ -1,6 +1,7 @@
 import Link from "next/link";
 import StudentAvatar from "./studnet-avatar";
 import StudentInfo from "./student-info";
+import { Button } from "../ui/button";
 
 const StudentsCard = ({ lang = "bn", year = "2023-24", student }) => {
   return (
