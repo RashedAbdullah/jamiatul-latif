@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 const StudentsCard = ({ lang = "bn", year = "2023-24", student }) => {
   return (
  
-      <div className="shadow p-4 bg-white hover:shadow-lg transition-all duration-300">
+      <div className="shadow p-4 bg-white">
         <StudentAvatar avatar={student.avatar} />
         <div className="pt-4 px-5 border-t">
           <StudentInfo student={student} />
