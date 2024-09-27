@@ -13,7 +13,7 @@ const StudentsCard = ({ lang = "bn", year = "2023-24", student }) => {
         </div>
          <div className="w-full text-end">
         <Link
-         href={`/${lang}/students/${year}/${student.dakhila}`}
+         href={`/${lang}/students/${year}/${student.dakhila}`}>
           <Button>বিস্তারিত</Button>
         </Link>
       </div>
