@@ -108,9 +108,22 @@ const getStudentBYDakhila = async (dakhilaNo) => {
   }
 };
 
+const createNewStudent = async (studentData) => {
+  try {
+    await connectMongo();
+
+    const student = await studentModel.create(studentData);
+
+    return student;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export {
   getStudents,
   getStudentsByYear,
   getStudentsByYearAndClass,
   getStudentBYDakhila,
+  createNewStudent,
 };

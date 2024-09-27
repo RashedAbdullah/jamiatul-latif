@@ -8,7 +8,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
-export default async function SelectAcademicYear({ lang = "bn", navlink }) {
+export default async function SelectAcademicYear({ navlink }) {
   const years = await getYear();
   return (
     <Popover>
@@ -23,7 +23,7 @@ export default async function SelectAcademicYear({ lang = "bn", navlink }) {
             <li>
               <Link
                 className="py-1 px-3 hover:bg-gray-100 block"
-                href={`/${lang}/${navlink}/${yr.academicYear}`}
+                href={`/${navlink}/${yr.academicYear}`}
               >
                 {yr.academicYear}
               </Link>

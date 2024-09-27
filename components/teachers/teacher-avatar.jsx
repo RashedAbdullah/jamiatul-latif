@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { GrUserManager } from "react-icons/gr";
 
-const TeacherAvatar = ({ lang = "bn", avatar, id }) => {
+const TeacherAvatar = ({  avatar, id }) => {
   return (
     <div className="flex justify-center my-2">
-      <Link href={`/${lang}/teachers/${id}`}>
+      <Link href={`/teachers/${id}`}>
         {avatar ? (
           <div
             className={`h-[230px] w-[230px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}

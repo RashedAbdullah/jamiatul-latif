@@ -9,7 +9,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
-const SelectClass = async ({ lang = "bn", navlink, year }) => {
+const SelectClass = async ({ navlink, year }) => {
   const classes = await getClasses();
   return (
     <Popover>
@@ -24,7 +24,7 @@ const SelectClass = async ({ lang = "bn", navlink, year }) => {
             <li>
               <Link
                 className="py-1 px-3 hover:bg-gray-100 block"
-                href={`/${lang}/${navlink}/${year}/${cls.class.replace(
+                href={`/${navlink}/${year}/${cls.class.replace(
                   / /g,
                   "-"
                 )}`}

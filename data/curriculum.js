@@ -1,25 +1,25 @@
 import { IoBookSharp } from "react-icons/io5";
 
-export const curriculums = (lang = "bn") => {
+export const curriculums = () => {
   return {
     title: "পাঠ্যক্রম",
     logo: "",
     href: "/curriculums",
     categories: [
       {
-        en: `/${lang}/curriculums`,
+        en: `/curriculums`,
         bn: "পাঠ্যসূচী",
         ar: "",
         logo: <IoBookSharp color="#334155" />,
       },
       {
-        en: `/${lang}/departments`,
+        en: `/departments`,
         bn: "বিভাগসমূহ",
         ar: "",
         logo: <IoBookSharp color="#334155" />,
       },
       {
-        en: `/${lang}/future-plans`,
+        en: `/future-plans`,
         bn: "ভবিষ্যত পরিকল্পনা",
         ar: "",
         logo: <IoBookSharp color="#334155" />,

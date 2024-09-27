@@ -6,7 +6,7 @@ import { useState } from "react";
 import SubTitle from "../sub-title";
 import { Button } from "../ui/button";
 
-const SigninForm = ({ lang = "bn" }) => {
+const SigninForm = () => {
   const [error, setError] = useState();
   const router = useRouter();
 
@@ -18,7 +18,7 @@ const SigninForm = ({ lang = "bn" }) => {
       if (!!response.error) {
         setError(response.error.message);
       } else {
-        router.push(`/${lang}`);
+        router.push(`/`);
       }
     } catch (err) {
       setError(err.message);

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import Link from "next/link";
 
-const AdminDialog = ({ lang = "bn" }) => {
+const AdminDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -31,7 +31,7 @@ const AdminDialog = ({ lang = "bn" }) => {
             </Button>
           </DialogClose>
           <DialogClose asChild className="">
-            <Link href={`/${lang}/dashboard`}>
+            <Link href={`/dashboard`}>
               <Button>হ্যাঁ</Button>
             </Link>
           </DialogClose>

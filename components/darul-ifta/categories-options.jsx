@@ -8,7 +8,7 @@ import "tailwindcss/tailwind.css";
 import { getAllFatwa } from "@/actions";
 import { useRouter } from "next/navigation";
 
-const SelectDropdown = ({ lang = "bn" }) => {
+const SelectDropdown = () => {
   const router = useRouter();
   const [fatwa, setFatwa] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const SelectDropdown = ({ lang = "bn" }) => {
 
   const handleOptionClick = (optionEn, optionBn) => {
     setSelectedOption(optionBn);
-    router.push(`/${lang}/darul-ifta/${optionEn}`);
+    router.push(`/darul-ifta/${optionEn}`);
     setIsOpen(false);
   };
 

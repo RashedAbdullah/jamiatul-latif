@@ -13,8 +13,8 @@ const StudentAvatar = ({ avatar }) => {
           className="rounded-full h-40 w-40"
         />
       ) : (
-        <div className="rounded-full h-40 w-40 overflow-hidden">
-          <PiStudent className="h-full w-full text-slate-800" />
+        <div className="rounded-full h-40 w-40 overflow-hidden border">
+          <PiStudent className="h-full w-full text-slate-800 p-10" />
         </div>
       )}
     </div>
