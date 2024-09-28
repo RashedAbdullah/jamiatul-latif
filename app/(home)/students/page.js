@@ -10,7 +10,7 @@ const StudentsPage = async () => {
 
   return (
     <div>
-      <StudentsNavbar />
+      <StudentsNavbar navlink={"students"} />
       <div className="container">
         {await Promise.all(
           classes.map(async (cls) => {

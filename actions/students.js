@@ -120,10 +120,65 @@ const createNewStudent = async (studentData) => {
   }
 };
 
+const getStudentById = async (id) => {
+  try {
+    await connectMongo();
+
+    const singleStudent = await studentModel
+      .findById(id)
+      .populate({
+        path: "classNameId",
+        model: classModel,
+      })
+      .populate({
+        path: "academicYearId",
+        model: academicYearModel,
+      })
+      .lean();
+
+    return replaceMongoIdInObject(singleStudent);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const updateSingleStudent = async (id, updatedStudent) => {
+  try {
+    await connectMongo();
+
+    const singleStudent = await studentModel.findByIdAndUpdate(
+      id,
+      updatedStudent
+    );
+
+    return singleStudent;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const getDeleteStudent = async (id) => {
+  try {
+    await connectMongo();
+
+    const singleStudent = await studentModel.findByIdAndDelete(
+      id,
+      updatedStudent
+    );
+
+    return singleStudent;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export {
   getStudents,
   getStudentsByYear,
   getStudentsByYearAndClass,
   getStudentBYDakhila,
   createNewStudent,
+  getStudentById,
+  updateSingleStudent,
+  getDeleteStudent,
 };

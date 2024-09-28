@@ -6,7 +6,7 @@ const StudentsByClassLayout = ({ children, params: { year } }) => {
 
   return (
     <div>
-      <StudentsNavbar singleClass={true} year={yr} />
+      <StudentsNavbar singleClass={true} year={yr} navlink={"students"} />
       {children}
     </div>
   );

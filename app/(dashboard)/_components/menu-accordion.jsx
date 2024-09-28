@@ -24,7 +24,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/students/update-student/২০২৪-২০২৫"
             >
               <MoveRight />
               ছাত্র তথ্য আপডেট করুন

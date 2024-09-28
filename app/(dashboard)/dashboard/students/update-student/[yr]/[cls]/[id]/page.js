@@ -1,20 +1,22 @@
 import { getClasses } from "@/actions/classes";
-import { createNewStudent } from "@/actions/students";
+import { getDeleteStudent, getStudentById, updateSingleStudent } from "@/actions/students";
 import { getYear } from "@/actions/year";
 import DashInput from "@/app/(dashboard)/_components/dash-input";
+import DeleteStudent from "@/app/(dashboard)/_components/delete-student";
 import SubTitle from "@/components/sub-title";
 import { Button } from "@/components/ui/button";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 
-const DashboardAddStudentPage = async () => {
+const DashSingleStudentPage = async ({ params: { id } }) => {
   const years = await getYear();
   const classes = await getClasses();
+  const singleStudent = await getStudentById(id);
+  const deleteStudent = await getDeleteStudent(id)
 
-  const handleNewStudent = async (e) => {
+  console.log(singleStudent);
+  const UpdateStudentForm = async (e) => {
     "use server";
     try {
-      const newStudent = {
+      const updatedStudent = {
         name: e.get("name"),
         father: e.get("father"),
         academicYearId: e.get("yearId"),
@@ -26,20 +28,17 @@ const DashboardAddStudentPage = async () => {
         report: e.get("report"),
       };
 
-      createNewStudent(newStudent);
-      revalidatePath("/students");
-      redirect("/students");
+      updateSingleStudent(id, updatedStudent);
     } catch (err) {
       console.log(err.message);
     }
   };
-
   return (
     <div className="min-h-screen flex justify-center mt-5 container">
       <div className="w-full p-8 max-w-4xl bg-white shadow-lg rounded-lg transform transition duration-700 ease-in-out opacity-0 translate-y-6 animate-fade-in">
-        <SubTitle>নতুন ছাত্র যুক্ত করুন</SubTitle>
+        <SubTitle>ছাত্র তথ্য আপডেট করুন</SubTitle>
         <form
-          action={handleNewStudent}
+          action={UpdateStudentForm}
           className="w-full grid grid-cols-2 gap-10"
         >
           <div>
@@ -49,7 +48,7 @@ const DashboardAddStudentPage = async () => {
                 htmlFor="yearId"
                 className="block text-lg font-medium mb-2"
               >
-                শিক্ষাবর্ষ সিলেক্ট করুন
+                শিক্ষাবর্ষ
               </label>
               <select
                 required
@@ -57,7 +56,9 @@ const DashboardAddStudentPage = async () => {
                 id="yearId"
                 className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-slate-800 focus:outline-none"
               >
-                <option value="">শিক্ষাবর্ষ সিলেক্ট করুন</option>
+                <option value={singleStudent.academicYearId._id}>
+                  {singleStudent.academicYearId.academicYear}
+                </option>
                 {years.map((year) => (
                   <option key={year.id} value={year.id}>
                     {year.academicYear}
@@ -79,7 +80,9 @@ const DashboardAddStudentPage = async () => {
                 id="classId"
                 className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-slate-800 focus:outline-none"
               >
-                <option value="">ক্লাস সিলেক্ট করুন</option>
+                <option value={singleStudent.classNameId._id}>
+                  {singleStudent.classNameId.class}
+                </option>
                 {classes.map((cls) => (
                   <option key={cls.id} value={cls.id}>
                     {cls.class}
@@ -90,12 +93,14 @@ const DashboardAddStudentPage = async () => {
             {/* Name of student */}
             <DashInput
               req={true}
+              dValue={singleStudent.name}
               name={"name"}
               title={"শিক্ষার্থীর নাম লিখুন"}
               type={"text"}
             />
             {/* Father of student */}
             <DashInput
+              dValue={singleStudent.father}
               name={"father"}
               title={"পিতার নাম লিখুন"}
               type={"text"}
@@ -106,6 +111,7 @@ const DashboardAddStudentPage = async () => {
           <div>
             {/* Dakhila of student */}
             <DashInput
+              dValue={singleStudent.dakhila}
               name={"dakhila"}
               title={"দাখিলা নাম্বার লিখুন"}
               type={"number"}
@@ -113,15 +119,22 @@ const DashboardAddStudentPage = async () => {
             />
             {/* Address of student */}
             <DashInput
+              dValue={singleStudent.address}
               name={"address"}
               title={"ঠিকানা লিখুন (থানা ও জেলা)"}
               type={"text"}
               req={true}
             />
             {/* Image url of student */}
-            <DashInput name={"image"} title={"পিকচার URL"} type={"text"} />
+            <DashInput
+              name={"image"}
+              dValue={singleStudent.image}
+              title={"পিকচার URL"}
+              type={"text"}
+            />
             {/* Contact of student */}
             <DashInput
+              dValue={singleStudent.contact}
               name={"contact"}
               title={"ফোন নাম্বার"}
               type={"text"}
@@ -135,7 +148,7 @@ const DashboardAddStudentPage = async () => {
               রিপোর্ট লিখুন
             </label>
             <textarea
-              type="number"
+              defaultValue={singleStudent.report}
               placeholder="রিপোর্ট লিখুন . . ."
               name="report"
               id="report"
@@ -153,9 +166,10 @@ const DashboardAddStudentPage = async () => {
             </Button>
           </div>
         </form>
+        <DeleteStudent name={singleStudent.name} onDelete={deleteStudent} />
       </div>
     </div>
   );
 };
 
-export default DashboardAddStudentPage;
+export default DashSingleStudentPage;

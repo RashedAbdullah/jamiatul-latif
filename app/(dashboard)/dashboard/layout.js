@@ -11,7 +11,7 @@ const DashboardLayout = async ({ children }) => {
     redirect("/signin");
   }
   return (
-    <>
+    <div className="max-h-screen overflow-auto">
       <DashboardHeader />
       <div className="grid grid-cols-8">
         <div className="col-span-1">
@@ -19,7 +19,7 @@ const DashboardLayout = async ({ children }) => {
         </div>
         <div className="col-span-7"> {children}</div>
       </div>
-    </>
+    </div>
   );
 };
 

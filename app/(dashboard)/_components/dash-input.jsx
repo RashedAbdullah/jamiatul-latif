@@ -1,10 +1,11 @@
-const DashInput = ({ title, name, type, req = false }) => {
+const DashInput = ({ title, name, type, req = false, dValue = "" }) => {
   return (
     <div className="mt-5">
       <label htmlFor={name} className="block text-lg font-medium mb-2">
         {title}
       </label>
       <input
+        defaultValue={dValue}
         required={req}
         type={type}
         placeholder={`${title} . . .`}
