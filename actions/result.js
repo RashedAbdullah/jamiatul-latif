@@ -1,4 +1,5 @@
 import { connectMongo } from "@/database/connection";
+import { bookModel } from "@/models/book-model";
 import { classModel } from "@/models/class-model";
 import { examModel } from "@/models/exam-model";
 import { ResultModel } from "@/models/result-model";
@@ -27,6 +28,10 @@ const getResults = async () => {
       .populate({
         path: "classId",
         model: classModel,
+      })
+      .populate({
+        path: "marks.book",
+        model: bookModel,
       })
       .lean();
     return replaceMongoIdInArray(students);
@@ -59,6 +64,10 @@ const getResultsByYear = async (yearId) => {
       .populate({
         path: "classId",
         model: classModel,
+      })
+      .populate({
+        path: "marks.book",
+        model: bookModel,
       })
       .lean();
 
@@ -95,6 +104,10 @@ const getResultsByYearAndClass = async (yearId, classId) => {
       .populate({
         path: "classId",
         model: classModel,
+      })
+      .populate({
+        path: "marks.book",
+        model: bookModel,
       })
       .lean();
 

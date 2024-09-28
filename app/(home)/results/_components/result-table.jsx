@@ -13,7 +13,6 @@ import { getEngToBnNumber } from "@/utils/number-converter";
 import { Fragment } from "react";
 
 const ResultTable = ({ results }) => {
-
   const sortedResults = results
     .map((student) => ({
       ...student,
@@ -34,9 +33,9 @@ const ResultTable = ({ results }) => {
               দাখিলা
             </TableHead>
             {results[0]?.marks.map((mark) => (
-              <Fragment key={mark.book}>
+              <Fragment key={mark.book.book}>
                 <TableHead className="w-full border py-2 text-center text-white">
-                  {mark.book}
+                  {mark.book.book}
                 </TableHead>
               </Fragment>
             ))}
@@ -57,7 +56,11 @@ const ResultTable = ({ results }) => {
                 <TableCell className="w-8 border-x font-NotoSerifBengali">
                   {getEngToBnNumber(ind + 1)}
                 </TableCell>
-                <TableCell className={`w-full border-r `}>
+                <TableCell
+                  className={`w-full border-r ${
+                    student.totalMarks === 0 && "text-red-500"
+                  }`}
+                >
                   {student.studentId.name}
                 </TableCell>
                 <TableCell className="w-8 border-x font-NotoSerifBengali">
@@ -92,7 +95,9 @@ const ResultTable = ({ results }) => {
                     : getNumberValue(student.marks)}
                 </TableCell>
                 <TableCell className="w-full text-center border-r font-NotoSerifBengali">
-                  {getEngToBnNumber(ind + 1)}{" "}
+                  {student.totalMarks === 0
+                    ? "অনু."
+                    : getEngToBnNumber(ind + 1)}{" "}
                 </TableCell>
               </TableRow>
             );

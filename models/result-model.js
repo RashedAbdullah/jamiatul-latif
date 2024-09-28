@@ -17,10 +17,17 @@ const ResultSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "classes",
   },
-  marks: {
-    type: Array,
-    required: true,
-  },
+  marks: [
+    {
+      book: {
+        type: mongoose.Schema.ObjectId,
+        ref: "Book",
+      },
+      mark: {
+        type: String,
+      },
+    },
+  ],
 });
 
 const ResultModel =

@@ -4,6 +4,7 @@ import Navbar from "@/components/headers/navbar";
 import Footer from "@/components/footer/footer";
 import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/sonner";
+import { getResults } from "@/actions/result";
 
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
@@ -15,6 +16,8 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await auth();
+  const results = await getResults();
+  console.log(results[0].marks);
 
   return (
     <html lang="bn">
