@@ -30,26 +30,30 @@ const DashStudentByClass = async ({ params: { cls, yr } }) => {
           studentsByClas.map((student, ind) => (
             <ul
               key={student.id}
-              className="flex justify-between items-center py-1 bg-white px-3 rounded-lg"
+              className="hover:bg-slate-200 grid grid-cols-12 items-center align-middle py-1 bg-white px-3 rounded-lg"
             >
-              <li className="grid grid-cols-8">
+              <li className="grid grid-cols-8 col-span-4">
                 <p className="col-span-2 font-NotoSerifBengali">
                   {getEngToBnNumber(ind + 1)} |
                 </p>
                 <p className="col-span-5"> {student.name}</p>
               </li>
-              <div>
+              <li className="col-span-4">
                 <Link
-                  // href={""}
                   href={`/dashboard/students/update-student/${
                     student.academicYearId.academicYear
                   }/${student.classNameId.class.replace(" ", "-")}/${
                     student.id
                   }`}
                 >
-                  <Button>আপডেট করুন</Button>
+                  <Button>তথ্য আপডেট করুন</Button>
                 </Link>
-              </div>
+              </li>
+              <li className="col-span-4">
+                <Link href={`/dashboard/results/${student.id}`}>
+                  <Button>ফলাফল যৃক্ত করুন</Button>
+                </Link>
+              </li>
             </ul>
           ))
         ) : (

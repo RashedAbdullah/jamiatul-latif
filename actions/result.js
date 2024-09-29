@@ -5,7 +5,7 @@ import { examModel } from "@/models/exam-model";
 import { ResultModel } from "@/models/result-model";
 import { studentModel } from "@/models/student-model";
 import { academicYearModel } from "@/models/year-model";
-import { replaceMongoIdInArray } from "@/utils/data-utils";
+import { replaceMongoIdInArray, replaceMongoIdInObject } from "@/utils/data-utils";
 import mongoose from "mongoose";
 
 const getResults = async () => {
@@ -117,4 +117,46 @@ const getResultsByYearAndClass = async (yearId, classId) => {
   }
 };
 
-export { getResults, getResultsByYear, getResultsByYearAndClass };
+const getResultByStudentId = async (studentId) => {
+  try {
+    await connectMongo();
+
+    const result = await ResultModel.findOne({
+      studentId: {
+        _id: new mongoose.Types.ObjectId(studentId),
+      },
+    })
+      .populate({
+        path: "studentId",
+        model: studentModel,
+      })
+      .populate({
+        path: "examNameId",
+        model: examModel,
+      })
+      .populate({
+        path: "yearId",
+        model: academicYearModel,
+      })
+      .populate({
+        path: "classId",
+        model: classModel,
+      })
+      .populate({
+        path: "marks.book",
+        model: bookModel,
+      })
+      .lean();
+
+    return replaceMongoIdInObject(result);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export {
+  getResults,
+  getResultsByYear,
+  getResultsByYearAndClass,
+  getResultByStudentId,
+};

@@ -22,7 +22,7 @@ export const introductiion = () => {
         logo: <FaChalkboardTeacher color="#334155" />,
       },
       {
-        en: `/students`,
+        en: `/students/২০২৪-২০২৫`,
         bn: "ছাত্রদের তথ্য বিবরণ",
         ar: "",
         logo: <PiStudentFill color="#334155" />,

@@ -12,7 +12,7 @@ const DashSingleStudentPage = async ({ params: { id } }) => {
   const singleStudent = await getStudentById(id);
   const deleteStudent = await getDeleteStudent(id)
 
-  console.log(singleStudent);
+
   const UpdateStudentForm = async (e) => {
     "use server";
     try {

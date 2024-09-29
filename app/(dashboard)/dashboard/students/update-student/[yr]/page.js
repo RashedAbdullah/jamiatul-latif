@@ -14,7 +14,7 @@ const UpdateStudent = async ({ params: { yr } }) => {
   const classes = await getClasses();
   const studentsForYear = await getStudentsByYear(yearByYear.id);
   return (
-    <div className="container">
+    <div className="mx-5">
       <PageTitle>
         শিক্ষাবর্ষ <span className="font-NotoSerifBengali">{academicYear}</span>
       </PageTitle>
@@ -31,20 +31,20 @@ const UpdateStudent = async ({ params: { yr } }) => {
           return (
             <div key={cls.id}>
               <SubTitle>{cls.class}</SubTitle>
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-3 gap-4">
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-3 gap-4">
                 {studentsInClass.length > 0 ? (
                   studentsInClass.map((student, ind) => (
                     <ul
                       key={student.id}
-                      className="hover:bg-slate-200 flex justify-between items-center py-1 bg-white px-3 rounded-lg"
+                      className="hover:bg-slate-200 grid grid-cols-12 items-center align-middle py-1 bg-white px-3 rounded-lg"
                     >
-                      <li className="grid grid-cols-8">
+                      <li className="grid grid-cols-8 col-span-4">
                         <p className="col-span-2 font-NotoSerifBengali">
                           {getEngToBnNumber(ind + 1)} |
                         </p>
                         <p className="col-span-5"> {student.name}</p>
                       </li>
-                      <div>
+                      <li className="col-span-4">
                         <Link
                           href={`/dashboard/students/update-student/${
                             student.academicYearId.academicYear
@@ -52,9 +52,14 @@ const UpdateStudent = async ({ params: { yr } }) => {
                             student.id
                           }`}
                         >
-                          <Button>আপডেট করুন</Button>
+                          <Button>তথ্য আপডেট করুন</Button>
                         </Link>
-                      </div>
+                      </li>
+                      <li className="col-span-4">
+                        <Link href={`/dashboard/results/${student.id}`}>
+                          <Button>ফলাফল যুক্ত করুন</Button>
+                        </Link>
+                      </li>
                     </ul>
                   ))
                 ) : (

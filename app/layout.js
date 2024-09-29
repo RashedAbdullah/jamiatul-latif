@@ -17,10 +17,13 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const session = await auth();
   const results = await getResults();
-  console.log(results[0].marks);
 
   return (
     <html lang="bn">
+      <head>
+        <meta charSet="UTF-8" />
+      </head>
+
       <body className={bengali.className}>
         <div className="bg-gradient-to-br from-indigo-100 to-blue-50 text-[#083042] min-h-screen">
           <Navbar user={session?.user} />
