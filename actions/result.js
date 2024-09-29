@@ -5,7 +5,10 @@ import { examModel } from "@/models/exam-model";
 import { ResultModel } from "@/models/result-model";
 import { studentModel } from "@/models/student-model";
 import { academicYearModel } from "@/models/year-model";
-import { replaceMongoIdInArray, replaceMongoIdInObject } from "@/utils/data-utils";
+import {
+  replaceMongoIdInArray,
+  replaceMongoIdInObject,
+} from "@/utils/data-utils";
 import mongoose from "mongoose";
 
 const getResults = async () => {
@@ -149,6 +152,20 @@ const getResultByStudentId = async (studentId) => {
       .lean();
 
     return replaceMongoIdInObject(result);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const updateResult = async (studenId, marks) => {
+  try {
+    await connectMongo();
+
+    const updateResult = await ResultModel.findOneAndUpdate(studenId, marks, {
+      new: true,
+      upsert: true,
+    });
+    return updateResult;
   } catch (err) {
     console.log(err.message);
   }

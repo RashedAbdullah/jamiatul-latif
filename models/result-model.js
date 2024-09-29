@@ -22,9 +22,11 @@ const ResultSchema = new mongoose.Schema({
       book: {
         type: mongoose.Schema.ObjectId,
         ref: "Book",
+        required: true,
       },
       mark: {
-        type: String,
+        type: Number,
+        required: true,
       },
     },
   ],

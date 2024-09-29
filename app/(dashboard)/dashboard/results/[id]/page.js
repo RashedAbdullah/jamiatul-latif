@@ -12,19 +12,23 @@ const AddOrUpadeResultPage = async ({ params: { id } }) => {
   const handleStudentResult = async (formData) => {
     "use server";
 
-    const classId = formData.get("classId"); // Get selected exam
+    const classId = formData.get("examId"); // Get selected exam
     const studentName = formData.get("name"); // Get student's name
     const marks = {};
 
     // Collect all marks for the books
     formData.forEach((value, key) => {
-      if (key !== "classId" && key !== "name") {
+      if (key !== "examId" && key !== "name") {
         marks[key] = value; // Add each mark
       }
     });
 
-
-    console.log(formData);
+    const data = {
+      studentId: resultByStudentId.studentId._id,
+      yearId: resultByStudentId.yearId._id,
+      classId: classId,
+      marks: [marks],
+    };
   };
   return (
     <div className="min-h-screen flex justify-center mt-5 container">
@@ -36,16 +40,20 @@ const AddOrUpadeResultPage = async ({ params: { id } }) => {
         >
           {/* Exam Select */}
           <div className="mt-5">
-            <label htmlFor="classId" className="block text-lg font-medium mb-2">
+            <label htmlFor="examId" className="block text-lg font-medium mb-2">
               পরীক্ষা সিলেক্ট করুন
             </label>
             <select
               required
-              name="classId"
-              id="classId"
+              name="examId"
+              id="examId"
               className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-slate-800 focus:outline-none"
             >
-              <option value="">পরীক্ষা সিলেক্ট করুন</option>
+              <option value={resultByStudentId.examNameId._id}>
+                {resultByStudentId.examNameId.examName
+                  ? resultByStudentId.examNameId.examName
+                  : "পরীক্ষা সিলেক্ট করুন"}
+              </option>
               {exams.map((exam) => (
                 <option key={exam.id} value={exam.id}>
                   {exam.examName}
@@ -62,11 +70,11 @@ const AddOrUpadeResultPage = async ({ params: { id } }) => {
             title={"শিক্ষার্থীর নাম লিখুন"}
             type={"text"}
           />
-          {resultByStudentId.marks.map((mark) => (
+          {resultByStudentId.marks.map((mark, ind) => (
             <DashInput
               key={mark.book}
               dValue={mark.mark}
-              name={mark.book.book}
+              name={`markNo${ind + 1}`}
               title={mark.book.book}
               type={"number"}
               req={true}
