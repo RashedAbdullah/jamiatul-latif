@@ -17,8 +17,6 @@ const DashStudentByClass = async ({ params: { cls, yr } }) => {
     yearByYear.id
   );
 
-  console.log(studentsByClas[0]);
-
   return (
     <div className="container">
       <SubTitle>
@@ -50,8 +48,8 @@ const DashStudentByClass = async ({ params: { cls, yr } }) => {
                 </Link>
               </li>
               <li className="col-span-4">
-                <Link href={`/dashboard/results/${student.id}`}>
-                  <Button>ফলাফল যৃক্ত করুন</Button>
+                <Link href={`/dashboard/results/update-result/${student.id}`}>
+                  <Button>ফলাফল আপডেট করুন</Button>
                 </Link>
               </li>
             </ul>

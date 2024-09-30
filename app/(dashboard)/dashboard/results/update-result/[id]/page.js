@@ -30,6 +30,7 @@ const AddOrUpadeResultPage = async ({ params: { id } }) => {
       marks: [marks],
     };
   };
+
   return (
     <div className="min-h-screen flex justify-center mt-5 container">
       <div className="w-full p-8 max-w-4xl bg-white shadow-lg rounded-lg transform transition duration-700 ease-in-out opacity-0 translate-y-6 animate-fade-in">
@@ -75,7 +76,7 @@ const AddOrUpadeResultPage = async ({ params: { id } }) => {
               key={mark.book}
               dValue={mark.mark}
               name={`markNo${ind + 1}`}
-              title={mark.book.book}
+              title={mark.book}
               type={"number"}
               req={true}
             />

@@ -32,10 +32,7 @@ const getResults = async () => {
         path: "classId",
         model: classModel,
       })
-      .populate({
-        path: "marks.book",
-        model: bookModel,
-      })
+
       .lean();
     return replaceMongoIdInArray(students);
   } catch (err) {
@@ -68,10 +65,7 @@ const getResultsByYear = async (yearId) => {
         path: "classId",
         model: classModel,
       })
-      .populate({
-        path: "marks.book",
-        model: bookModel,
-      })
+
       .lean();
 
     return replaceMongoIdInArray(results);
@@ -108,10 +102,7 @@ const getResultsByYearAndClass = async (yearId, classId) => {
         path: "classId",
         model: classModel,
       })
-      .populate({
-        path: "marks.book",
-        model: bookModel,
-      })
+
       .lean();
 
     return replaceMongoIdInArray(results);
@@ -121,6 +112,7 @@ const getResultsByYearAndClass = async (yearId, classId) => {
 };
 
 const getResultByStudentId = async (studentId) => {
+  console.log(studentId);
   try {
     await connectMongo();
 
@@ -145,10 +137,6 @@ const getResultByStudentId = async (studentId) => {
         path: "classId",
         model: classModel,
       })
-      .populate({
-        path: "marks.book",
-        model: bookModel,
-      })
       .lean();
 
     return replaceMongoIdInObject(result);
@@ -157,15 +145,24 @@ const getResultByStudentId = async (studentId) => {
   }
 };
 
-const updateResult = async (studenId, marks) => {
+const updateResult = async (resultId, marks) => {
   try {
     await connectMongo();
 
-    const updateResult = await ResultModel.findOneAndUpdate(studenId, marks, {
-      new: true,
-      upsert: true,
-    });
+    const updateResult = await ResultModel.findOneAndUpdate(resultId, data);
     return updateResult;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const createResult = async (result) => {
+  try {
+    await connectMongo();
+
+    const results = await ResultModel.create(result);
+
+    return results;
   } catch (err) {
     console.log(err.message);
   }
@@ -176,4 +173,5 @@ export {
   getResultsByYear,
   getResultsByYearAndClass,
   getResultByStudentId,
+  createResult,
 };

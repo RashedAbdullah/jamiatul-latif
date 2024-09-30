@@ -1,5 +1,3 @@
-import SubTitle from "@/components/sub-title";
-
 import {
   Table,
   TableBody,
@@ -33,9 +31,9 @@ const ResultTable = ({ results }) => {
               দাখিলা
             </TableHead>
             {results[0]?.marks.map((mark) => (
-              <Fragment key={mark.book.book}>
+              <Fragment key={mark.book}>
                 <TableHead className="w-full border py-2 text-center text-white">
-                  {mark.book.book}
+                  {mark.book}
                 </TableHead>
               </Fragment>
             ))}
@@ -52,7 +50,7 @@ const ResultTable = ({ results }) => {
         <TableBody>
           {sortedResults.map((student, ind) => {
             return (
-              <TableRow key={student.dakhila} className="hover:bg-gray-100">
+              <TableRow key={ind} className="hover:bg-gray-100">
                 <TableCell className="w-8 border-x font-NotoSerifBengali">
                   {getEngToBnNumber(ind + 1)}
                 </TableCell>

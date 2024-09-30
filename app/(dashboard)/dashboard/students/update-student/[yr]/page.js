@@ -56,8 +56,10 @@ const UpdateStudent = async ({ params: { yr } }) => {
                         </Link>
                       </li>
                       <li className="col-span-4">
-                        <Link href={`/dashboard/results/${student.id}`}>
-                          <Button>ফলাফল যুক্ত করুন</Button>
+                        <Link
+                          href={`/dashboard/results/update-result/${student.id}`}
+                        >
+                          <Button>ফলাফল আপডেট করুন</Button>
                         </Link>
                       </li>
                     </ul>

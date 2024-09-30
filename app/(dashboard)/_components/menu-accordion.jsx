@@ -33,7 +33,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href={`http://localhost:3000/dashboard/results`}
+              href={`/dashboard/results/add-result/২০২৪-২০২৫`}
             >
               <MoveRight />
               ফলাফল যুক্ত করুন

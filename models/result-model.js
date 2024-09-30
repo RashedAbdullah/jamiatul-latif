@@ -20,8 +20,7 @@ const ResultSchema = new mongoose.Schema({
   marks: [
     {
       book: {
-        type: mongoose.Schema.ObjectId,
-        ref: "Book",
+        type: String,
         required: true,
       },
       mark: {
