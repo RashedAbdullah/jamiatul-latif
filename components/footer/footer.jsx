@@ -2,7 +2,7 @@ import Link from "next/link";
 import MadrashaLogo from "../headers/logo";
 import { getEngToBnNumber } from "@/utils/number-converter";
 
-const Footer = ({ lang = "bn" }) => {
+const Footer = () => {
   return (
     <footer className="py-20">
       <div className="flex justify-center items-center align-middle">

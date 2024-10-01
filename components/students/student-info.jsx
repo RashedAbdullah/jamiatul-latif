@@ -1,3 +1,5 @@
+import { getEngToBnNumber } from "@/utils/number-converter";
+
 const StudentInfo = ({ student }) => {
   return (
     <div className="grid grid-cols-10 gap-1">
@@ -14,10 +16,16 @@ const StudentInfo = ({ student }) => {
         <h2>{student.father}</h2>
       </div>
       <div className="col-span-3">
+        <h2>দাখিলা: </h2>
+      </div>
+      <div className="col-span-7 font-NotoSerifBengali">
+        <h2>{getEngToBnNumber(student.dakhila)}</h2>
+      </div>
+      <div className="col-span-3">
         <h2>ক্লাস: </h2>
       </div>
       <div className="col-span-7">
-        <h2>{student.class}</h2>
+        <h2>{student.classNameId.class}</h2>
       </div>
       <div className="col-span-3">
         <h2>ঠিকানা: </h2>
@@ -29,7 +37,7 @@ const StudentInfo = ({ student }) => {
         <h2>মোবাইল: </h2>
       </div>
       <div className="col-span-7">
-        <h2>{student.phone}</h2>
+        <h2>{student.contact}</h2>
       </div>
     </div>
   );

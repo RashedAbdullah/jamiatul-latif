@@ -1,0 +1,167 @@
+[
+  {
+    "name": "আব্দুল মাজিদ",
+    "father": "হায়দার সরদার",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "901",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "ভাংগা, ফরিদপুর",
+    "contact": "01609003776",
+    "report": ""
+  },
+  {
+    "name": "ফুরকান মাহমুদ",
+    "father": "শিহাব উদ্দিন",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "902",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "গৌরীপুর, ময়মনসিংহ",
+    "contact": "01609003776",
+    "report": ""
+  },
+  {
+    "name": "যোবায়ের আহমদ",
+    "father": "মাও: আবুল কাসিম",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "903",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "কবিরহাট, নোয়াখালী",
+    "contact": "01610583696",
+    "report": ""
+  },
+  {
+    "name": "আল-আমিন হোসাইন",
+    "father": "হারুনুর রশীদ",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "904",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "যশোর সদর, যশোর",
+    "contact": "01753843196",
+    "report": ""
+  },
+  {
+    "name": "মো. ইউসুফ",
+    "father": "সুলাইমান",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "905",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "মুলাদী, বরিশাল",
+    "contact": "01568308296",
+    "report": ""
+  },
+  {
+    "name": "আমিনুল ইসলাম",
+    "father": "আনওয়ার হোসাইন",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "906",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "মুলাদী, বরিশাল",
+    "contact": "01615850028",
+    "report": ""
+  },
+  {
+    "name": "মো. ফেরদৌস",
+    "father": "আব্দুস সালাম ভুইয়া",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "907",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "মুলাদী, বরিশাল",
+    "contact": "01775365229",
+    "report": ""
+  },
+  {
+    "name": "সাইফুদ্দিন",
+    "father": "ইউসুফ",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "908",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "কামালনগর, লক্ষীপুর",
+    "contact": "01830278873",
+    "report": ""
+  },
+  {
+    "name": "সাব্বির আহমদ",
+    "father": "মোরশেদ আলম",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "909",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "বেগমগঞ্জ, নোয়াখালী",
+    "contact": "01605786575",
+    "report": ""
+  },
+  {
+    "name": "আব্দুল মাজিদ",
+    "father": "আবুল কালাম",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "801",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "কলমাকান্দা, নেত্রকোণা",
+    "contact": "01967394402",
+    "report": ""
+  },
+  {
+    "name": "বোরহান উদ্দিন",
+    "father": "মাও: নুরুল আলম",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "802",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "ফেনী সদর, ফেনী",
+    "contact": "01851714295",
+    "report": ""
+  },
+  {
+    "name": "ছাদির হোসাইন",
+    "father": "বেলায়েত হোসাইন",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "803",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "নিকলী, কিশোরগঞ্জ",
+    "contact": "0161495101",
+    "report": ""
+  },
+  {
+    "name": "তানভীর আহমদ সিয়াম",
+    "father": "আব্দুস সালাম",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "804",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "মদনপুর, নেত্রকোনা",
+    "contact": "01921841866",
+    "report": ""
+  },
+  {
+    "name": "হাবিবুল্লাহ আল ফামান",
+    "father": "ফরিদ মিয়া",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "805",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "কটিয়াদী, কিশোরগঞ্জ",
+    "contact": "01714238111",
+    "report": ""
+  },
+  {
+    "name": "ফেরদৌস আলম",
+    "father": "ওমর শরীফ",
+    "academicYearId": "66f13d0337317a1fbb7e7ff7",
+    "dakhila": "806",
+    "classNameId": "66b8bd59747c42c755a197b2",
+    "image": "",
+    "address": "শ্রীপুর, গাজীপুর",
+    "contact": "01949040570",
+    "report": ""
+  }
+]

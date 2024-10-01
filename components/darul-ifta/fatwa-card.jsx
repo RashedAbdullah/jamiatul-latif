@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { MoveRight } from "lucide-react";
 
-const FatwaCard = ({ fatwa, lang = "bn" }) => {
+const FatwaCard = ({ fatwa }) => {
   return (
     <div className="bg-white p-5 border shadow">
       <h2 className="text-lg font-semibold">
@@ -20,7 +20,7 @@ const FatwaCard = ({ fatwa, lang = "bn" }) => {
         </p>
       </div>
       <div className="flex justify-end mt-2">
-        <Link href={`/${lang}/darul-ifta/${fatwa.categoryEn}/${fatwa.id}`}>
+        <Link href={`/darul-ifta/${fatwa.categoryEn}/${fatwa.id}`}>
           <Button className="flex gap-2">
             বিস্তারিত <MoveRight />
           </Button>

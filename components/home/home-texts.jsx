@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-const HomeTexts = ({ lang = "bn" }) => {
+const HomeTexts = () => {
   const router = useRouter();
 
   return (
@@ -40,7 +40,7 @@ const HomeTexts = ({ lang = "bn" }) => {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <button
-          onClick={() => router.push(`/${lang}/about-madrasha`)}
+          onClick={() => router.push(`/about-madrasha`)}
           className="border py-2 px-5 rounded-md hover:bg-green-500 hover:border-green-500 transition-all duration-300"
         >
           প্রতিষ্ঠান পরিচিতি

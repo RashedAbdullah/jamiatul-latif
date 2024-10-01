@@ -1,25 +1,50 @@
 import mongoose from "mongoose";
 
-const StudentSchema = new mongoose.Schema({
-  className: {
-    type: String,
-    required: true,
+const studentSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    father: {
+      type: String,
+      required: true,
+    },
+    academicYearId: {
+      type: mongoose.Schema.ObjectId,
+      ref: "Year",
+    },
+    dakhila: {
+      type: String,
+      required: true,
+    },
+    classNameId: {
+      type: mongoose.Schema.ObjectId,
+      ref: "classes",
+    },
+    image: {
+      type: String,
+      required: false,
+    },
+    address: {
+      type: String,
+      required: true,
+    },
+    contact: {
+      type: String,
+      required: true,
+    },
+    report: {
+      type: String,
+      required: false,
+    },
   },
-  classSerial: {
-    type: Number,
-    required: true,
-  },
-  academicYear: {
-    type: String,
-    required: true,
-  },
-  students: {
-    type: Array,
-    required: false,
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
 const studentModel =
-  mongoose.models.students || mongoose.model("students", StudentSchema);
+  mongoose.models.Student || mongoose.model("Student", studentSchema);
 
 export { studentModel };

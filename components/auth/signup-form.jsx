@@ -5,7 +5,7 @@ import { useState } from "react";
 import SubTitle from "../sub-title";
 // MONGO_URI = mongodb+srv://jamiatullatifdarulifta:q3TShx2W8TuHeynh@jamaitaullatif.z7dqkyn.mongodb.net/darul_ifta?retryWrites=true&w=majority&appName=jamaitaullatif/jamiatul_latif
 
-const SignupForm = ({ lang = "bn" }) => {
+const SignupForm = () => {
   const [error, setError] = useState("");
   const router = useRouter();
 
@@ -26,7 +26,7 @@ const SignupForm = ({ lang = "bn" }) => {
         },
         body: JSON.stringify({ name, email, number, password }),
       });
-      response.status === 201 && router.push(`/${lang}/signin`);
+      response.status === 201 && router.push(`/signin`);
     } catch (err) {
       setError(err.message);
     }

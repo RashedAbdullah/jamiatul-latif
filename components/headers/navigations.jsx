@@ -7,11 +7,11 @@ import { curriculums } from "@/data/curriculum";
 import NavSearch from "./search";
 import AdminDialog from "./admin-dialog";
 
-const Navigations = ({ lang = "bn", user }) => {
-  const intro = introductiion(lang);
-  const course = courses(lang);
-  const notice = notices(lang);
-  const curriculum = curriculums(lang);
+const Navigations = () => {
+  const intro = introductiion();
+  const course = courses();
+  const notice = notices();
+  const curriculum = curriculums();
   return (
     <>
       <nav
@@ -19,7 +19,7 @@ const Navigations = ({ lang = "bn", user }) => {
       >
         <NavSearch />
         <DropDown menu={intro} />
-        <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
+        <NavTitle router={`/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={curriculum} />
         <DropDown menu={notice} />
         <DropDown menu={course} />
