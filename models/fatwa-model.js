@@ -5,44 +5,24 @@ const FatwaSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  categoryEn: {
-    type: String,
-    required: true,
+  categoryId: {
+    type: mongoose.Schema.ObjectId,
+    ref: "fatwaCategory",
   },
-  categoryBn: {
-    type: String,
-    required: true,
-  },
-  question: {
-    type: String,
-    required: true,
+  questionerId: {
+    type: mongoose.Schema.ObjectId,
+    ref: "IftaQuestion",
   },
   answer: {
     type: String,
     required: true,
   },
   references: {
-    type: Array,
-    required: true,
-  },
-  date: {
-    type: String,
-    required: true,
-  },
-  questioner: {
-    type: String,
-    required: true,
-  },
-  address: {
-    type: String,
-    required: true,
-  },
-  phone: {
     type: String,
     required: true,
   },
 });
 const FatwaModel =
-  mongoose.models.all_fatwa || mongoose.model("all_fatwa", FatwaSchema);
+  mongoose.models.Fatwa || mongoose.model("Fatwa", FatwaSchema);
 
 export { FatwaModel };

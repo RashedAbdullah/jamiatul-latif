@@ -7,7 +7,7 @@ const DashInput = ({
   dsble = false,
 }) => {
   return (
-    <div className="mt-5">
+    <div className="mt-3">
       <label htmlFor={name} className="block text-lg font-medium mb-2">
         {title}
       </label>

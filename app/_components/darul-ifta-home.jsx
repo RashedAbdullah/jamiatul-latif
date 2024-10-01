@@ -26,7 +26,7 @@ const DarulIftaHome = () => {
             <Button>আপনার জিজ্ঞাসা</Button>
           </Link>
           <Link href={`/darul-ifta`}>
-            <Button variant="secondary">ইফতার প্রবন্ধ পড়ুন</Button>
+            <Button variant="secondary">ফতোয়া দেখুন</Button>
           </Link>
         </div>
       </div>

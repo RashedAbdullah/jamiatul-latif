@@ -70,7 +70,16 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/darul-ifta/get-questions"
+            >
+              <MoveRight />
+              ইস্তেফতা দেখুন
+            </Link>
+          </li>{" "}
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href="/dashboard/darul-ifta/add-fatwa"
             >
               <MoveRight />
               ফতোয়া যুক্ত করুন
@@ -79,7 +88,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/darul-ifta/update-fatwa"
             >
               <MoveRight />
               ফতোয়া আপডেট করুন
@@ -202,6 +211,20 @@ const MenuAccordion = async ({ menu }) => {
             >
               <MoveRight />
               নতুন কোর্স যুক্ত করুন
+            </Link>
+          </li>
+        </ul>
+      );
+    } else if (menu.dash === "মতামত সমূহ") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href="/dashboard/opinions"
+            >
+              <MoveRight />
+              মতামত সমূহ
             </Link>
           </li>
         </ul>

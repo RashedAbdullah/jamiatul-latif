@@ -29,4 +29,8 @@ export const dashboardMenu = [
     dash: "কোর্স সমূহ",
     icon: <BookCheck />,
   },
+  {
+    dash: "মতামত সমূহ",
+    icon: <BookCheck />,
+  },
 ];
