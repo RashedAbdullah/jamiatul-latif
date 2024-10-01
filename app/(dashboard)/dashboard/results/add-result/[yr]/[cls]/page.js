@@ -27,9 +27,9 @@ const AddResultByClassPage = async ({ params: { cls, yr } }) => {
     <div>
       {studentsByClas.length ? (
         <AddResultForm
-          students={studentsByClas}
+          students={JSON.parse(JSON.stringify(studentsByClas))}
           exams={exams}
-          createResult={handleResultCreation}
+          createResult={JSON.parse(JSON.stringify(handleResultCreation))}
         />
       ) : (
         <div className="text-center py-20">

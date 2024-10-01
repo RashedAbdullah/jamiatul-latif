@@ -113,6 +113,7 @@ const AddResultForm = ({ students = [], exams = [], createResult }) => {
           students[0].academicYearId.academicYear
         }/${students[0].classNameId.class.replace(/ /g, "-")}`
       );
+    
     } catch (err) {
       console.log(err.message);
     }
@@ -120,30 +121,31 @@ const AddResultForm = ({ students = [], exams = [], createResult }) => {
 
   return (
     <form onSubmit={handleSubmit} className="mx-10">
-      {/* Select Exam */}
-      <div className="flex justify-center py-2">
-        <Select required onValueChange={(value) => setExamId(value)}>
-          <SelectTrigger className="w-[300px]">
-            <SelectValue placeholder="পরীক্ষা সিলেক্ট করুন" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>পরীক্ষা সিলেক্ট করুন</SelectLabel>
-              {exams.map((exam) => (
-                <SelectItem key={exam.id} value={exam.id}>
-                  {exam.examName}
-                </SelectItem>
-              ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
-
-      {/* Button to add new book columns */}
-      <div className="text-center my-4">
-        <Button type="button" onClick={handleAddHeader} className="bg-blue-500">
-          সাব্জেক্ট ও মার্ক এড করুন
-        </Button>
+      <div className="flex justify-center gap-5 items-center">
+        {/* Select Exam */}
+        <div className="flex justify-center py-2">
+          <Select required onValueChange={(value) => setExamId(value)}>
+            <SelectTrigger className="w-[300px]">
+              <SelectValue placeholder="পরীক্ষা সিলেক্ট করুন" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>পরীক্ষা সিলেক্ট করুন</SelectLabel>
+                {exams.map((exam) => (
+                  <SelectItem key={exam.id} value={exam.id}>
+                    {exam.examName}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+        {/* Button to add new book columns */}
+        <div className="text-center my-4">
+          <Button type="button" onClick={handleAddHeader}>
+            সাব্জেক্ট ও মার্ক এড করুন
+          </Button>
+        </div>
       </div>
 
       <Table className="bg-slate-300">
@@ -200,7 +202,7 @@ const AddResultForm = ({ students = [], exams = [], createResult }) => {
                       className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-slate-800 focus:outline-none mb-2"
                     />
                     <input
-                      type="number"
+                      type="text"
                       placeholder="মার্কস"
                       value={mark.mark}
                       onChange={(e) =>

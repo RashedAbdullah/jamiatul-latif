@@ -145,11 +145,14 @@ const getResultByStudentId = async (studentId) => {
   }
 };
 
-const updateResult = async (resultId, marks) => {
+const updateResult = async (resultId, updatedMarks) => {
   try {
     await connectMongo();
 
-    const updateResult = await ResultModel.findOneAndUpdate(resultId, data);
+    const updateResult = await ResultModel.findByIdAndUpdate(
+      resultId,
+      updatedMarks
+    );
     return updateResult;
   } catch (err) {
     console.log(err.message);
@@ -174,4 +177,5 @@ export {
   getResultsByYearAndClass,
   getResultByStudentId,
   createResult,
+  updateResult,
 };
