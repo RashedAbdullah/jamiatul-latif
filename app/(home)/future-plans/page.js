@@ -1,6 +1,11 @@
 import DepartmentAccordion from "@/components/department/department-accordion";
 import PageTitle from "@/components/page-title";
 
+export const metadata = {
+  title: "ভবিষ্যৎ পরিকল্পনা",
+  description: "জামিয়াতুল লতিফ রূপগঞ্জ মাদরাসার ভবিষ্যৎ পরিকল্পনা",
+};
+
 const items = [
   {
     title: "আরবি সাহিত্য (আদব বিভাগ)",

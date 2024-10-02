@@ -9,9 +9,9 @@ import { getResults } from "@/actions/result";
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
 export const metadata = {
-  title: "জামিয়াতুল লতিফ - হোম",
+  title: "জামিয়াতুল লতিফ",
   description:
-    "জামিয়াতুল লতিফ মাদরাসা। রূপগঞ্জ, নারায়ণগঞ্জ। একটি ধর্মীয় কওমি শিক্ষা প্রতিষ্ঠান। ঢাকা বিভাগের নারায়ণগঞ্জ জেলার রূপগঞ্জ থানার বরাব এলাকায় অবস্থিত।",
+    "জামিয়াতুল লতিফ রূপগঞ্জ মাদরাসা। নারায়ণগঞ্জ। একটি ধর্মীয় কওমি শিক্ষা প্রতিষ্ঠান। ঢাকা বিভাগের নারায়ণগঞ্জ জেলার রূপগঞ্জ থানার বরাব এলাকায় অবস্থিত।",
 };
 
 export default async function RootLayout({ children }) {

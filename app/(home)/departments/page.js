@@ -1,6 +1,11 @@
 import DepartmentAccordion from "@/components/department/department-accordion";
 import PageTitle from "@/components/page-title";
 
+export const metadata = {
+  title: "বিভাগ সমূহ",
+  description: "জামিয়াতুল লতিফ রূপগঞ্জ মাদরাসার বিভাগসমূহ",
+};
+
 const items = [
   {
     title: "ইসলামিক ফিকহ এন্ড রিসার্চ সেন্টার",

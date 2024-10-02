@@ -3,6 +3,11 @@ import CurriculumAccordion from "@/components/curriculums/curriculum-accordion";
 import CurriculumsInfo from "@/components/curriculums/curriculums-info";
 import PageTitle from "@/components/page-title";
 
+export const metadata = {
+  title: "শিক্ষা কারিকুলাম",
+  description: "জামিয়াতুল লতিফ রূপগঞ্জ মাদরাসার শিক্ষা কারিকুলাম",
+};
+
 const CurriculumsPage = async () => {
   const curriculums = await getCurriculums();
   return (

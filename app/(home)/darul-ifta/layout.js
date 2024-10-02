@@ -3,8 +3,7 @@ import DarulIftaNabvar from "./_components/ifta-navbar";
 
 export const metadata = {
   title: "দারুল ইফতা",
-  description:
-    "জামিয়াতুল লতিফ রূপগঞ্জ, নারায়ণগঞ্জ। একটি ধর্মীয় কওমি শিক্ষা প্রতিষ্ঠান। ঢাকা বিভাগের নারায়ণগঞ্জ জেলার রূপগঞ্জ থানার বরাব এলাকায় অবস্থিত।",
+  description: "জামিয়াতুল লতিফ রূপগঞ্জ মাদরাসারা ফতোয়া বিভাগ।",
 };
 
 export default function LayoutIfta({ children }) {

@@ -6,6 +6,11 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { opinionModel } from "@/models/opinion-model";
 
+export const metadata = {
+  title: "মতমত দিন",
+  description: "জামিয়াতুল লতিফ রূপগঞ্জ মাদরাসার বিষয়ে মতমত দিন",
+};
+
 const GetOpinion = () => {
   const handleGetingOpinion = async (event) => {
     "use server";
