@@ -3,10 +3,7 @@
 import { signIn } from "@/auth";
 import { connectMongo } from "@/database/connection";
 import { curriculumModel } from "@/models/curriculum-model";
-import { FatwaModel } from "@/models/fatwa-model";
-import { studentModel } from "@/models/student-model";
 import { teacherModel } from "@/models/teacher-model";
-import { classModel } from "@/models/class-model";
 import {
   replaceMongoIdInArray,
   replaceMongoIdInObject,
@@ -48,17 +45,6 @@ const getSingleTeacher = async (teacherId) => {
   }
 };
 
-const getStudentsByClass = async (classId) => {
-  try {
-    await connectMongo();
-
-    const studentByclass = await studentModel.findById(classId).lean();
-    return replaceMongoIdInObject(studentByclass);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
 const getCurriculums = async () => {
   try {
     await connectMongo();
@@ -70,33 +56,9 @@ const getCurriculums = async () => {
   }
 };
 
-const getAllFatwa = async () => {
-  try {
-    await connectMongo();
-
-    const allFatwa = await FatwaModel.find().lean();
-    return replaceMongoIdInArray(allFatwa);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
-const getFatwaById = async (fatwaId) => {
-  try {
-    await connectMongo();
-
-    const Fatwa = await FatwaModel.findById(fatwaId).lean();
-    return replaceMongoIdInObject(Fatwa);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
 export {
   handleSignin,
   getTeachers,
   getSingleTeacher,
   getCurriculums,
-  getAllFatwa,
-  getFatwaById,
 };

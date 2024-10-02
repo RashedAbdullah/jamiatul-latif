@@ -1,6 +1,5 @@
 import { connectMongo } from "@/database/connection";
 import { fatwaCategoryModel } from "@/models/fatwa-category-model";
-import { replaceMongoIdInArray } from "@/utils/data-utils";
 
 const createFatwaCategory = async (category) => {
   try {

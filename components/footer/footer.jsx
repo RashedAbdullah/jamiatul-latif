@@ -1,5 +1,3 @@
-import Link from "next/link";
-import MadrashaLogo from "../headers/logo";
 import { getEngToBnNumber } from "@/utils/number-converter";
 
 const Footer = () => {

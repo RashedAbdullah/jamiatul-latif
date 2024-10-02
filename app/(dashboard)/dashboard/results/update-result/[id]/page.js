@@ -1,10 +1,7 @@
 import { getExams } from "@/actions/exam";
 import { getResultByStudentId, updateResult } from "@/actions/result";
-import DashInput from "@/app/(dashboard)/_components/dash-input";
 import UpdateResultForm from "@/app/(dashboard)/_components/update-result-fomr";
 import SubTitle from "@/components/sub-title";
-import { Button } from "@headlessui/react";
-import { utf16Decode, utf8Encode } from "pdf-lib";
 
 const AddOrUpadeResultPage = async ({ params: { id } }) => {
   const exams = await getExams();

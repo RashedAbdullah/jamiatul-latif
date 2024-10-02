@@ -1,5 +1,4 @@
 import { connectMongo } from "@/database/connection";
-import { bookModel } from "@/models/book-model";
 import { classModel } from "@/models/class-model";
 import { examModel } from "@/models/exam-model";
 import { ResultModel } from "@/models/result-model";

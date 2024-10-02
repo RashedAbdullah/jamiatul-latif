@@ -2,7 +2,7 @@ import { getSingleYearByYear } from "@/actions/year";
 // You need to implement this function to fetch results
 import SubTitle from "@/components/sub-title";
 import ResultTable from "../../_components/result-table";
-import { getResults, getResultsByYearAndClass } from "@/actions/result";
+import {  getResultsByYearAndClass } from "@/actions/result";
 import { getExams } from "@/actions/exam";
 import { getSingleClassByClss } from "@/actions/classes";
 

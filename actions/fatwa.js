@@ -1,6 +1,9 @@
 import { connectMongo } from "@/database/connection";
+import { fatwaCategoryModel } from "@/models/fatwa-category-model";
 import { FatwaModel } from "@/models/fatwa-model";
+import { iftaQuestionModel } from "@/models/fatwa-question-model";
 import { replaceMongoIdInArray } from "@/utils/data-utils";
+import mongoose from "mongoose";
 
 const createFatwa = async (fatwa) => {
   try {
@@ -17,11 +20,42 @@ const getFatwas = async () => {
   try {
     await connectMongo();
 
-    const fatwas = await FatwaModel.find({}).lean();
+    const fatwas = await FatwaModel.find({})
+      .populate({
+        path: "categoryId",
+        model: fatwaCategoryModel,
+      })
+      .populate({
+        path: "questionerId",
+        model: iftaQuestionModel,
+      })
+      .lean();
     return replaceMongoIdInArray(fatwas);
   } catch (err) {
     console.log(err.message);
   }
 };
 
-export { createFatwa, getFatwas };
+const getFatwasByCategoryId = async (categoryId) => {
+  try {
+    await connectMongo();
+
+    const fatwasByCategory = await FatwaModel.find({
+      categoryId: new mongoose.Types.ObjectId(categoryId),
+    })
+      .populate({
+        path: "categoryId",
+        model: fatwaCategoryModel,
+      })
+      .populate({
+        path: "questionerId",
+        model: iftaQuestionModel,
+      })
+      .lean();
+    return replaceMongoIdInArray(fatwasByCategory);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export { createFatwa, getFatwas, getFatwasByCategoryId };

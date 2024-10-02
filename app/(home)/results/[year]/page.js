@@ -3,7 +3,7 @@ import ResultTable from "../_components/result-table";
 import { getSingleYearByYear } from "@/actions/year";
 import { getClasses } from "@/actions/classes";
 import SubTitle from "@/components/sub-title";
-import { getResults, getResultsByYear } from "@/actions/result";
+import {  getResultsByYear } from "@/actions/result";
 import { getExams } from "@/actions/exam";
 
 const ResultsByYearPage = async ({ params: { year: yr } }) => {
@@ -28,7 +28,7 @@ const ResultsByYearPage = async ({ params: { year: yr } }) => {
                 result.studentId.classNameId.toString() === cls.id &&
                 result.examNameId.examName === exam.examName
             );
-         
+
             return (
               <div key={exam.id}>
                 <SubTitle>{exam.examName} </SubTitle>

@@ -1,5 +1,4 @@
 import { dashboardMenu } from "@/data/dashboard-menu";
-import Link from "next/link";
 import MenuAccordion from "./menu-accordion";
 
 const DeashboardMenu = () => {

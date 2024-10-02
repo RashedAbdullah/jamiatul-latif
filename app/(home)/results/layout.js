@@ -1,4 +1,4 @@
-const ResultsLayout = ({ children, params: { lang } }) => {
+const ResultsLayout = ({ children }) => {
   return <>{children}</>;
 };
 

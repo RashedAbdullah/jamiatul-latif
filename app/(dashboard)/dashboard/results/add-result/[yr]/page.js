@@ -1,8 +1,4 @@
-import { getYear } from "@/actions/year";
-import Link from "next/link";
-
 const DhasAddResultYearPgae = async ({ params: { yr } }) => {
-  const years = await getYear();
   return (
     <div>
       <h3 className="text-4xl text-center py-20 text-gray-400">

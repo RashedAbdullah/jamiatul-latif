@@ -21,11 +21,11 @@ const NavSearch = () => {
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle className="text-center">সার্চ করুন</DialogTitle>
+            <DialogTitle className="text-center">অনুসন্ধান করুন</DialogTitle>
           </DialogHeader>
           <div className="py-4">
             <div>
-              <Input placeholder="খুঁজুন" />
+              <Input placeholder="অনুসন্ধান করুন . . ." />
             </div>
           </div>
         </DialogContent>

@@ -1,10 +1,4 @@
 import { getSingleTeacher } from "@/actions";
-import AboutTeacher from "@/components/teachers/about-teacher";
-import TeachersSocialLinks from "@/components/teachers/social-links";
-import TeacherAvatar from "@/components/teachers/teacher-avatar";
-import TeacherCard from "@/components/teachers/teacher-card";
-import TeacherInfo from "@/components/teachers/teacher-info";
-import { Facebook } from "lucide-react";
 
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";

@@ -1,5 +1,3 @@
-import { auth } from "@/auth";
-
 const DashboardPage = () => {
   return (
     <div className="max-h-[85vh]">
