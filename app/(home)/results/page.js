@@ -6,6 +6,7 @@ import { getExams } from "@/actions/exam";
 import PageTitle from "@/components/page-title";
 import SubTitle from "@/components/sub-title";
 import ResultsNavbar from "./_components/results-navbar";
+import Head from "next/head";
 
 const ResultsPage = async () => {
   // Fetching data
@@ -16,20 +17,49 @@ const ResultsPage = async () => {
 
   // Render the results by filtering based on year, class, and exam
   return (
-    <div>
-      <ResultsNavbar />
-      {years.map((yr) => {
-        // Filter by academic year
-        return (
-          <div key={yr.id}>
-            <PageTitle>শিক্ষাবর্ষ {yr.academicYear}</PageTitle>
-            {classes.map((cls) => {
-              // Filter by class
-              return (
+    <>
+      <Head>
+        {/* SEO Metadata */}
+        <title>
+          Exam Results | পরীক্ষার ফলাফল | Jamitul latif | জামিয়াতুল লতিফ
+        </title>
+        <meta
+          name="description"
+          content="View the results of different exams at Jamia Tul Latif, filtered by academic year, class, and examination."
+        />
+        <meta
+          name="keywords"
+          content="Islamic Education, Exam Results, Jamia Tul Latif, Madrasa"
+        />
+        <meta property="og:title" content="Exam Results | Jamia Tul Latif" />
+        <meta
+          property="og:description"
+          content="Check your exam results for the academic year, class, and exam at Jamia Tul Latif."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.jamiatullatif.com/results"
+        />
+
+        <meta name="robots" content="index,follow" />
+      </Head>
+
+      <div>
+        <ResultsNavbar />
+
+        <section>
+          {years.map((yr) => (
+            <article key={yr.id}>
+              <header>
+                <PageTitle>শিক্ষাবর্ষ {yr.academicYear}</PageTitle>
+              </header>
+
+              {classes.map((cls) => (
                 <div key={cls.id}>
                   <SubTitle>{cls.class}</SubTitle>
+
                   {exams.map((exam) => {
-                    // const filteredResults = [];
                     // Filter results by exam name, year, and class
                     const filteredResults = allResults.filter(
                       (result) =>
@@ -38,10 +68,10 @@ const ResultsPage = async () => {
                         result.examNameId.examName === exam.examName
                     );
 
-                    // If there are filtered results, display the ResultTable
                     return (
                       <div key={exam.id}>
                         <SubTitle>{exam.examName}</SubTitle>
+
                         {filteredResults.length > 0 ? (
                           <div className="container">
                             <ResultTable results={filteredResults} />
@@ -55,12 +85,12 @@ const ResultsPage = async () => {
                     );
                   })}
                 </div>
-              );
-            })}
-          </div>
-        );
-      })}
-    </div>
+              ))}
+            </article>
+          ))}
+        </section>
+      </div>
+    </>
   );
 };
 
