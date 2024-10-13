@@ -4,7 +4,6 @@ import Navbar from "@/components/headers/navbar";
 import Footer from "@/components/footer/footer";
 import { auth } from "@/auth";
 
-
 // Google Font
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
@@ -53,6 +52,7 @@ export default async function RootLayout({ children }) {
     <html lang="bn">
       <head>
         <meta charSet="UTF-8" />
+        <meta name="google-adsense-account" content="ca-pub-6921856465558245" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
