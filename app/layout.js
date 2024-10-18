@@ -54,6 +54,11 @@ export default async function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="google-adsense-account" content="ca-pub-6921856465558245" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
+          crossorigin="anonymous"
+        ></script>
       </head>
       <body
         className={`${bengali.className} bg-gradient-to-br from-indigo-100 to-blue-50 text-[#083042] min-h-screen`}
