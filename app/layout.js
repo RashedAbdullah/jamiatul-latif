@@ -3,8 +3,8 @@ import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
 import Footer from "@/components/footer/footer";
 import { auth } from "@/auth";
+import { Analytics } from "@vercel/analytics/react";
 
-// Google Font
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
 // SEO Metadata
@@ -66,6 +66,7 @@ export default async function RootLayout({ children }) {
         <Navbar user={session?.user} />
         <main>{children}</main>
         <Footer />
+        <Analytics /> 
       </body>
     </html>
   );
