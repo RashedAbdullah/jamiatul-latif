@@ -4,10 +4,10 @@ import Navbar from "@/components/headers/navbar";
 import Footer from "@/components/footer/footer";
 import { auth } from "@/auth";
 import { Analytics } from "@vercel/analytics/react";
+import AboutSchemaScript from "@/meta/about-madrasha-meta";
 
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
-// SEO Metadata
 export const metadata = {
   title: "জামিয়াতুল লতিফ রূপগঞ্জ",
   description:
@@ -63,10 +63,11 @@ export default async function RootLayout({ children }) {
       <body
         className={`${bengali.className} bg-gradient-to-br from-indigo-100 to-blue-50 text-[#083042] min-h-screen`}
       >
+        <AboutSchemaScript />
         <Navbar user={session?.user} />
         <main>{children}</main>
         <Footer />
-        <Analytics /> 
+        <Analytics />
       </body>
     </html>
   );

@@ -1,7 +1,10 @@
 import PageTitle from "@/components/page-title";
+import AboutSchemaScript from "@/meta/about-madrasha-meta";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const AboutPage = () => {
+  const router = useRouter();
   const aboutMadrasha = [
     {
       title: "নাম",
@@ -25,13 +28,13 @@ const AboutPage = () => {
       details: "১২০+",
     },
     {
-      title: "শিক্ষক ও স্টাপ",
+      title: "শিক্ষক ও স্টাফ",
       details: "১৫+",
     },
     {
       title: "প্রেক্ষাপট",
       details:
-        "পাঠ্যসূচি নির্বাচনের ক্ষেত্রে জামিয়াতুল লতিফসবসময় আকাবিরে ওলামায়ে দেওবন্দের অনুসারী। কদীম নেসাবকে সামনে রেখে তার যাবতীয় মাহাসিন ও সৌন্দর্যের পুরোটা ছাত্রদের সামনে তুলে ধরার প্রতি বদ্ধপরিকর। হ্যাঁ, জামিয়াতুল লতিফ অবশ্যই আধুনিকতাকে স্বাগত জানায়। তবে তা কখনও বাধহীন না। একজন ছাত্র যেন যাবতীয় ইলমি ইসতিদাদের পাশাপাশি আরবী ও বাংলা ভাষার প্রতি পুরোপুরি যত্নশীল থাকে, তা লক্ষ্য রাখা হয়।",
+        "পাঠ্যসূচি নির্বাচনের ক্ষেত্রে জামিয়াতুল লতিফ সবসময় আকাবিরে ওলামায়ে দেওবন্দের অনুসারী। কদীম নেসাবকে সামনে রেখে তার যাবতীয় মাহাসিন ও সৌন্দর্যের পুরোটা ছাত্রদের সামনে তুলে ধরার প্রতি বদ্ধপরিকর। হ্যাঁ, জামিয়াতুল লতিফ অবশ্যই আধুনিকতাকে স্বাগত জানায়। তবে তা কখনও বাধহীন না। একজন ছাত্র যেন যাবতীয় ইলমি ইসতিদাদের পাশাপাশি আরবী ও বাংলা ভাষার প্রতি পুরোপুরি যত্নশীল থাকে, তা লক্ষ্য রাখা হয়।",
     },
   ];
 
@@ -41,11 +44,11 @@ const AboutPage = () => {
         <title>About Jamia Tul Latif | About the Madrasa</title>
         <meta
           name="description"
-          content="Learn about Jamia Tul Latif, its location, founders, teachers, and the educational background of this Islamic institution."
+          content="Learn about Jamia Tul Latif, its location, founders, teachers, and the educational background of this Islamic institution in Narayanganj."
         />
         <meta
           name="keywords"
-          content="Jamia Tul Latif, Islamic education, Madrasa, Deobandi, Islamic learning"
+          content="Jamia Tul Latif, Islamic education, Madrasa, Deobandi, Islamic learning, Narayanganj Madrasa, Rupganj Islamic school"
         />
         <meta property="og:title" content="About Jamia Tul Latif" />
         <meta
@@ -55,13 +58,27 @@ const AboutPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://jamiatullatif.com/about-madrasha"
+          content={`https://jamiatullatif.com${router.pathname}`}
         />
         <meta
           property="og:image"
-          content="https://i.ibb.co.com/0FZ9bnp/jamia-pic.jpg"
+          content="https://i.ibb.co/0FZ9bnp/jamia-pic.jpg"
         />
         <meta name="robots" content="index,follow" />
+        <meta name="language" content="bn" />
+        <meta name="author" content="Rashed Abdullah" />
+        <link rel="canonical" href="https://jamiatullatif.com/about-madrasha" />
+        <meta property="og:locale" content="bn_BD" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Jamia Tul Latif" />
+        <meta
+          name="twitter:description"
+          content="Learn about Jamia Tul Latif, its founder, location, and mission in Islamic education."
+        />
+        <meta
+          name="twitter:image"
+          content="https://i.ibb.co/0FZ9bnp/jamia-pic.jpg"
+        />
       </Head>
 
       <div className="container mb-10">
@@ -71,6 +88,7 @@ const AboutPage = () => {
             <ul>
               {aboutMadrasha.map((about, ind) => (
                 <li key={ind} className="grid grid-cols-12 p-2">
+                  <AboutSchemaScript />
                   <p className="md:col-span-2 col-span-3 font-semibold">
                     {about.title}:
                   </p>
