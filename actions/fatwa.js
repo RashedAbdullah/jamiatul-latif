@@ -2,7 +2,10 @@ import { connectMongo } from "@/database/connection";
 import { fatwaCategoryModel } from "@/models/fatwa-category-model";
 import { FatwaModel } from "@/models/fatwa-model";
 import { iftaQuestionModel } from "@/models/fatwa-question-model";
-import { replaceMongoIdInArray } from "@/utils/data-utils";
+import {
+  replaceMongoIdInArray,
+  replaceMongoIdInObject,
+} from "@/utils/data-utils";
 import mongoose from "mongoose";
 
 const createFatwa = async (fatwa) => {
@@ -58,4 +61,24 @@ const getFatwasByCategoryId = async (categoryId) => {
   }
 };
 
-export { createFatwa, getFatwas, getFatwasByCategoryId };
+const getSingleFatwa = async (id) => {
+  try {
+    await connectMongo();
+    const fatwa = FatwaModel.findById(id)
+      .populate({
+        path: "categoryId",
+        model: fatwaCategoryModel,
+      })
+      .populate({
+        path: "questionerId",
+        model: iftaQuestionModel,
+      });
+
+    return fatwa;
+  } catch (err) {
+    console.log(err.message);
+    return null;
+  }
+};
+
+export { createFatwa, getFatwas, getFatwasByCategoryId, getSingleFatwa };

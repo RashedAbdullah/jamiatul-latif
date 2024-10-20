@@ -7,7 +7,6 @@ export const metadata = {
 
 const Notices = async () => {
   const notices = await getActiveNotices();
-  console.log(notices);
 
   return (
     <div className="min-h-screen">
