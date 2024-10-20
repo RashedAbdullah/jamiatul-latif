@@ -11,14 +11,14 @@ import {
 import { Menu } from "lucide-react";
 import DropDown from "./dropdown";
 import { introductiion } from "@/data/introduction";
-import { courses } from "@/data/courses";
+// import { courses } from "@/data/courses";
 import { notices } from "@/data/notices";
 import { curriculums } from "@/data/curriculum";
 import NavTitle from "./nav-title";
 
 export default function MobileMenu({ lang = "bn" }) {
   const intro = introductiion(lang);
-  const course = courses(lang);
+  // const course = courses(lang);
   const notice = notices(lang);
   const curriculum = curriculums(lang);
   return (
@@ -37,7 +37,7 @@ export default function MobileMenu({ lang = "bn" }) {
         </SheetHeader>
         <div>
           <DropDown menu={intro} />
-          <DropDown menu={course} />
+          {/* <DropDown menu={course} /> */}
           <DropDown menu={notice} />
           <DropDown menu={curriculum} />
           <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>

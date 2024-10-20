@@ -1,10 +1,8 @@
 import PageTitle from "@/components/page-title";
 import AboutSchemaScript from "@/meta/about-madrasha-meta";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 const AboutPage = () => {
-  const router = useRouter();
   const aboutMadrasha = [
     {
       title: "নাম",
@@ -58,7 +56,7 @@ const AboutPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://jamiatullatif.com${router.pathname}`}
+          content={`https://jamiatullatif.com/about-madrasha`}
         />
         <meta
           property="og:image"

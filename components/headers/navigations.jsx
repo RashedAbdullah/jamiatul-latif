@@ -1,4 +1,4 @@
-import { courses } from "@/data/courses";
+// import { courses } from "@/data/courses";
 import DropDown from "./dropdown";
 import NavTitle from "./nav-title";
 import { introductiion } from "@/data/introduction";
@@ -9,7 +9,7 @@ import AdminDialog from "./admin-dialog";
 
 const Navigations = () => {
   const intro = introductiion();
-  const course = courses();
+  // const course = courses();
   const notice = notices();
   const curriculum = curriculums();
   return (
@@ -22,7 +22,7 @@ const Navigations = () => {
         <NavTitle router={`/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={curriculum} />
         <DropDown menu={notice} />
-        <DropDown menu={course} />
+        {/* <DropDown menu={course} /> */}
         <AdminDialog />
       </nav>
     </>

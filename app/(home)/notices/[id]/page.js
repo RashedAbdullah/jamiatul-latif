@@ -1,7 +1,7 @@
-const SingleNoticePage = () => {
+const SingleNoticePage = ({params: {id}}) => {
   return (
     <div className="container">
-      This is single notice page like addmition notice or another notice
+     {id}
     </div>
   );
 };

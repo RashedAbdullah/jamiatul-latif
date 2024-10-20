@@ -23,9 +23,9 @@ export default function Home() {
           <DarulIftaHome />
         </section>
 
-        <section>
+        {/* <section>
           <HomaPageCourses />
-        </section>
+        </section> */}
 
         <section>
           <HomePageTeachers />
