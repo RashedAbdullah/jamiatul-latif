@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GrUserManager } from "react-icons/gr";
 
-const TeacherAvatar = ({  avatar, id }) => {
+const TeacherAvatar = ({ avatar, id }) => {
   return (
     <div className="flex justify-center my-2">
       <Link href={`/teachers/${id}`}>

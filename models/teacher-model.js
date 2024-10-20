@@ -49,7 +49,7 @@ const TeacherSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  socilas: {
+  socials: {
     type: Array,
     required: false,
   },

@@ -1,5 +1,4 @@
-import { getSingleTeacher } from "@/actions";
-
+import { getSingleTeacher } from "@/actions/teachers";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
@@ -13,7 +12,11 @@ const SingleTeacherPage = async ({ params: { id } }) => {
           <div className="flex justify-center items-center align-middle">
             <div
               className={`md:h-[500px] md:w-[500px] h-[400px] w-[400px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
-              style={{ backgroundImage: `url(${teacher.image})` }}
+              style={{
+                backgroundImage: teacher.image
+                  ? `url(${teacher.image})`
+                  : "url(https://i.ibb.co.com/VtvbmpP/imgbin-computer-icons-teacher-professor-education-lecturer-png.png)",
+              }}
             ></div>
           </div>
           <div className="lg:block hidden">

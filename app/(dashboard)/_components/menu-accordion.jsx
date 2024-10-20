@@ -47,7 +47,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/add-teacher"
             >
               <MoveRight />
               শিক্ষক যোগ করুন
@@ -56,7 +56,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/update-teacher"
             >
               <MoveRight />
               শিক্ষক আপডেট করুন
@@ -102,7 +102,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/add-notice"
             >
               <MoveRight />
               নোটিশ দিন
@@ -111,7 +111,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/update-notice"
             >
               <MoveRight />
               নোটিশ আপডেট করুন

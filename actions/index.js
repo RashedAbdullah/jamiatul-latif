@@ -3,11 +3,7 @@
 import { signIn } from "@/auth";
 import { connectMongo } from "@/database/connection";
 import { curriculumModel } from "@/models/curriculum-model";
-import { teacherModel } from "@/models/teacher-model";
-import {
-  replaceMongoIdInArray,
-  replaceMongoIdInObject,
-} from "@/utils/data-utils";
+import { replaceMongoIdInArray } from "@/utils/data-utils";
 
 const handleSignin = async (formData) => {
   try {
@@ -23,28 +19,6 @@ const handleSignin = async (formData) => {
   }
 };
 
-const getTeachers = async () => {
-  try {
-    await connectMongo();
-
-    const teachers = await teacherModel.find().lean();
-    return replaceMongoIdInArray(teachers);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
-const getSingleTeacher = async (teacherId) => {
-  try {
-    await connectMongo();
-
-    const teacher = await teacherModel.findById(teacherId).lean();
-    return replaceMongoIdInObject(teacher);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
 const getCurriculums = async () => {
   try {
     await connectMongo();
@@ -56,9 +30,4 @@ const getCurriculums = async () => {
   }
 };
 
-export {
-  handleSignin,
-  getTeachers,
-  getSingleTeacher,
-  getCurriculums,
-};
+export { handleSignin, getCurriculums };

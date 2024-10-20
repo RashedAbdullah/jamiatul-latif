@@ -21,7 +21,7 @@ const Navigations = () => {
         <DropDown menu={intro} />
         <NavTitle router={`/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={curriculum} />
-        <DropDown menu={notice} />
+       <NavTitle router="/notices">নোটিশ</NavTitle>
         {/* <DropDown menu={course} /> */}
         <AdminDialog />
       </nav>

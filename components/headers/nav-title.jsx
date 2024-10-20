@@ -3,6 +3,7 @@ import React from "react";
 import { ImBooks } from "react-icons/im";
 import { LuPenSquare } from "react-icons/lu";
 import { AiOutlineLogin } from "react-icons/ai";
+import { BiSolidMessageError } from "react-icons/bi";
 
 const NavTitle = ({ children, router = "/" }) => {
   const child = () => {
@@ -11,8 +12,8 @@ const NavTitle = ({ children, router = "/" }) => {
         return <LuPenSquare />;
       case "ফতোয়া বিভাগ":
         return <ImBooks />;
-      case "ফতোয়া বিভাগ":
-        return <ImBooks />;
+      case "নোটিশ":
+        return <BiSolidMessageError />;
       case "লগইন":
         return <AiOutlineLogin />;
       default:
