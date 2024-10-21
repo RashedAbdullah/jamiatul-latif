@@ -229,6 +229,29 @@ const MenuAccordion = async ({ menu }) => {
           </li>
         </ul>
       );
+    } else if (menu.dash === "বেসিক ইনফো") {
+      return (
+        <ul>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href="/dashboard/add-info"
+            >
+              <MoveRight />
+              ইনফো যুক্ত করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href="/dashboard/update-info"
+            >
+              <MoveRight />
+              ইনফো আপডেট করুন
+            </Link>
+          </li>
+        </ul>
+      );
     }
   };
   return (

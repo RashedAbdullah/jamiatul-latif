@@ -26,6 +26,10 @@ export const dashboardMenu = [
     icon: <BookCheck />,
   },
   {
+    dash: "বেসিক ইনফো",
+    icon: <BookCheck />,
+  },
+  {
     dash: "কোর্স সমূহ",
     icon: <BookCheck />,
   },
