@@ -1,8 +1,10 @@
+import { getMadrashaInfo } from "@/actions/madrasha";
 import PageTitle from "@/components/page-title";
 import AboutSchemaScript from "@/meta/about-madrasha-meta";
 import Head from "next/head";
 
-const AboutPage = () => {
+const AboutPage = async() => {
+  const madrashaInfo = await getMadrashaInfo();
   const aboutMadrasha = [
     {
       title: "নাম",
@@ -84,7 +86,7 @@ const AboutPage = () => {
           <PageTitle>প্রতিষ্ঠান পরিচিতি</PageTitle>
           <article>
             <ul>
-              {aboutMadrasha.map((about, ind) => (
+              {madrashaInfo.map((about, ind) => (
                 <li key={ind} className="grid grid-cols-12 p-2">
                   <AboutSchemaScript />
                   <p className="md:col-span-2 col-span-3 font-semibold">

@@ -175,7 +175,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/update-madrasha-info"
             >
               <MoveRight />
               মাদর্রাসা পরিচিতি আপডেট করুন
@@ -184,7 +184,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/add-madrasha-info"
             >
               <MoveRight />
               মাদর্রাসা পরিচিতি যুক্ত করুন
