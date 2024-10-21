@@ -6,12 +6,34 @@ const UpdateSingleFatwa = async ({ params: { slug } }) => {
   const singleFatwa = await getSingleFatwa(slug);
   const categories = await getFatwaCategories();
 
+  const handleUpdateFatwa = async (formData) => {
+    "use server";
+    try {
+      const fatwa_no = formData.get("fatwa_no");
+      const categoryId = formData.get("categoryId");
+      const answer = formData.get("answer");
+      const references = formData.get("references");
+
+      const updatedFatwa = {
+        fatwa_no,
+        categoryId,
+        answer,
+        references,
+      };
+
+      console.log("Updated Fatwa Data: ", updatedFatwa);
+      // e.g., await updateFatwaInDatabase(slug, updatedFatwa);
+    } catch (err) {
+      console.log("Error updating fatwa: ", err.message);
+    }
+  };
+
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-4xl font-bold mb-6 text-center">ফতোয়া আপডেট করুন</h1>
 
       <div className="bg-white p-6 rounded-lg shadow-md">
-        <form>
+        <form action={handleUpdateFatwa}>
           {/* Fatwa Number */}
           <div className="mb-4">
             <label className="block text-lg font-semibold mb-2">
@@ -32,6 +54,7 @@ const UpdateSingleFatwa = async ({ params: { slug } }) => {
               ক্যাটাগরি
             </label>
             <select
+              name="categoryId"
               className="mt-1 p-3 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             >
