@@ -28,9 +28,10 @@ const Notices = async () => {
               className="p-6 bg-white rounded-lg shadow-md border border-gray-200"
             >
               <h2 className="text-2xl font-semibold text-gray-800">
-                নতুন ভর্তি বিজ্ঞপ্তি
+               {notice.title ?? "সর্বশেষ নোটিশ"}
               </h2>
-              <p className="mt-4 text-gray-600">{notice.title}</p>
+
+              <p className="mt-4 text-gray-600">{notice.details}</p>
             </div>
           ))}
         </div>

@@ -9,6 +9,7 @@ const UpdateSingleNoticePage = async ({ params: { slug } }) => {
     try {
       const updatedNotice = {
         title: formData.get("title"),
+        details: formData.get("details"),
         activeDate: formData.get("activeDate"),
         duration: formData.get("duration"),
         active: formData.get("active"),
@@ -38,6 +39,19 @@ const UpdateSingleNoticePage = async ({ params: { slug } }) => {
             type="text"
             name="title"
             defaultValue={singleNotice.title}
+            className="mt-1 p-3 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        {/* Title */}
+        <div>
+          <label className="block text-lg font-semibold mb-2">
+            নোটিশের শিরোনাম
+          </label>
+          <input
+            type="text"
+            name="details"
+            defaultValue={singleNotice.details}
             className="mt-1 p-3 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>

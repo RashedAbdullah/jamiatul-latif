@@ -23,7 +23,10 @@ const getActiveNotices = async () => {
 
     const currentDate = new Date();
 
-    const notices = await noticeModel.find({}).lean();
+    const notices = await noticeModel
+      .find({ active: true })
+      .sort({ createdAt: -1 })
+      .lean();
 
     const activeNotices = notices.filter((notice) => {
       const activeDate = new Date(notice.activeDate);
@@ -55,7 +58,7 @@ const getLatestNotice = async () => {
     await connectMongo();
 
     const latestNotice = await noticeModel
-      .findOne({})
+      .findOne({ active: true })
       .sort({ createdAt: -1 })
       .lean();
 

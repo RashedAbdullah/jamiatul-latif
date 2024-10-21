@@ -5,6 +5,8 @@ import Footer from "@/components/footer/footer";
 import { auth } from "@/auth";
 import { Analytics } from "@vercel/analytics/react";
 import AboutSchemaScript from "@/meta/about-madrasha-meta";
+import PopupNotice from "./_components/popup-notice";
+import { getLatestNotice } from "@/actions/notice";
 
 const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
@@ -47,6 +49,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await auth();
+  const latestNotice = await getLatestNotice();
 
   return (
     <html lang="bn">
@@ -64,6 +67,7 @@ export default async function RootLayout({ children }) {
         className={`${bengali.className} bg-gradient-to-br from-indigo-100 to-blue-50 text-[#083042] min-h-screen`}
       >
         <AboutSchemaScript />
+        <PopupNotice notice={latestNotice} />
         <Navbar user={session?.user} />
         <main>{children}</main>
         <Footer />

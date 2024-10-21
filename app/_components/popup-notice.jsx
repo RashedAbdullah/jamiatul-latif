@@ -33,9 +33,9 @@ const PopupNotice = ({ notice }) => {
             transition={{ duration: 0.3 }}
           >
             <h2 className="text-2xl font-bold mb-4 text-gray-800">
-              সর্বশেষ নোটিশ
+              {notice.title ?? "সর্বশেষ নোটিশ"}
             </h2>
-            <p className="text-gray-600 mb-4">{notice}</p>
+            <p className="text-gray-600 mb-4">{notice.details}</p>
             <Button onClick={() => setShowPopup(false)}>বন্ধ করুন</Button>
           </motion.div>
         </motion.div>

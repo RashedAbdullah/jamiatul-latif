@@ -6,6 +6,10 @@ const noticeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    details: {
+      type: String,
+      required: true,
+    },
     activeDate: {
       type: String,
       required: true,

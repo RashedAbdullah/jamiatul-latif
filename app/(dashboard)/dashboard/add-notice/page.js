@@ -8,6 +8,7 @@ const AddNoticePage = () => {
     try {
       const newNotice = {
         title: formData.get("title"),
+        details: formData.get("details"),
         activeDate: formData.get("activeDate"),
         duration: formData.get("duration"),
         active: formData.get("active") === "yes" ? true : false,
@@ -38,6 +39,20 @@ const AddNoticePage = () => {
               type="text"
               name="title"
               placeholder="নোটিশের শিরোনাম লিখুন"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+
+          {/* Details */}
+          <div>
+            <label className="block text-lg font-medium mb-2">
+              বিস্তারিত
+            </label>
+            <input
+              type="text"
+              name="details"
+              placeholder="বিস্তারিত লিখুন"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
