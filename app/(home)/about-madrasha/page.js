@@ -3,40 +3,8 @@ import PageTitle from "@/components/page-title";
 import AboutSchemaScript from "@/meta/about-madrasha-meta";
 import Head from "next/head";
 
-const AboutPage = async() => {
+const AboutPage = async () => {
   const madrashaInfo = await getMadrashaInfo();
-  const aboutMadrasha = [
-    {
-      title: "নাম",
-      details: "জামিয়াতুল লতিফ",
-    },
-    {
-      title: "অবস্থান",
-      details:
-        "নারায়নগঞ্জ জেলার রূপগঞ্জ উপজেলার বরাব বাজারের পশ্চিম পাশে অবস্থিত",
-    },
-    {
-      title: "প্রতিষ্ঠাতা",
-      details: "মুফতী ইব্রাহীম নোমানী হাফি",
-    },
-    {
-      title: "পরিচালক",
-      details: "মুফতী ইব্রাহীম নোমানী হাফি",
-    },
-    {
-      title: "ছাত্র সংখ্যা",
-      details: "১২০+",
-    },
-    {
-      title: "শিক্ষক ও স্টাফ",
-      details: "১৫+",
-    },
-    {
-      title: "প্রেক্ষাপট",
-      details:
-        "পাঠ্যসূচি নির্বাচনের ক্ষেত্রে জামিয়াতুল লতিফ সবসময় আকাবিরে ওলামায়ে দেওবন্দের অনুসারী। কদীম নেসাবকে সামনে রেখে তার যাবতীয় মাহাসিন ও সৌন্দর্যের পুরোটা ছাত্রদের সামনে তুলে ধরার প্রতি বদ্ধপরিকর। হ্যাঁ, জামিয়াতুল লতিফ অবশ্যই আধুনিকতাকে স্বাগত জানায়। তবে তা কখনও বাধহীন না। একজন ছাত্র যেন যাবতীয় ইলমি ইসতিদাদের পাশাপাশি আরবী ও বাংলা ভাষার প্রতি পুরোপুরি যত্নশীল থাকে, তা লক্ষ্য রাখা হয়।",
-    },
-  ];
 
   return (
     <>

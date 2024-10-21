@@ -1,4 +1,4 @@
-import { Hind_Siliguri } from "next/font/google";
+import { Tiro_Bangla } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
 import Footer from "@/components/footer/footer";
@@ -8,7 +8,7 @@ import AboutSchemaScript from "@/meta/about-madrasha-meta";
 import PopupNotice from "./_components/popup-notice";
 import { getLatestNotice } from "@/actions/notice";
 
-const bengali = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
+const bengali = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 export const metadata = {
   title: "জামিয়াতুল লতিফ রূপগঞ্জ",
@@ -62,10 +62,19 @@ export default async function RootLayout({ children }) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
           crossOrigin="anonymous"
         ></script>
+        <script
+          async
+          custom-element="amp-auto-ads"
+          src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
+        ></script>
       </head>
       <body
         className={`${bengali.className} bg-gradient-to-br from-indigo-100 to-blue-50 text-[#083042] min-h-screen`}
       >
+        <amp-auto-ads
+          type="adsense"
+          data-ad-client="ca-pub-6921856465558245"
+        ></amp-auto-ads>
         <AboutSchemaScript />
         <PopupNotice notice={latestNotice} />
         <Navbar user={session?.user} />
