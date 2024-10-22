@@ -38,7 +38,6 @@ export default function MobileMenu() {
           <NavTitle router={`/notices`}>নোটিশ</NavTitle>
           <DropDown menu={curriculum} />
           <NavTitle router={`/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
-          <NavTitle router={`/blogs`}>প্রবন্ধ</NavTitle>
         </div>
       </SheetContent>
     </Sheet>
