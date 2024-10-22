@@ -1,6 +1,19 @@
 import { getArticles } from "@/actions/acticle";
 import ArticlateCard from "./_components/article-card";
 
+export const metadata = {
+  title: "প্রবন্ধসমূহ | জামিয়াতুল লতিফ রূপগঞ্জ",
+  description:
+    "আমাদের সর্বশেষ প্রবন্ধ পড়ুন এবং ইসলামিক জীবন, প্রযুক্তি, শিক্ষা, এবং অন্যান্য গুরুত্বপূর্ণ বিষয় সম্পর্কে জ্ঞান অর্জন করুন।",
+  openGraph: {
+    title: "প্রবন্ধসমূহ | জামিয়াতুল লতিফ রূপগঞ্জ",
+    description:
+      "আমাদের সর্বশেষ প্রবন্ধ পড়ুন এবং ইসলামিক জীবন, প্রযুক্তি, শিক্ষা, এবং অন্যান্য গুরুত্বপূর্ণ বিষয় সম্পর্কে জ্ঞান অর্জন করুন।",
+    type: "website",
+    url: "https://www.jamiatullatif.com/articles",
+  },
+};
+
 const ArticlesPage = async () => {
   const articles = await getArticles();
   return (

@@ -2,6 +2,25 @@ import { getTeachers } from "@/actions/teachers";
 import PageTitle from "@/components/page-title";
 import TeacherCard from "@/components/teachers/teacher-card";
 
+export const metadata = {
+  title: "শিক্ষক পরিচিতি | জামিয়াতুল লতিফ রূপগঞ্জ",
+  description:
+    "আমাদের নিবেদিত শিক্ষকদের সাথে পরিচিত হোন, যারা শিক্ষার আলো ছড়াচ্ছেন।",
+  openGraph: {
+    title: "শিক্ষক পরিচিতি | জামিয়াতুল লতিফ রূপগঞ্জ",
+    description:
+      "আমাদের নিবেদিত শিক্ষকদের সাথে পরিচিত হোন, যারা শিক্ষার আলো ছড়াচ্ছেন।",
+    type: "website",
+    url: "https://www.jamiatullatif.com/teachers",
+    images: [
+      {
+        url: "https://i.ibb.co/0FZ9bnp/default-avatar.png",
+        alt: "শিক্ষক পরিচিতি",
+      },
+    ],
+  },
+};
+
 const TeachersPage = async () => {
   const teachers = await getTeachers();
 

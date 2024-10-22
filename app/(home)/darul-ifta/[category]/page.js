@@ -2,15 +2,26 @@ import { getFatwasByCategoryId } from "@/actions/fatwa";
 import FatwaCategories from "../_components/fatwa-categories";
 import FatwaCard from "../_components/fatwa-catd";
 
+export const metadata = {
+  title: "ফতোয়া ক্যাটাগরি",
+  description: "বিভিন্ন ফতোয়া সম্পর্কিত তথ্য এবং উত্তর।",
+};
+
 const FatwaCategoryPage = async ({ params: { category } }) => {
   const fatwasByCategory = await getFatwasByCategoryId(category);
+
+  // If you have a specific category title, consider fetching it based on the category ID
+  const categoryTitle =
+    fatwasByCategory.length > 0
+      ? fatwasByCategory[0].categoryId.category
+      : "ফতোয়া";
 
   return (
     <div className="container mx-auto px-4 min-h-screen">
       {/* Dynamic Category Title */}
       {fatwasByCategory.length > 0 && (
         <h1 className="text-2xl text-center pt-5 font-bold text-gray-800">
-          {fatwasByCategory[0].categoryId.category} সম্পর্কিত ফতোয়া
+          {categoryTitle} সম্পর্কিত ফতোয়া
         </h1>
       )}
 

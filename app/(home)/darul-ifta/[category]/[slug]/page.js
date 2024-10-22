@@ -3,12 +3,31 @@ import CopyLinkButton from "../../_components/share-link-fatwa";
 import { getSingleFatwa } from "@/actions/fatwa";
 import { getEngToBnNumber } from "@/utils/number-converter";
 
-const SinleFatwaPage = async ({ params: { slug } }) => {
+// Metadata function for SEO
+export const generateMetadata = async ({ params: { slug } }) => {
+  const singleFatwa = await getSingleFatwa(slug);
+
+  if (!singleFatwa) {
+    return {
+      title: "ফতোয়া পাওয়া যায়নি",
+      description: "ফতোয়া তথ্য উপলব্ধ নয়।",
+    };
+  }
+
+  return {
+    title: `${getEngToBnNumber(singleFatwa.fatwa_no)} নং. ${
+      singleFatwa.questionerId.name
+    } এর প্রশ্ন | দারুল ইফতা`,
+    description: `${singleFatwa.categoryId.category} ক্যাটাগরিতে ${singleFatwa.questionerId.name} এর প্রশ্ন ও উত্তরের বিস্তারিত তথ্য।`,
+  };
+};
+
+const SingleFatwaPage = async ({ params: { slug } }) => {
   const singleFatwa = await getSingleFatwa(slug);
 
   // Ensure that singleFatwa is correctly fetched
   if (!singleFatwa) {
-    return <div>Fatwa not found.</div>;
+    return <div>ফতোয়া পাওয়া যায়নি।</div>;
   }
 
   return (
@@ -76,4 +95,4 @@ const SinleFatwaPage = async ({ params: { slug } }) => {
   );
 };
 
-export default SinleFatwaPage;
+export default SingleFatwaPage;

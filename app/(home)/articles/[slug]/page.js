@@ -3,6 +3,26 @@ import ArticleSchemaScript from "@/meta/article-meta";
 import Image from "next/image";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 
+export const metadata = async ({ params: { slug } }) => {
+  const article = await getSingleArticle(slug);
+  return {
+    title: article.title || "প্রবন্ধ",
+    description: article.excerpt || "এই প্রবন্ধটি সম্পর্কে আরো জানুন।",
+    openGraph: {
+      title: article.title || "প্রবন্ধ",
+      description: article.excerpt || "এই প্রবন্ধটি সম্পর্কে আরো জানুন।",
+      type: "article",
+      url: `আপনার পেজের URL/${slug}`,
+      images: [
+        {
+          url: article.coverImage || "/ifta_book.png",
+          alt: article.title || "প্রবন্ধের ছবি",
+        },
+      ],
+    },
+  };
+};
+
 const SingleArticlePage = async ({ params: { slug } }) => {
   const article = await getSingleArticle(slug);
 

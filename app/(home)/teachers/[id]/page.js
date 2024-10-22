@@ -2,6 +2,32 @@ import { getSingleTeacher } from "@/actions/teachers";
 import TeacherSchemaScript from "@/meta/teacher-meta";
 import { FaFacebook, FaTwitter, FaTelegram } from "react-icons/fa";
 
+export const metadata = async ({ params: { id } }) => {
+  const teacher = await getSingleTeacher(id);
+  return {
+    title: `${teacher.name} | শিক্ষক পরিচিতি | জামিয়াতুল লতিফ রূপগঞ্জ`,
+    description: teacher.about || "শিক্ষক সম্পর্কে আরও জানুন।",
+    openGraph: {
+      title: `${teacher.name} | শিক্ষক পরিচিতি | জামিয়াতুল লতিফ রূপগঞ্জ`,
+      description: teacher.about || "শিক্ষক সম্পর্কে আরও জানুন।",
+      type: "profile",
+      profile: {
+        firstName: teacher.name.split(" ")[0],
+        lastName: teacher.name.split(" ")[1] || "",
+        gender: "male", // Update based on actual data if available
+      },
+      images: [
+        {
+          url:
+            teacher.image ||
+            "https://i.ibb.co.com/VtvbmpP/imgbin-computer-icons-teacher-professor-education-lecturer-png.png",
+          alt: `${teacher.name} - ছবি`,
+        },
+      ],
+    },
+  };
+};
+
 const SingleTeacherPage = async ({ params: { id } }) => {
   const teacher = await getSingleTeacher(id);
 

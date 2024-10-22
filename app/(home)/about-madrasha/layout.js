@@ -24,7 +24,26 @@ const AboutMadrashaLayout = ({ children }) => {
           content="https://i.ibb.co.com/0FZ9bnp/jamia-pic.jpg"
         />
       </Head>
-      <main role="main">{children}</main>
+      <main role="main">
+        <script type="application/ld+json">
+          {`
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "জামিয়াতুল লতিফ রূপগঞ্জ",
+  "url": "https://jamiatullatif.com",
+  "description": "জামিয়াতুল লতিফ রূপগঞ্জ মাদরাসার পরিচিতি",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "রূপগঞ্জ",
+    "addressRegion": "বাংলাদেশ"
+  },
+  "logo": "https://i.ibb.co/0FZ9bnp/jamia-pic.jpg"
+}
+`}
+        </script>
+        {children}
+      </main>
     </>
   );
 };
