@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import TeacherSchemaScript from "@/meta/teacher-meta";
 import Link from "next/link";
 
 const HomePageTeachers = async () => {
@@ -28,6 +29,7 @@ const HomePageTeachers = async () => {
                       key={teacher.id}
                       className="pl-1 md:basis-1/2 lg:basis-1/3"
                     >
+                      <TeacherSchemaScript teacher={teacher} />
                       <div className="p-1">
                         <Card className="transition-transform transform hover:scale-105">
                           <CardContent className="flex aspect-square items-center justify-center p-6">

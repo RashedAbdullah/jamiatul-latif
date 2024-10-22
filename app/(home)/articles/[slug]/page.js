@@ -1,4 +1,5 @@
 import { getSingleArticle } from "@/actions/acticle";
+import ArticleSchemaScript from "@/meta/article-meta";
 import Image from "next/image";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 
@@ -16,6 +17,7 @@ const SingleArticlePage = async ({ params: { slug } }) => {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <ArticleSchemaScript article={article} />
       <article className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
         {/* Cover Image with Overlay */}
         <div className="relative w-full h-72 mb-6">

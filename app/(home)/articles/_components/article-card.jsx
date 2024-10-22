@@ -1,3 +1,4 @@
+import ArticleSchemaScript from "@/meta/article-meta";
 import Link from "next/link";
 import { FaCalendarAlt, FaUser } from "react-icons/fa";
 
@@ -11,6 +12,7 @@ const ArticleCard = ({ article }) => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl">
+      <ArticleSchemaScript article={article} />
       {/* Article Title */}
       <h2 className="text-2xl font-bold text-gray-800 mb-2">{title}</h2>
 

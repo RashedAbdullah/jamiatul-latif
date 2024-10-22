@@ -1,4 +1,5 @@
 import { getSingleTeacher } from "@/actions/teachers";
+import TeacherSchemaScript from "@/meta/teacher-meta";
 import { FaFacebook, FaTwitter, FaTelegram } from "react-icons/fa";
 
 const SingleTeacherPage = async ({ params: { id } }) => {
@@ -6,6 +7,7 @@ const SingleTeacherPage = async ({ params: { id } }) => {
 
   return (
     <div className="container mx-auto py-10">
+      <TeacherSchemaScript teacher={teacher} />
       <div className="bg-white shadow-lg rounded-lg lg:grid lg:grid-cols-2 lg:gap-4 p-6">
         {/* Left Section: Image and About */}
         <div className="lg:border-r lg:pr-2">
