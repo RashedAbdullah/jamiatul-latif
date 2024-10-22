@@ -21,7 +21,7 @@ const ResultsPage = async () => {
       <Head>
         {/* SEO Metadata */}
         <title>
-          Exam Results | পরীক্ষার ফলাফল | Jamitul latif | জামিয়াতুল লতিফ
+          Exam Results | পরীক্ষার ফলাফল | Jamitul Latif | জামিয়াতুল লতিফ
         </title>
         <meta
           name="description"
@@ -41,18 +41,17 @@ const ResultsPage = async () => {
           property="og:url"
           content="https://www.jamiatullatif.com/results"
         />
-
         <meta name="robots" content="index,follow" />
       </Head>
 
       <div>
         <ResultsNavbar />
 
-        <section>
-          {years.map((yr) => (
-            <article key={yr.id}>
+        <section className="container mx-auto">
+          {years.map((year) => (
+            <article key={year.id}>
               <header>
-                <PageTitle>শিক্ষাবর্ষ {yr.academicYear}</PageTitle>
+                <PageTitle>শিক্ষাবর্ষ {year.academicYear}</PageTitle>
               </header>
 
               {classes.map((cls) => (
@@ -63,7 +62,8 @@ const ResultsPage = async () => {
                     // Filter results by exam name, year, and class
                     const filteredResults = allResults.filter(
                       (result) =>
-                        result.studentId.academicYearId.toString() === yr.id &&
+                        result.studentId.academicYearId.toString() ===
+                          year.id &&
                         result.studentId.classNameId.toString() === cls.id &&
                         result.examNameId.examName === exam.examName
                     );
@@ -73,9 +73,7 @@ const ResultsPage = async () => {
                         <SubTitle>{exam.examName}</SubTitle>
 
                         {filteredResults.length > 0 ? (
-                          <div className="container">
-                            <ResultTable results={filteredResults} />
-                          </div>
+                          <ResultTable results={filteredResults} />
                         ) : (
                           <p className="text-center my-10 text-gray-400">
                             দুঃখিত, কোন তথ্য পাওয়া য়ায় নি।

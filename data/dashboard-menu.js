@@ -30,6 +30,10 @@ export const dashboardMenu = [
     icon: <BookCheck />,
   },
   {
+    dash: "প্রবন্ধ সমূহ",
+    icon: <BookCheck />,
+  },
+  {
     dash: "কোর্স সমূহ",
     icon: <BookCheck />,
   },

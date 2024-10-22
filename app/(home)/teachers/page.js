@@ -6,9 +6,12 @@ const TeachersPage = async () => {
   const teachers = await getTeachers();
 
   return (
-    <div className="text-primary">
+    <div className="text-primary container mx-auto p-4">
       <PageTitle>শিক্ষক পরিচিতি</PageTitle>
-      <div className="container grid lg:grid-cols-2 grid-cols-1 gap-5 mb-5">
+      <p className="mb-5 text-lg text-gray-600 text-center">
+        আমাদের নিবেদিত শিক্ষকদের সাথে পরিচিত হোন, যারা শিক্ষার আলো ছড়াচ্ছেন।
+      </p>
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
         {teachers
           .sort((a, b) => a.teacherSerial - b.teacherSerial)
           .map(

@@ -1,16 +1,14 @@
-// import { courses } from "@/data/courses";
 import DropDown from "./dropdown";
 import NavTitle from "./nav-title";
 import { introductiion } from "@/data/introduction";
-import { notices } from "@/data/notices";
+
 import { curriculums } from "@/data/curriculum";
 import NavSearch from "./search";
 import AdminDialog from "./admin-dialog";
 
 const Navigations = () => {
   const intro = introductiion();
-  // const course = courses();
-  const notice = notices();
+
   const curriculum = curriculums();
   return (
     <>
@@ -21,7 +19,8 @@ const Navigations = () => {
         <DropDown menu={intro} />
         <NavTitle router={`/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
         <DropDown menu={curriculum} />
-       <NavTitle router="/notices">নোটিশ</NavTitle>
+        <NavTitle router="/articles">প্রবন্ধ</NavTitle>
+        <NavTitle router="/notices">নোটিশ</NavTitle>
         {/* <DropDown menu={course} /> */}
         <AdminDialog />
       </nav>

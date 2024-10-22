@@ -1,20 +1,23 @@
 import Link from "next/link";
-import StudentAvatar from "./studnet-avatar";
+
 import StudentInfo from "./student-info";
 import { Button } from "../ui/button";
+import StudentAvatar from "./studnet-avatar";
 
 const StudentsCard = ({ student }) => {
+  const { avatar, academicYearId, classNameId, dakhila } = student;
+
   return (
-    <div className="shadow p-4 bg-white">
-      <StudentAvatar avatar={student.avatar} />
+    <div className="shadow p-4 bg-white rounded-lg transition-transform transform hover:scale-105">
+      <StudentAvatar avatar={avatar} />
       <div className="pt-4 px-5 border-t">
         <StudentInfo student={student} />
       </div>
-      <div className="w-full text-end">
+      <div className="w-full text-right mt-4">
         <Link
           href={`/students/${
-            student.academicYearId.academicYear
-          }/${student.classNameId.class.replace(/ /g, "-")}/${student.dakhila}`}
+            academicYearId.academicYear
+          }/${classNameId.class.replace(/ /g, "-")}/${dakhila}`}
         >
           <Button>বিস্তারিত</Button>
         </Link>

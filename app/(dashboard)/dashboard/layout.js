@@ -1,5 +1,5 @@
 import DashboardHeader from "../_components/dashboard-header";
-import DeashboardMenu from "../_components/dashboard-menu";
+import DashboardMenu from "../_components/dashboard-menu";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 
@@ -8,14 +8,15 @@ const DashboardLayout = async ({ children }) => {
   if (!session) {
     redirect("/signin");
   }
+
   return (
-    <div className="max-h-screen overflow-auto">
+    <div className="max-h-screen flex flex-col">
       <DashboardHeader />
-      <div className="grid grid-cols-8">
-        <div className="col-span-1">
-          <DeashboardMenu />
-        </div>
-        <div className="col-span-7"> {children}</div>
+      <div className="flex flex-1">
+        <aside className="w-1/4 hidden md:block">
+          <DashboardMenu />
+        </aside>
+        <main className="flex-1 p-6">{children}</main>
       </div>
     </div>
   );

@@ -50,17 +50,22 @@ const AboutPage = async () => {
       </Head>
 
       <div className="container mb-10">
-        <section>
+        <section className="my-8">
           <PageTitle>প্রতিষ্ঠান পরিচিতি</PageTitle>
-          <article>
-            <ul>
+          <article className="bg-gray-100 rounded-lg shadow p-6">
+            <ul className="space-y-4">
               {madrashaInfo.map((about, ind) => (
-                <li key={ind} className="grid grid-cols-12 p-2">
+                <li
+                  key={ind}
+                  className="grid grid-cols-12 gap-4 items-center border-b border-gray-300 pb-4"
+                >
                   <AboutSchemaScript />
-                  <p className="md:col-span-2 col-span-3 font-semibold">
+                  <p className="md:col-span-2 col-span-3 font-semibold text-gray-700">
                     {about.title}:
                   </p>
-                  <p className="md:col-span-10 col-span-9">{about.details}</p>
+                  <p className="md:col-span-10 col-span-9 text-gray-600">
+                    {about.details}
+                  </p>
                 </li>
               ))}
             </ul>

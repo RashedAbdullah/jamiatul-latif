@@ -18,12 +18,16 @@ const TeacherInfo = ({ info }) => {
         <div className="col-span-7">
           <p>{info.masters}</p>
         </div>
-        <div className="col-span-3">
-          <p>তাখাস্সুস: </p>
-        </div>
-        <div className="col-span-7">
-          <p>{info.degree}</p>
-        </div>
+        {info.degree && (
+          <>
+            <div className="col-span-3">
+              <p>তাখাস্সুস: </p>
+            </div>
+            <div className="col-span-7">
+              <p>{info.degree}</p>
+            </div>
+          </>
+        )}
         <div className="col-span-3">
           <p>ইমেইল: </p>
         </div>

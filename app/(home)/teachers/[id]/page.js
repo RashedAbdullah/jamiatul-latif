@@ -1,15 +1,15 @@
 import { getSingleTeacher } from "@/actions/teachers";
-import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaTelegram } from "react-icons/fa";
 
 const SingleTeacherPage = async ({ params: { id } }) => {
   const teacher = await getSingleTeacher(id);
+
   return (
-    <div className="container">
-      <div className="bg-white shadow lg:grid grid-cols-2 gap-4 p-6 mt-10 rounded-lg">
+    <div className="container mx-auto py-10">
+      <div className="bg-white shadow-lg rounded-lg lg:grid lg:grid-cols-2 lg:gap-4 p-6">
+        {/* Left Section: Image and About */}
         <div className="lg:border-r lg:pr-2">
-          <div className="flex justify-center items-center align-middle">
+          <div className="flex justify-center items-center mb-4">
             <div
               className={`md:h-[500px] md:w-[500px] h-[400px] w-[400px] bg-cover bg-no-repeat bg-center flex justify-center items-end`}
               style={{
@@ -17,72 +17,64 @@ const SingleTeacherPage = async ({ params: { id } }) => {
                   ? `url(${teacher.image})`
                   : "url(https://i.ibb.co.com/VtvbmpP/imgbin-computer-icons-teacher-professor-education-lecturer-png.png)",
               }}
-            ></div>
-          </div>
-          <div className="lg:block hidden">
-            <h2 className="text-center text-2xl font-bold my-5">
-              শিক্ষক সম্পর্কে
-            </h2>
-            <div className="mx-10">
-              <p>{teacher.about}</p>
+              aria-label={teacher.name} // Added accessibility label
+            >
+              <div className="bg-black bg-opacity-50 text-white p-2 rounded">
+                {teacher.name}
+              </div>
             </div>
+          </div>
+          <div className="hidden lg:block text-center">
+            <h2 className="text-2xl font-bold my-5">শিক্ষক সম্পর্কে</h2>
+            <p className="mx-10">{teacher.about}</p>
           </div>
         </div>
-        <div className="p-6 flex justify-center items-center align-middle">
-          <div className="flex flex-col justify-center items-center align-middle md:gap-10 gap-4 w-full h-full">
-            <div className="text-center py-6 w-full">
-              <h2 className="font-semibold md:text-3xl">{teacher.name}</h2>
-              <p>{teacher.post}</p>
-            </div>
-            <div className="border-b border-slate-800 w-full"></div>
-            <div className="py-6 grid grid-cols-10 gap-2 w-full">
-              <div className="col-span-3">
-                <p>ঠিকানা: </p>
+
+        {/* Right Section: Teacher Info */}
+        <div className="p-6 flex flex-col justify-center items-center">
+          <div className="text-center py-6">
+            <h2 className="font-semibold md:text-3xl">{teacher.name}</h2>
+            <p className="text-lg">{teacher.post}</p>
+          </div>
+          <div className="border-b border-slate-800 w-full mb-4"></div>
+          <div className="grid grid-cols-10 gap-2 w-full">
+            <div className="col-span-3 font-semibold">ঠিকানা:</div>
+            <div className="col-span-7">{teacher.address}</div>
+            <div className="col-span-3 font-semibold">ফারেগ:</div>
+            <div className="col-span-7">{teacher.masters}</div>
+            {teacher.degree && (
+              <>
+                <div className="col-span-3 font-semibold">তাখাস্সুস:</div>
+                <div className="col-span-7">{teacher.degree}</div>
+              </>
+            )}
+            <div className="col-span-3 font-semibold">ইমেইল:</div>
+            <div className="col-span-7">{teacher.email}</div>
+            <div className="col-span-3 font-semibold">মোবাইল:</div>
+            <div className="col-span-7">{teacher.number}</div>
+          </div>
+          <div className="border-b border-slate-800 w-full my-4"></div>
+
+          {/* Social Media Links */}
+          <div className="flex justify-center gap-5 text-2xl text-slate-800">
+            {teacher.socials.map((link, ind) => (
+              <div key={ind}>
+                <a
+                  href={link.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${link.name}`}
+                >
+                  {link.name === "facebook" ? (
+                    <FaFacebook />
+                  ) : link.name === "twitter" ? (
+                    <FaTwitter />
+                  ) : (
+                    <FaTelegram />
+                  )}
+                </a>
               </div>
-              <div className="col-span-7">
-                <p>{teacher.address}</p>
-              </div>
-              <div className="col-span-3">
-                <p>ফারেগ: </p>
-              </div>
-              <div className="col-span-7">
-                <p>{teacher.masters}</p>
-              </div>
-              <div className="col-span-3">
-                <p>তাখাস্সুস: </p>
-              </div>
-              <div className="col-span-7">
-                <p>{teacher.degree}</p>
-              </div>
-              <div className="col-span-3">
-                <p>ইমেইল: </p>
-              </div>
-              <div className="col-span-7">
-                <p>{teacher.email}</p>
-              </div>
-              <div className="col-span-3">
-                <p>মোবাইল: </p>
-              </div>
-              <div className="col-span-7">
-                <p>{teacher.number}</p>
-              </div>
-            </div>
-            <div className="border-b border-slate-800 w-full"></div>
-            <div className="flex justify-center align-middle items-center gap-5 text-2xl mt-6 text-slate-800 w-full">
-              {teacher.socials.map((link, ind) => (
-                <div key={ind}>
-                  <a href={link.link} target="_blnk">
-                    {link.name === "facebook" ? (
-                      <FaFacebook />
-                    ) : link.name === "twitter" ? (
-                      <FaTwitter />
-                    ) : (
-                      <FaTelegram />
-                    )}
-                  </a>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </div>
