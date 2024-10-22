@@ -16,11 +16,11 @@ import { notices } from "@/data/notices";
 import { curriculums } from "@/data/curriculum";
 import NavTitle from "./nav-title";
 
-export default function MobileMenu({ lang = "bn" }) {
-  const intro = introductiion(lang);
+export default function MobileMenu() {
+  const intro = introductiion();
   // const course = courses(lang);
-  const notice = notices(lang);
-  const curriculum = curriculums(lang);
+  const notice = notices();
+  const curriculum = curriculums();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -40,8 +40,8 @@ export default function MobileMenu({ lang = "bn" }) {
           {/* <DropDown menu={course} /> */}
           <DropDown menu={notice} />
           <DropDown menu={curriculum} />
-          <NavTitle router={`/${lang}/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
-          <NavTitle router={`/${lang}/blogs`}>প্রবন্ধ</NavTitle>
+          <NavTitle router={`/darul-ifta`}>ফতোয়া বিভাগ</NavTitle>
+          <NavTitle router={`/blogs`}>প্রবন্ধ</NavTitle>
         </div>
       </SheetContent>
     </Sheet>

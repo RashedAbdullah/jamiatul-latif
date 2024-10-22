@@ -32,6 +32,7 @@ const getFatwas = async () => {
         path: "questionerId",
         model: iftaQuestionModel,
       })
+      .sort({ createdAt: -1 })
       .lean();
     return replaceMongoIdInArray(fatwas);
   } catch (err) {
@@ -77,8 +78,24 @@ const getSingleFatwa = async (id) => {
     return fatwa;
   } catch (err) {
     console.log(err.message);
-    return null;
   }
 };
 
-export { createFatwa, getFatwas, getFatwasByCategoryId, getSingleFatwa };
+const updateFatwa = async (id, data) => {
+  try {
+    await connectMongo();
+
+    const fatwa = FatwaModel.findByIdAndUpdate(id, data);
+    return fatwa;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export {
+  createFatwa,
+  getFatwas,
+  getFatwasByCategoryId,
+  getSingleFatwa,
+  updateFatwa,
+};
