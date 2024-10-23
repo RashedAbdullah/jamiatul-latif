@@ -5,6 +5,15 @@ import DarulIftaHome from "./_components/darul-ifta-home";
 import HomePageTeachers from "./_components/teachers";
 import Ads from "@/components/ads";
 
+// async function getFacebookPosts() {
+//   const response = await fetch(
+//     `https://graph.facebook.com/v14.0/${process.env.PAGE_ID}/posts?access_token=${process.env.FB_ACCESS_TOKEN}`
+//   );
+//   const data = await response.json();
+//   console.log(data);
+//   return data;
+// }
+// getFacebookPosts();
 export default async function Home() {
   return (
     <>
