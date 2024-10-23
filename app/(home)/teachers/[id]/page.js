@@ -2,7 +2,7 @@ import { getSingleTeacher } from "@/actions/teachers";
 import TeacherSchemaScript from "@/meta/teacher-meta";
 import { FaFacebook, FaTwitter, FaTelegram } from "react-icons/fa";
 
-export const metadata = async ({ params: { id } }) => {
+export const generateMetadata = async ({ params: { id } }) => {
   const teacher = await getSingleTeacher(id);
   return {
     title: `${teacher.name} | শিক্ষক পরিচিতি | জামিয়াতুল লতিফ রূপগঞ্জ`,

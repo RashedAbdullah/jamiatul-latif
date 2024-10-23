@@ -3,7 +3,7 @@ import ArticleSchemaScript from "@/meta/article-meta";
 import Image from "next/image";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 
-export const metadata = async ({ params: { slug } }) => {
+export const generateMetadata = async ({ params: { slug } }) => {
   const article = await getSingleArticle(slug);
   return {
     title: article.title || "প্রবন্ধ",
