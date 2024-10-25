@@ -1,116 +1,130 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useState } from "react";
-import SubTitle from "../sub-title";
-// MONGO_URI = mongodb+srv://jamiatullatifdarulifta:q3TShx2W8TuHeynh@jamaitaullatif.z7dqkyn.mongodb.net/darul_ifta?retryWrites=true&w=majority&appName=jamaitaullatif/jamiatul_latif
+import { useRouter } from "next/navigation";
 
-const SignupForm = () => {
-  const [error, setError] = useState("");
+const Signup = () => {
   const router = useRouter();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    password: "",
+    role: "teacher",
+  });
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
 
-  const handleSubmitSignup = async (event) => {
-    event.preventDefault();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+    setSuccess(null);
+
     try {
-      const formData = new FormData(event.currentTarget);
-
-      const name = formData.get("name");
-      const email = formData.get("email");
-      const number = formData.get("number");
-      const password = formData.get("password");
-
       const response = await fetch("/api/auth/register", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, number, password }),
+        body: JSON.stringify(formData), // Sending formData directly
       });
-      response.status === 201 && router.push(`/signin`);
+
+      const data = await response.json(); // Parse the JSON response
+
+      if (!response.ok) {
+        throw new Error(data.message || "কিছু ভুল হয়েছে!"); // Handle error response
+      }
+
+      setSuccess(data.message); // Set success message
+      setFormData({
+        name: "",
+        email: "",
+        number: "",
+        password: "",
+        role: "teacher",
+      });
+      router.push("/signin");
     } catch (err) {
-      setError(err.message);
+      setError(err.message || "কিছু ভুল হয়েছে!"); // Set error message
     }
   };
 
   return (
-    <>
-      {error && <div className="text-center text-sm text-red-500">{error}</div>}
-      <form onSubmit={handleSubmitSignup}>
-        <SubTitle showIcon={false}>সাইনআপ করুন</SubTitle>
-        <div className="flex flex-col gap-5">
-          <div className="grid grid-cols-10">
-            <p className="col-span-2 text-end px-3">নাম:</p>
-            <div className="col-span-8">
-              <input
-                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 border-b border-green-500 bg-transparent transition-all duration-300"
-                type="text"
-                placeholder="আপনার নাম"
-                name="name"
-              />
-            </div>
-          </div>
-
-          {/* ইমেইল */}
-          <div className="grid grid-cols-10">
-            <p className="col-span-2 text-end px-3">ইমেইল:</p>
-            <div className="col-span-8">
-              <input
-                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 border-b border-green-500 bg-transparent transition-all duration-300"
-                type="email"
-                placeholder="আপনার ইমেইল"
-                name="email"
-              />
-            </div>
-          </div>
-
-          {/* নাম্বার */}
-          <div className="grid grid-cols-10">
-            <p className="col-span-2 text-end px-3">ফোন:</p>
-            <div className="col-span-8">
-              <input
-                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 border-b border-green-500 bg-transparent transition-all duration-300"
-                type="text"
-                placeholder="আপনার ফোন নাম্বার"
-                name="number"
-              />
-            </div>
-          </div>
-
-          {/* পাসওয়ার্ড */}
-          <div className="grid grid-cols-10">
-            <p className="col-span-2 text-end px-3">পাসওয়ার্ড:</p>
-            <div className="col-span-8">
-              <input
-                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 bg-transparent border-b border-green-500"
-                type="password"
-                placeholder="পাসওয়ার্ড সেট করুন"
-                name="password"
-              />
-            </div>
-          </div>
-
-          {/* কনফার্ম পাসওয়ার্ড */}
-          <div className="grid grid-cols-10">
-            <p className="col-span-2 text-end px-3">পাসওয়ার্ড:</p>
-            <div className="col-span-8">
-              <input
-                className="w-full py-1 px-3 resize-none focus:outline outline-1 outline-green-500 bg-transparent border-b border-green-500"
-                type="password"
-                placeholder="পাসওয়ার্ড কনফার্ম করুন"
-                name="conf-password"
-              />
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button className="bg-green-500 hover:bg-green-600 transition-all duration-300 text-white py-2 px-10 mt-3 shadow-lg">
-              সাবমিট করুন
-            </button>
-          </div>
+    <div className="container mx-auto mt-10 p-5">
+      <h1 className="text-3xl font-bold text-center">নিবন্ধন করুন</h1>
+      {error && <p className="text-red-500 text-center">{error}</p>}
+      {success && <p className="text-green-500 text-center">{success}</p>}
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-5">
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-2">নাম:</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-3 py-2 border border-gray-300 rounded"
+          />
         </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-2">ইমেইল:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-3 py-2 border border-gray-300 rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-2">ফোন নম্বর:</label>
+          <input
+            type="text"
+            name="number"
+            value={formData.number}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-2">পাসওয়ার্ড:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+            className="w-full px-3 py-2 border border-gray-300 rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-2">ভূমিকা:</label>
+          <select
+            name="role"
+            value={formData.role}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded"
+          >
+            <option value="principal">প্রধান</option>
+            <option value="darul ifta">দারুল ইফতা</option>
+            <option value="teacher">শিক্ষক</option>
+          </select>
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          নিবন্ধন করুন
+        </button>
       </form>
-    </>
+    </div>
   );
 };
 
-export default SignupForm;
+export default Signup;
