@@ -40,6 +40,28 @@ const getFatwas = async () => {
   }
 };
 
+const getLatestFatwas = async () => {
+  try {
+    await connectMongo();
+
+    const fatwas = await FatwaModel.find({})
+      .populate({
+        path: "categoryId",
+        model: fatwaCategoryModel,
+      })
+      .populate({
+        path: "questionerId",
+        model: iftaQuestionModel,
+      })
+      .sort({ createdAt: -1 })
+      .limit(3)
+      .lean();
+    return replaceMongoIdInArray(fatwas);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const getFatwasByCategoryId = async (categoryId) => {
   try {
     await connectMongo();
@@ -55,6 +77,7 @@ const getFatwasByCategoryId = async (categoryId) => {
         path: "questionerId",
         model: iftaQuestionModel,
       })
+      .sort({ createdAt: -1 })
       .lean();
     return replaceMongoIdInArray(fatwasByCategory);
   } catch (err) {
@@ -98,4 +121,5 @@ export {
   getFatwasByCategoryId,
   getSingleFatwa,
   updateFatwa,
+  getLatestFatwas,
 };

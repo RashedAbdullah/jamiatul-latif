@@ -12,6 +12,20 @@ const getArticles = async () => {
   }
 };
 
+const getLatestArticles = async () => {
+  try {
+    await connectMongo();
+
+    const latestArticles = await articleModel
+      .find({})
+      .sort({ publishedAt: -1 })
+      .limit(3);
+    return latestArticles;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const getSingleArticle = async (id) => {
   try {
     await connectMongo();
@@ -50,4 +64,5 @@ export {
   getSingleArticle,
   updateSingleArticle,
   createSingleArticle,
+  getLatestArticles,
 };

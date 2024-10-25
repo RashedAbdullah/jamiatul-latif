@@ -16,7 +16,17 @@ const HomePageTeachers = async () => {
 
   return (
     <div className="my-10">
-      <PageTitle>শিক্ষকবৃন্দ</PageTitle>
+      {/* Page Title */}
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">শিক্ষকবৃন্দ</h1>
+        <div className="w-24 mx-auto mt-2 mb-6"></div>
+        <p className="text-lg text-gray-600">
+          জামিয়ার নিবেদিতপ্রাণ শিক্ষকবৃন্দ, যারা তাঁদের গভীর জ্ঞান ও অভিজ্ঞতা
+          দিয়ে ছাত্রদের উজ্জীবিত করেন এবং সঠিক পথনির্দেশনা দিয়ে থাকেন।
+        </p>
+      </div>
+
+      {/* Teacher Carousel */}
       <div className="flex justify-center items-center">
         <Carousel className="w-full relative">
           <CarouselContent className="-ml-1">
@@ -46,7 +56,7 @@ const HomePageTeachers = async () => {
                                   {teacher.name}
                                 </h2>
                                 <p className="text-sm italic">{teacher.post}</p>
-                                <div className="flex justify-between mt-1">
+                                <div className="flex justify-between mt-2">
                                   <Link
                                     className="underline text-white hover:text-gray-300 transition duration-200"
                                     href={`/teachers/${teacher.id}`}
