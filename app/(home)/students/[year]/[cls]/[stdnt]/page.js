@@ -1,14 +1,31 @@
 import { getResultByStudentId } from "@/actions/result";
 import { getStudentBYDakhila } from "@/actions/students";
 import SubTitle from "@/components/sub-title";
-import { getNumberValue } from "@/utils/get-student-value";
 import { getEngToBnNumber } from "@/utils/number-converter";
 import Image from "next/image";
+
+export async function generateMetadata({ params }) {
+  const studebtByDakhila = await getStudentBYDakhila(params.stdnt);
+
+  return {
+    title: `${studebtByDakhila.name} - শিক্ষার্থীর বিস্তারিত`,
+    description: `${studebtByDakhila.name}-এর বিস্তারিত তথ্য, ${studebtByDakhila.classNameId.class}-এর শিক্ষার্থী। শিক্ষাবর্ষ: ${studebtByDakhila.academicYearId.academicYear}।`,
+    keywords: `শিক্ষার্থী, ${studebtByDakhila.name}, ${studebtByDakhila.classNameId.class}, শিক্ষাবর্ষ: ${studebtByDakhila.academicYearId.academicYear}`,
+    author: "জামিয়াতুল লতিফ রূপগঞ্জ", // আপনার প্রতিষ্ঠানের নাম দিয়ে পরিবর্তন করুন
+    robots: "index, follow", // অনুসন্ধান ইঞ্জিনকে এই পৃষ্ঠাটি সূচীকরণ করতে বলে
+    openGraph: {
+      title: `${studebtByDakhila.name} - শিক্ষার্থীর বিস্তারিত`,
+      description: `${studebtByDakhila.name}-এর বিস্তারিত তথ্য, ${studebtByDakhila.classNameId.class}-এর শিক্ষার্থী। শিক্ষাবর্ষ: ${studebtByDakhila.academicYearId.academicYear}।`,
+      url: `https://yourdomain.com/students/${studebtByDakhila.dakhila}`, // প্রকৃত URL দিয়ে পরিবর্তন করুন
+      type: "website",
+      image: studebtByDakhila.image || "/default-image.jpg", // যদি কোনো ছবি না থাকে তবে একটি ডিফল্ট ছবি পাথ দিয়ে পরিবর্তন করুন
+    },
+  };
+}
 
 const SingleStudentPage = async ({ params: { stdnt } }) => {
   const studebtByDakhila = await getStudentBYDakhila(stdnt);
   const result = await getResultByStudentId(studebtByDakhila.id);
-  console.log(studebtByDakhila);
 
   // Calculate total and average marks
   const totalMarks = result.marks.reduce((total, mark) => total + mark.mark, 0);
@@ -38,7 +55,7 @@ const SingleStudentPage = async ({ params: { stdnt } }) => {
                 {studebtByDakhila.name}
               </h2>
               <h3 className="text-md text-gray-600 mb-2">
-                পিতা: {studebtByDakhila.father}
+                পিতার নাম: {studebtByDakhila.father}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-2 text-gray-700">
                 <p>
@@ -110,18 +127,13 @@ const SingleStudentPage = async ({ params: { stdnt } }) => {
               মোট নম্বর: {getEngToBnNumber(totalMarks)}
             </h4>
             <h4 className="text-md font-semibold text-gray-800">
-              গড় নম্বর: {averageMarks}
-            </h4>
-            <h4 className="text-md font-semibold text-gray-800">
-              গড় নম্বর: {getNumberValue(result?.marks)}
+              গড় নম্বর: {getEngToBnNumber(averageMarks)}
             </h4>
           </div>
 
           {/* Overall Comments Section */}
           <SubTitle>সামগ্রিক মতামত</SubTitle>
-          <p className="text-center">
-            {studebtByDakhila?.report || "মতামত নেই"}
-          </p>
+          <p>{studebtByDakhila?.report || "মতামত নেই"}</p>
         </div>
       </div>
     </div>

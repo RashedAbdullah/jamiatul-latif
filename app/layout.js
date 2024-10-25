@@ -30,6 +30,7 @@ export const metadata = {
     "কওমি মাদ্রাসা",
     "নারায়ণগঞ্জ মাদ্রাসা",
   ],
+  robots: "index, follow",
   openGraph: {
     title: "জামিয়াতুল লতিফ | Islamic Education Platform",
     description:
