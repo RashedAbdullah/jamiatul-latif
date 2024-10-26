@@ -1,6 +1,13 @@
 import { creatInfo } from "@/actions/info";
+import { getUserWithRole } from "@/utils/user-with-role";
+import { redirect } from "next/navigation";
 
-const AddInfoPage = () => {
+const AddInfoPage = async () => {
+  const user = await getUserWithRole();
+  if (!user || user.role !== "teacher") {
+    redirect("/dashboard");
+  }
+
   const handleAddInfo = async (formData) => {
     "use server";
     try {
@@ -9,7 +16,6 @@ const AddInfoPage = () => {
         count: Number(formData.get("count")),
       };
 
-      console.log(newInfo);
       await creatInfo(newInfo);
     } catch (err) {
       console.log(err.message);

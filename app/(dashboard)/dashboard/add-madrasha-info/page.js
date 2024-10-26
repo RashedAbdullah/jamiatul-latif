@@ -1,8 +1,14 @@
 import { createMadrashaInfo } from "@/actions/madrasha";
+import { getUserWithRole } from "@/utils/user-with-role";
 import { redirect } from "next/navigation";
 import React from "react";
 
-const AddMadrashaInfo = () => {
+const AddMadrashaInfo = async () => {
+  const user = await getUserWithRole();
+   if (!user || user.role !== "teacher") {
+     redirect("/dashboard");
+   }
+
   const handleAddMadrashaInfo = async (formData) => {
     "use server";
     try {

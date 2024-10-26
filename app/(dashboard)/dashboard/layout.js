@@ -1,7 +1,13 @@
+import { auth } from "@/auth";
 import DashboardHeader from "../_components/dashboard-header";
 import DashboardMenu from "../_components/dashboard-menu";
 
 const DashboardLayout = async ({ children }) => {
+  const session = await auth();
+  if (!session.user) {
+    redirect("/");
+  }
+
   return (
     <div className="max-h-screen flex flex-col">
       <DashboardHeader />

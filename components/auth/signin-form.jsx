@@ -18,7 +18,7 @@ const SigninForm = () => {
       if (!!response.error) {
         setError(response.error.message);
       } else {
-        router.push(`/`);
+        router.push(`/dashboard`);
       }
     } catch (err) {
       setError(err.message);

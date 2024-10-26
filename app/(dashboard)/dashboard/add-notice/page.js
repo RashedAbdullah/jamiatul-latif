@@ -1,8 +1,13 @@
 import React from "react";
-import { redirect } from "next/navigation"; // Assuming Next.js 13+
+import { redirect } from "next/navigation";
 import { createNotice } from "@/actions/notice";
+import { getUserWithRole } from "@/utils/user-with-role";
 
-const AddNoticePage = () => {
+const AddNoticePage = async () => {
+  const user = await getUserWithRole();
+   if (!user || user.role !== "teacher") {
+     redirect("/dashboard");
+   }
   const handleCreateNotice = async (formData) => {
     "use server";
     try {
@@ -46,9 +51,7 @@ const AddNoticePage = () => {
 
           {/* Details */}
           <div>
-            <label className="block text-lg font-medium mb-2">
-              বিস্তারিত
-            </label>
+            <label className="block text-lg font-medium mb-2">বিস্তারিত</label>
             <input
               type="text"
               name="details"

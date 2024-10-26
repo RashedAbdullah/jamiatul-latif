@@ -1,10 +1,10 @@
-import { auth } from "@/auth";
+import { getUserWithRole } from "@/utils/user-with-role";
 
 const AdminDetails = async () => {
-  const session = await auth();
+  const user = await getUserWithRole();
   return (
     <div>
-      <p>এডমিন: {session.user.name}</p>
+      <p>এডমিন: {user?.name}</p>
     </div>
   );
 };

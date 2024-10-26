@@ -30,13 +30,13 @@ export const {
 
         try {
           const user = await userModel.findOne({ email: credentials.email });
+
           if (user) {
             const isMatch = await bcryptjs.compare(
               credentials.password,
               user.password
             );
             if (isMatch) {
-              // Add `role` field to the returned user object
               return {
                 id: user._id,
                 email: user.email,
@@ -57,14 +57,16 @@ export const {
   ],
   callbacks: {
     async jwt({ token, user }) {
+      // Attach user role to the token if it exists
       if (user) {
-        token.role = user.role;
+        token.role = user.role; // Attach role to the token
       }
       return token;
     },
     async session({ session, token }) {
+      // Attach token role to the session
       if (token) {
-        session.user.role = token.role;
+        session.user.role = token.role; // Attach role to session.user
       }
       return session;
     },

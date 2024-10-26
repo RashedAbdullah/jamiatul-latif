@@ -1,12 +1,4 @@
-import { auth } from "@/auth";
-
-const DashboardPage = async() => {
-    const session = await auth();
-    if (!session.user.role === "teacher") {
-      redirect("/signin");
-    }
-
-
+const DashboardPage = async () => {
   return (
     <div className="max-h-[85vh] p-6 bg-gray-50">
       <div className="bg-white shadow-lg rounded-lg p-6 mb-6">

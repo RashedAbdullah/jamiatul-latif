@@ -1,7 +1,13 @@
-import { redirect } from "next/navigation"; // Assuming you're using Next.js 13+
+import { redirect, RedirectType } from "next/navigation"; // Assuming you're using Next.js 13+
 import { createTeacher } from "@/actions/teachers";
+import { getUserWithRole } from "@/utils/user-with-role";
 
-const AddTeacherPage = () => {
+const AddTeacherPage = async () => {
+  const user = await getUserWithRole();
+   if (!user || user.role !== "teacher") {
+     redirect("/dashboard");
+   }
+
   const handleCreateTeacher = async (formData) => {
     "use server";
     try {

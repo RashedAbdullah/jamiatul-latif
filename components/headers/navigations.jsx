@@ -1,14 +1,13 @@
 import DropDown from "./dropdown";
 import NavTitle from "./nav-title";
 import { introductiion } from "@/data/introduction";
-
 import { curriculums } from "@/data/curriculum";
 import NavSearch from "./search";
 import AdminDialog from "./admin-dialog";
-import { auth } from "@/auth";
+import { getUserWithRole } from "@/utils/user-with-role";
 
 const Navigations = async () => {
-  const session = await auth();
+  const user = await getUserWithRole();
 
   const intro = introductiion();
 
@@ -25,9 +24,9 @@ const Navigations = async () => {
         <NavTitle router="/articles">প্রবন্ধ</NavTitle>
         <NavTitle router="/notices">নোটিশ</NavTitle>
 
-        {session && (
+        {user && (
           <div className="mx-4 te text-green-600 font-bold p-2 rounded-lg">
-            <h2>{session.user.name}</h2>
+            <h2>{user.name}</h2>
           </div>
         )}
         <AdminDialog />

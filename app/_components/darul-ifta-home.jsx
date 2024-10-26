@@ -2,6 +2,8 @@ import Image from "next/image";
 import ifta_book from "@/public/ifta_book.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { RiQuestionAnswerFill } from "react-icons/ri";
+import { MdLibraryBooks } from "react-icons/md";
 
 const DarulIftaHome = () => {
   return (
@@ -23,10 +25,17 @@ const DarulIftaHome = () => {
         </div>
         <div className="flex gap-4 justify-center md:justify-start">
           <Link href={`/ask-fatwa`}>
-            <Button>আপনার জিজ্ঞাসা</Button>
+            <Button className="flex justify-center items-center gap-2">
+              আপনার জিজ্ঞাসা <RiQuestionAnswerFill size={16} />
+            </Button>
           </Link>
           <Link href={`/darul-ifta`}>
-            <Button variant="secondary">ফতোয়া দেখুন</Button>
+            <Button
+              variant="secondary"
+              className="flex justify-center items-center gap-2"
+            >
+              ফতোয়া দেখুন <MdLibraryBooks size={17} />
+            </Button>
           </Link>
         </div>
       </div>

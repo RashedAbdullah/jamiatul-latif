@@ -42,7 +42,7 @@ const UpdateSingleTeacherPage = async ({ params: { slug } }) => {
         ],
       };
       await updateTeacher(slug, updatedTeacher);
-      console.log(updatedTeacher);
+
       redirect("/");
     } catch (err) {
       console.log(err.message);
