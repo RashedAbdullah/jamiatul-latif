@@ -3,6 +3,7 @@ import { getStudentBYDakhila } from "@/actions/students";
 import SubTitle from "@/components/sub-title";
 import { getEngToBnNumber } from "@/utils/number-converter";
 import Image from "next/image";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const studebtByDakhila = await getStudentBYDakhila(params.stdnt);
@@ -112,8 +113,18 @@ const SingleStudentPage = async ({ params: { stdnt } }) => {
             <tbody>
               {result.marks.map((mark) => (
                 <tr key={mark._id} className="border-b border-gray-300">
-                  <td className="border border-gray-300 p-2">{mark.book}</td>
-                  <td className="border border-gray-300 p-2">
+                  <td
+                    className={`border border-gray-300 p-2 ${
+                      mark.mark < 40 && "text-red-600"
+                    }`}
+                  >
+                    {mark.book}
+                  </td>
+                  <td
+                    className={`border border-gray-300 p-2 ${
+                      mark.mark < 40 && "text-red-600"
+                    }`}
+                  >
                     {getEngToBnNumber(mark.mark)}
                   </td>
                 </tr>
@@ -135,6 +146,7 @@ const SingleStudentPage = async ({ params: { stdnt } }) => {
           <SubTitle>সামগ্রিক মতামত</SubTitle>
           <p>{studebtByDakhila?.report || "মতামত নেই"}</p>
         </div>
+      
       </div>
     </div>
   );

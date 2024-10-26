@@ -41,7 +41,7 @@ export const {
                 id: user._id,
                 email: user.email,
                 name: user.name,
-                role: user.role, // Include role here
+                role: user.role,
               };
             } else {
               throw new Error("Email or Password is not correct");
@@ -57,19 +57,17 @@ export const {
   ],
   callbacks: {
     async jwt({ token, user }) {
-      // If user is available (on sign in), add role to token
       if (user) {
         token.role = user.role;
       }
       return token;
     },
     async session({ session, token }) {
-      // Pass role from token to session
       if (token) {
         session.user.role = token.role;
       }
       return session;
     },
   },
-  secret: process.env.JWT_SECRET, // Ensure this is set in your .env
+  secret: process.env.JWT_SECRET,
 });
