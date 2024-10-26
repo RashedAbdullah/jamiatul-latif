@@ -1,6 +1,7 @@
 import { auth } from "@/auth";
 import DashboardHeader from "../_components/dashboard-header";
 import DashboardMenu from "../_components/dashboard-menu";
+import { redirect } from "next/navigation";
 
 const DashboardLayout = async ({ children }) => {
   const session = await auth();

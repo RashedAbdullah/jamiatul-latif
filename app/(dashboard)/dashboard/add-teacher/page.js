@@ -1,4 +1,4 @@
-import { redirect, RedirectType } from "next/navigation"; // Assuming you're using Next.js 13+
+import { redirect } from "next/navigation"; // Assuming you're using Next.js 13+
 import { createTeacher } from "@/actions/teachers";
 import { getUserWithRole } from "@/utils/user-with-role";
 
