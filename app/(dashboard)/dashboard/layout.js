@@ -1,14 +1,7 @@
 import DashboardHeader from "../_components/dashboard-header";
 import DashboardMenu from "../_components/dashboard-menu";
-import { auth } from "@/auth";
-import { redirect } from "next/navigation";
 
 const DashboardLayout = async ({ children }) => {
-  const session = await auth();
-  if (!session) {
-    redirect("/signin");
-  }
-
   return (
     <div className="max-h-screen flex flex-col">
       <DashboardHeader />

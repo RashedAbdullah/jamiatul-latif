@@ -5,8 +5,11 @@ import { introductiion } from "@/data/introduction";
 import { curriculums } from "@/data/curriculum";
 import NavSearch from "./search";
 import AdminDialog from "./admin-dialog";
+import { auth } from "@/auth";
 
-const Navigations = () => {
+const Navigations = async () => {
+  const session = await auth();
+
   const intro = introductiion();
 
   const curriculum = curriculums();
@@ -21,7 +24,12 @@ const Navigations = () => {
         <DropDown menu={curriculum} />
         <NavTitle router="/articles">প্রবন্ধ</NavTitle>
         <NavTitle router="/notices">নোটিশ</NavTitle>
-        {/* <DropDown menu={course} /> */}
+
+        {session && (
+          <div className="mx-4 te text-green-600 font-bold p-2 rounded-lg">
+            <h2>{session.user.name}</h2>
+          </div>
+        )}
         <AdminDialog />
       </nav>
     </>

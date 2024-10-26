@@ -31,11 +31,10 @@ const Signup = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), // Sending formData directly
+        body: JSON.stringify(formData),
       });
 
-      const data = await response.json(); // Parse the JSON response
-
+      const data = await response.json(); 
       if (!response.ok) {
         throw new Error(data.message || "কিছু ভুল হয়েছে!"); // Handle error response
       }

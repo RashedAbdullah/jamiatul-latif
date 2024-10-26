@@ -1,5 +1,4 @@
 import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import CredentialProviders from "next-auth/providers/credentials";
 import bcryptjs from "bcryptjs";
@@ -22,24 +21,28 @@ export const {
   providers: [
     CredentialProviders({
       credentials: {
-        email: {},
-        password: {},
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         if (credentials === null) return null;
         await connectMongo();
 
         try {
-          const user = await userModel.findOne({
-            email: credentials?.email,
-          });
+          const user = await userModel.findOne({ email: credentials.email });
           if (user) {
             const isMatch = await bcryptjs.compare(
               credentials.password,
               user.password
             );
             if (isMatch) {
-              return user;
+              // Add `role` field to the returned user object
+              return {
+                id: user._id,
+                email: user.email,
+                name: user.name,
+                role: user.role, // Include role here
+              };
             } else {
               throw new Error("Email or Password is not correct");
             }
@@ -51,10 +54,22 @@ export const {
         }
       },
     }),
-    GoogleProvider({
-      clientId: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENT_SECRET,
-      allowDangerousEmailAccountLinking: true,
-    }),
   ],
+  callbacks: {
+    async jwt({ token, user }) {
+      // If user is available (on sign in), add role to token
+      if (user) {
+        token.role = user.role;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      // Pass role from token to session
+      if (token) {
+        session.user.role = token.role;
+      }
+      return session;
+    },
+  },
+  secret: process.env.JWT_SECRET, // Ensure this is set in your .env
 });
