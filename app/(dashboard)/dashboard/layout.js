@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 const DashboardLayout = async ({ children }) => {
   const session = await auth();
   if (!session) {
-    redirect("/");
+    redirect("/signin");
   }
 
   return (
