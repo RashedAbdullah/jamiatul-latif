@@ -125,25 +125,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
-            >
-              <MoveRight />
-              পাঠ্যসূচী আপডেট করুন
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
-            >
-              <MoveRight />
-              বিভাগসমূহ আপডেট করুন
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/add-department"
             >
               <MoveRight />
               নতুন বিভাগ যুক্ত করুন
@@ -152,7 +134,34 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/update-department"
+            >
+              <MoveRight />
+              বিভাগসমূহ আপডেট করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href="/dashboard/add-curriculum"
+            >
+              <MoveRight />
+              পাঠ্যসূচী সংযুক্ত করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href="/dashboard/update-curriculum"
+            >
+              <MoveRight />
+              পাঠ্যসূচী আপডেট করুন
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href="/dashboard/add-future-plan"
             >
               <MoveRight />
               ভবিষ্যৎ পরিকল্পনা যুক্ত করুন
@@ -161,7 +170,7 @@ const MenuAccordion = async ({ menu }) => {
           <li>
             <Link
               className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
-              href=""
+              href="/dashboard/update-future-plan"
             >
               <MoveRight />
               ভবিষ্যৎ পরিকল্পনা আপডেট করুন

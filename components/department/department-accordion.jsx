@@ -7,7 +7,7 @@ const DepartmentAccordion = ({ items }) => {
         <DepartmentAccordionItem
           key={index}
           title={item.title}
-          content={item.content}
+          content={item.desc}
         />
       ))}
     </div>
