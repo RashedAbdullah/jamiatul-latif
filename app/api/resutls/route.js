@@ -1,4 +1,5 @@
 import { connectMongo } from "@/database/connection";
+import { ResultModel } from "@/models/result-model";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
@@ -7,12 +8,12 @@ export const GET = async (req) => {
     await connectMongo();
 
     // Model:
-    // const ...
+    const results = await ResultModel.find({});
 
     // Retun:
-    // return NextResponse.json({ success: true, data: ... });
+    return NextResponse.json({ success: true, data: results });
   } catch (err) {
-    console.error("Error fetching ...:", err);
+    console.error("Error fetching results:", err);
 
     const errorMessage = err.message || "An unexpected error occurred";
     const statusCode = err.name === "MongoNetworkError" ? 503 : 500;
