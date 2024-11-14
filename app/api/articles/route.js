@@ -4,13 +4,13 @@ import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
   try {
-    // Connection:
     await connectMongo();
 
-    // Model:
-    const articles = await articleModel.find({});
+    const { searchParams } = new URL(req.url);
+    const limit = parseInt(searchParams.get("limit")) || 0;
 
-    // Retun:
+    const articles = await articleModel.find({}).limit(limit);
+
     return NextResponse.json({ success: true, data: articles });
   } catch (err) {
     console.error("Error fetching articles:", err);
