@@ -4,16 +4,17 @@ import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
   try {
-    // Connection:
+    // Connect to the database
     await connectMongo();
 
+    // Parse the URL for the limit query parameter
     const { searchParams } = new URL(req.url);
-    const limit = parseInt(searchParams.get("limit")) || 0;
+    const limit = parseInt(searchParams.get("limit")) || 0; // Default to 0 (no limit)
 
-    // Model:
+    // Fetch fatwas with an optional limit
     const fatwas = await FatwaModel.find({}).limit(limit);
 
-    // Retun:
+    // Return the fetched data
     return NextResponse.json({ success: true, data: fatwas });
   } catch (err) {
     console.error("Error fetching fatwas:", err);
@@ -21,7 +22,7 @@ export const GET = async (req) => {
     const errorMessage = err.message || "An unexpected error occurred";
     const statusCode = err.name === "MongoNetworkError" ? 503 : 500;
 
-    return new NextResponse.json(
+    return NextResponse.json(
       {
         success: false,
         message: errorMessage,
