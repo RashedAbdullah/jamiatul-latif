@@ -31,7 +31,6 @@ const getResults = async () => {
         path: "classId",
         model: classModel,
       })
-
       .lean();
     return replaceMongoIdInArray(students);
   } catch (err) {
@@ -77,7 +76,8 @@ const getResultsByYearAndClass = async (yearId, classId) => {
   try {
     await connectMongo();
 
-    const results = await ResultModel.find({
+    const results = await ResultModel
+      .find({
       yearId: {
         _id: new mongoose.Types.ObjectId(yearId),
       },
@@ -111,11 +111,12 @@ const getResultsByYearAndClass = async (yearId, classId) => {
 };
 
 const getResultByStudentId = async (studentId) => {
-  console.log(studentId);
+
   try {
     await connectMongo();
 
-    const result = await ResultModel.findOne({
+    const result = await ResultModel
+      .findOne({
       studentId: {
         _id: new mongoose.Types.ObjectId(studentId),
       },

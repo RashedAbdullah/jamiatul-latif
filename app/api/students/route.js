@@ -1,5 +1,7 @@
 import { connectMongo } from "@/database/connection";
+import { classModel } from "@/models/class-model";
 import { studentModel } from "@/models/student-model";
+import { academicYearModel } from "@/models/year-model";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
@@ -8,7 +10,16 @@ export const GET = async (req) => {
     await connectMongo();
 
     // Model:
-    const students = await studentModel.find({});
+    const students = await studentModel
+      .find({})
+      .populate({
+        path: "classNameId",
+        model: classModel,
+      })
+      .populate({
+        path: "academicYearId",
+        model: academicYearModel,
+      });
 
     // Retun:
     return NextResponse.json({ success: true, data: students });
