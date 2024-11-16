@@ -1,24 +1,24 @@
 import { connectMongo } from "@/database/connection";
-import { ResultModel } from "@/models/result-model";
+import { classModel } from "@/models/class-model";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
   try {
-    // Connection:
     await connectMongo();
 
-    // Model:
-    const results = await ResultModel.find({});
+    const url = new URL(req.url);
+    const classId = url.searchParams.get("classId");
 
-    // Retun:
-    return NextResponse.json({ success: true, data: results });
+    const singleClass = await classModel.findById(classId);
+
+    return NextResponse.json({ success: true, data: singleClass });
   } catch (err) {
-    console.error("Error fetching results:", err);
+    console.error("Errror fetching single class", singleClass);
 
     const errorMessage = err.message || "An unexpected error occurred";
     const statusCode = err.name === "MongoNetworkError" ? 503 : 500;
 
-    return new NextResponse.json(
+    return NextResponse.json(
       {
         success: false,
         message: errorMessage,

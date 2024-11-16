@@ -8,10 +8,19 @@ export const GET = async (req) => {
     await connectMongo();
 
     // Model:
-    const notices = await noticeModel.find({});
+    const notices = await noticeModel
+      .find({ active: true })
+      .sort({ createdAt: -1 });
+
+    const activeNotices = notices.filter((notice) => {
+      const activeDate = new Date(notice.activeDate);
+      const durationDate = new Date(notice.duration);
+
+      return currentDate >= activeDate && currentDate <= durationDate;
+    });
 
     // Retun:
-    return NextResponse.json({ success: true, data: notices });
+    return NextResponse.json({ success: true, data: activeNotices });
   } catch (err) {
     console.error("Error fetching notices:", err);
 
