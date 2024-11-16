@@ -2,6 +2,8 @@ import { connectMongo } from "@/database/connection";
 import { noticeModel } from "@/models/notice-model";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export const GET = async (req) => {
   try {
     // Connection:
@@ -27,7 +29,7 @@ export const GET = async (req) => {
     const errorMessage = err.message || "An unexpected error occurred";
     const statusCode = err.name === "MongoNetworkError" ? 503 : 500;
 
-    return new NextResponse.json(
+    return NextResponse.json(
       {
         success: false,
         message: errorMessage,

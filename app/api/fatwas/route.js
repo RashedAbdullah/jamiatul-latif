@@ -4,6 +4,8 @@ import { FatwaModel } from "@/models/fatwa-model";
 import { iftaQuestionModel } from "@/models/fatwa-question-model";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export const GET = async (req) => {
   try {
     // Connect to the database

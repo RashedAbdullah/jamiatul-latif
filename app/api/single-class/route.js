@@ -2,6 +2,8 @@ import { connectMongo } from "@/database/connection";
 import { classModel } from "@/models/class-model";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export const GET = async (req) => {
   try {
     await connectMongo();

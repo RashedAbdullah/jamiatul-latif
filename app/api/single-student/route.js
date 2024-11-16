@@ -5,6 +5,8 @@ import { academicYearModel } from "@/models/year-model";
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 
+export const dynamic = "force-dynamic";
+
 export const GET = async (req) => {
   try {
     // Connect to the database

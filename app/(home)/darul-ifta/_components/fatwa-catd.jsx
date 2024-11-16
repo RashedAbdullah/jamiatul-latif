@@ -6,15 +6,17 @@ const FatwaCard = ({ fatwa }) => {
   return (
     <article className="bg-white p-6 rounded-lg mt-4 shadow-md transition-shadow hover:shadow-lg border border-gray-200">
       <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 mb-4">
-        <div className="flex items-center gap-3">
-          <h2 className="text-lg font-semibold text-gray-800">
-            {fatwa.questionerId.name}
-          </h2>
-          <span className="hidden md:inline text-gray-400">|</span>
-          <address className="text-sm italic text-gray-500">
-            {fatwa.questionerId.address}
-          </address>
-        </div>
+        {fatwa.questionerId && (
+          <div className="flex items-center gap-3">
+            <h2 className="text-lg font-semibold text-gray-800">
+              {fatwa.questionerId?.name}
+            </h2>
+            <span className="hidden md:inline text-gray-400">|</span>
+            <address className="text-sm italic text-gray-500">
+              {fatwa.questionerId?.address}
+            </address>
+          </div>
+        )}
         {fatwa.createdAt && (
           <span className="text-sm text-gray-500 mt-2 md:mt-0">
             {new Date(fatwa.createdAt).toLocaleDateString("bn-BD")}
@@ -26,9 +28,11 @@ const FatwaCard = ({ fatwa }) => {
         <h3 className="text-xl font-bold text-blue-600 mb-2">
           {getEngToBnNumber(fatwa.fatwa_no)} নং. প্রশ্ন
         </h3>
-        <p className="text-gray-700 leading-relaxed">
-          {fatwa.questionerId.question}
-        </p>
+        {fatwa.questionerId.question && (
+          <p className="text-gray-700 leading-relaxed">
+            {fatwa.questionerId?.question}
+          </p>
+        )}
       </section>
 
       <section className="mb-4">
