@@ -10,14 +10,6 @@ const getExams = async () => {
     return replaceMongoIdInArray(exams);
   } catch (err) {
     console.log(err.message);
-
-    return NextResponse.json(
-      {
-        success: false,
-        message: errorMessage,
-      },
-      { status: statusCode }
-    );
   }
 };
 

@@ -4,21 +4,24 @@ import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
   try {
-    // Connection:
+    // Connect to MongoDB
     await connectMongo();
 
-    // Model:
+    // Fetch future plans
     const futurePlans = await futurePlanModel.find({});
+    console.log("Fetched future plans:", futurePlans.length);
 
-    // Retun:
+    // Return the fetched plans
     return NextResponse.json({ success: true, data: futurePlans });
   } catch (err) {
     console.error("Error fetching future plans:", err);
 
-    const errorMessage = err.message || "An unexpected error occurred";
+    // Prepare error response details
+    const errorMessage = err.message || "An unexpected error occurred.";
     const statusCode = err.name === "MongoNetworkError" ? 503 : 500;
 
-    return new NextResponse.json(
+    // Return error response
+    return NextResponse.json(
       {
         success: false,
         message: errorMessage,

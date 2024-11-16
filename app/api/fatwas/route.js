@@ -9,11 +9,26 @@ export const GET = async (req) => {
     // Connect to the database
     await connectMongo();
 
-    // Parse the URL for the limit query parameter
+    // Parse the URL to get query parameters
     const { searchParams } = new URL(req.url);
-    const limit = parseInt(searchParams.get("limit")) || 0;
+    const limitParam = searchParams.get("limit");
 
-    // Fetch fatwas with an optional limit
+    // Validate and parse the limit parameter
+    let limit = 0; // Default limit: no limit
+    if (limitParam) {
+      limit = parseInt(limitParam, 10);
+      if (isNaN(limit) || limit < 0) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: "The 'limit' parameter must be a non-negative integer.",
+          },
+          { status: 400 } // Bad Request
+        );
+      }
+    }
+
+    // Fetch fatwas from the database
     const fatwas = await FatwaModel.find({})
       .populate({
         path: "categoryId",
@@ -31,9 +46,24 @@ export const GET = async (req) => {
   } catch (err) {
     console.error("Error fetching fatwas:", err);
 
-    const errorMessage = err.message || "An unexpected error occurred";
-    const statusCode = err.name === "MongoNetworkError" ? 503 : 500;
+    // Default error message and status code
+    let errorMessage = "An unexpected error occurred.";
+    let statusCode = 500;
 
+    // Handle specific errors
+    if (err.name === "MongoNetworkError") {
+      errorMessage =
+        "Failed to connect to the database. Please try again later.";
+      statusCode = 503; // Service Unavailable
+    } else if (err.name === "ValidationError") {
+      errorMessage = "Invalid data provided. Please check your input.";
+      statusCode = 400; // Bad Request
+    } else if (err.name === "CastError") {
+      errorMessage = "Invalid query parameters or data format.";
+      statusCode = 400; // Bad Request
+    }
+
+    // Return error response
     return NextResponse.json(
       {
         success: false,
