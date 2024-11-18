@@ -9,6 +9,8 @@ export const GET = async (req) => {
     // Connection:
     await connectMongo();
 
+    const currentDate = new Date();
+
     // Model:
     const notices = await noticeModel
       .find({ active: true })
