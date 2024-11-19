@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { Expo } from "expo-server-sdk";
-import mongoose from "mongoose";
 import { connectMongo } from "@/database/connection";
 import { expoTokenModel } from "@/models/expo-token-model";
 
@@ -8,7 +7,7 @@ let expo = new Expo({ accessToken: process.env.EXPO_ACCESS_TOKEN });
 
 export async function POST(request) {
   try {
-    const { title, body, data } = await request.json();
+    const { title, body } = await request.json();
 
     if (!title || !body) {
       return NextResponse.json(
@@ -29,7 +28,6 @@ export async function POST(request) {
       sound: "default",
       title,
       body,
-      data: data || {},
     }));
 
     const chunks = expo.chunkPushNotifications(messages);
