@@ -53,22 +53,6 @@ const getSinleNotice = async (id) => {
   }
 };
 
-const getLatestNotice = async () => {
-  try {
-    await connectMongo();
-
-    const latestNotice = await noticeModel
-      .findOne({ active: true })
-      .sort({ createdAt: -1 })
-      .lean();
-
-    return latestNotice ? latestNotice : null;
-  } catch (err) {
-    console.log(err.message);
-    return null;
-  }
-};
-
 const updateNotice = async (id, notice) => {
   try {
     await connectMongo();
@@ -94,7 +78,6 @@ const createNotice = async (notice) => {
 export {
   getNotices,
   getActiveNotices,
-  getLatestNotice,
   getSinleNotice,
   updateNotice,
   createNotice,

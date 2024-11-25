@@ -6,7 +6,7 @@ import { auth } from "@/auth";
 import { Analytics } from "@vercel/analytics/react";
 import AboutSchemaScript from "@/meta/about-madrasha-meta";
 import PopupNotice from "./_components/popup-notice";
-import { getLatestNotice } from "@/actions/notice";
+import { getActiveNotices } from "@/actions/notice";
 
 const bengali = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
@@ -50,7 +50,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await auth();
-  const latestNotice = await getLatestNotice();
+  const latestNotice = await getActiveNotices();
 
   return (
     <html lang="bn">
@@ -77,7 +77,7 @@ export default async function RootLayout({ children }) {
           data-ad-client="ca-pub-6921856465558245"
         ></amp-auto-ads>
         <AboutSchemaScript />
-        <PopupNotice notice={latestNotice} />
+        <PopupNotice notice={latestNotice[0]} />
         <Navbar user={session?.user} />
         <main>{children}</main>
         <Footer />

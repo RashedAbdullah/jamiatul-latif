@@ -35,7 +35,7 @@ const GetOpinion = () => {
     }
   };
   return (
-    <div className="container flex justify-center items-center align-middle">
+    <div className="container flex justify-center items-center align-middle min-h-screen">
       <form action={handleGetingOpinion} className="w-96">
         <PageTitle>আপনার মতামত</PageTitle>
         <div className="flex flex-col gap-5">
