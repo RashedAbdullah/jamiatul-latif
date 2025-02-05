@@ -39,6 +39,15 @@ const MenuAccordion = async ({ menu }) => {
               ফলাফল যুক্ত করুন
             </Link>
           </li>
+          <li>
+            <Link
+              className="py-2 px-4 hover:bg-slate-800 w-full flex items-center gap-2 transition-all duration-300"
+              href={`/dashboard/students-articles`}
+            >
+              <MoveRight />
+              লেখা যুক্ত করুন
+            </Link>
+          </li>
         </ul>
       );
     } else if (menu.dash === "শিক্ষক ইনফো") {

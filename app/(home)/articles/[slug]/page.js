@@ -76,7 +76,7 @@ const SingleArticlePage = async ({ params: { slug } }) => {
 
         {/* Article Content */}
         <section
-          className="text-gray-700 leading-relaxed"
+          className="text-gray-700 leading-relaxed articlesdetails"
           dangerouslySetInnerHTML={{ __html: article.content }}
         ></section>
       </article>
