@@ -77,7 +77,7 @@ export default async function RootLayout({ children }) {
           data-ad-client="ca-pub-6921856465558245"
         ></amp-auto-ads>
         <AboutSchemaScript />
-        {latestNotice.length && <PopupNotice notice={latestNotice[0]} />}
+        {/* {latestNotice.length && <PopupNotice notice={latestNotice[0]} />} */}
         <Navbar user={session?.user} />
         <main>{children}</main>
         <Footer />

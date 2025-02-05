@@ -5,7 +5,7 @@ const amiri = Amiri({ subsets: ["arabic"], weight: "400" });
 
 const StudentsWriting = async () => {
   const studentsAritlces = await getStudentsWriting();
-  console.log(studentsAritlces);
+
   return (
     <div
       dir="rtl"

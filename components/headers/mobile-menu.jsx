@@ -13,9 +13,11 @@ import DropDown from "./dropdown";
 import { introductiion } from "@/data/introduction";
 import { curriculums } from "@/data/curriculum";
 import NavTitle from "./nav-title";
+import { students } from "@/data/students";
 
 export default function MobileMenu() {
   const intro = introductiion();
+  const stdts = students();
 
   const curriculum = curriculums();
   return (
@@ -34,6 +36,7 @@ export default function MobileMenu() {
         </SheetHeader>
         <div>
           <DropDown menu={intro} />
+          <DropDown menu={stdts} />
           <NavTitle router={`/articles`}>প্রবন্ধ</NavTitle>
           <NavTitle router={`/notices`}>নোটিশ</NavTitle>
           <DropDown menu={curriculum} />
