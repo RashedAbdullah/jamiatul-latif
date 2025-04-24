@@ -84,11 +84,22 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="pt-10 text-center text-sm">
+        <div className="pt-10 text-center text-sm md:flex justify-between items-center">
           <p>
             &copy; {getEngToBnNumber(new Date().getFullYear())} জমিয়াতুল লতিফ
             কতৃক স্বত্ত্ব সংরক্ষিত
           </p>
+          <div className="flex justify-center mt-3 md:mt-0 items-center gap-1 text-sm">
+            <span>ডেভেলপ ও মেইনটেইন: </span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/Rashed4Abdullah"
+              className="text-green-500 underline underline-offset-4 transition duration-300"
+            >
+              রাশেদ আব্দুল্লাহ
+            </a>
+          </div>
         </div>
       </div>
     </footer>
