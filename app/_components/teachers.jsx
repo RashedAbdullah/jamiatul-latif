@@ -1,6 +1,5 @@
 import { getTeachers } from "@/actions/teachers";
-import PageTitle from "@/components/page-title";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -15,12 +14,14 @@ const HomePageTeachers = async () => {
   const teachers = await getTeachers();
 
   return (
-    <div className="my-10">
+    <div className="my-16 px-4 md:px-8 lg:px-16">
       {/* Page Title */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">শিক্ষকবৃন্দ</h1>
-        <div className="w-24 mx-auto mt-2 mb-6"></div>
-        <p className="text-lg text-gray-600">
+      <div className="text-center mb-14">
+        <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
+          শিক্ষকবৃন্দ
+        </h1>
+        <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full"></div>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           জামিয়ার নিবেদিতপ্রাণ শিক্ষকবৃন্দ, যারা তাঁদের গভীর জ্ঞান ও অভিজ্ঞতা
           দিয়ে ছাত্রদের উজ্জীবিত করেন এবং সঠিক পথনির্দেশনা দিয়ে থাকেন।
         </p>
@@ -28,8 +29,8 @@ const HomePageTeachers = async () => {
 
       {/* Teacher Carousel */}
       <div className="flex justify-center items-center">
-        <Carousel className="w-full relative">
-          <CarouselContent className="-ml-1">
+        <Carousel className="w-full max-w-7xl">
+          <CarouselContent>
             {teachers
               .sort((a, b) => a.teacherSerial - b.teacherSerial)
               .map(
@@ -37,47 +38,50 @@ const HomePageTeachers = async () => {
                   !teacher.resignation.resigned && (
                     <CarouselItem
                       key={teacher.id}
-                      className="pl-1 md:basis-1/2 lg:basis-1/3"
+                      className="pl-4 md:basis-1/2 lg:basis-1/3"
                     >
                       <TeacherSchemaScript teacher={teacher} />
-                      <div className="p-1">
-                        <Card className="transition-transform transform hover:scale-105">
-                          <CardContent className="flex aspect-square items-center justify-center p-6">
-                            <div
-                              className={`h-[400px] w-[400px] bg-cover bg-no-repeat bg-center flex justify-center items-end rounded-lg shadow-lg overflow-hidden`}
-                              style={{
-                                backgroundImage: teacher.image
-                                  ? `url(${teacher.image})`
-                                  : "url(https://i.ibb.co.com/VtvbmpP/imgbin-computer-icons-teacher-professor-education-lecturer-png.png)",
-                              }}
-                            >
-                              <div className="bg-primary text-white bg-opacity-70 w-full p-2">
-                                <h2 className="text-xl font-semibold">
-                                  {teacher.name}
-                                </h2>
-                                <p className="text-sm italic">{teacher.post}</p>
-                                <div className="flex justify-between mt-2">
-                                  <Link
-                                    className="underline text-white hover:text-gray-300 transition duration-200"
-                                    href={`/teachers/${teacher.id}`}
-                                  >
-                                    বিস্তারিত
-                                  </Link>
-                                </div>
-                              </div>
+                      <Card className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 group">
+                        <div
+                          className="h-[400px] w-full bg-cover bg-center relative"
+                          style={{
+                            backgroundImage: `url(${
+                              teacher.image ||
+                              "https://i.ibb.co.com/VtvbmpP/imgbin-computer-icons-teacher-professor-education-lecturer-png.png"
+                            })`,
+                          }}
+                        >
+                          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300 rounded-2xl"></div>
+
+                          <div className="absolute bottom-0 left-0 w-full p-4 text-white z-10">
+                            <h2 className="text-xl font-bold">
+                              {teacher.name}
+                            </h2>
+                            <p className="text-sm italic">{teacher.post}</p>
+                            <div className="mt-2">
+                              <Link
+                                href={`/teachers/${teacher.id}`}
+                                className="inline-block text-sm underline hover:text-gray-200 transition"
+                              >
+                                বিস্তারিত
+                              </Link>
                             </div>
-                          </CardContent>
-                        </Card>
-                      </div>
+                          </div>
+                        </div>
+                      </Card>
                     </CarouselItem>
                   )
               )}
           </CarouselContent>
 
-          {/* Hide controls on small screens */}
-          <div className="absolute inset-y-1/2 flex justify-between w-full px-4">
-            <CarouselPrevious />
-            <CarouselNext />
+          {/* Carousel Controls */}
+          <div className="absolute inset-y-1/2 flex justify-between w-full px-4 pointer-events-none">
+            <div className="pointer-events-auto">
+              <CarouselPrevious />
+            </div>
+            <div className="pointer-events-auto">
+              <CarouselNext />
+            </div>
           </div>
         </Carousel>
       </div>

@@ -3,39 +3,45 @@ import ArticleCard from "../(home)/articles/_components/article-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 const HomeArticles = async () => {
   const latestArticles = await getLatestArticles();
+
   return (
-    <div className="container px-4">
-      {/* Page Title */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">প্রবন্ধসমূহ</h1>
-        <div className="w-24 mx-auto mt-2 mb-6"></div>
-        <p className="text-lg text-gray-600">
-          আমাদের সর্বশেষ প্রবন্ধ পড়ুন এবং ইসলামিক জীবন, প্রযুক্তি, শিক্ষা, এবং
-          অন্যান্য গুরুত্বপূর্ণ বিষয় সম্পর্কে জানুন।
-        </p>
+    <div className="container px-4 py-12">
+      {/* Page Header */}
+      <div className="text-center mb-12 max-w-3xl mx-auto">
+        <CardHeader className="px-0">
+          <CardTitle className="text-3xl md:text-4xl font-bold">
+            প্রবন্ধসমূহ
+          </CardTitle>
+          <div className="w-16 h-1 bg-primary mx-auto my-4 rounded-full" />
+          <CardDescription className="text-lg">
+            আমাদের সর্বশেষ প্রবন্ধ পড়ুন এবং ইসলামিক জীবন, প্রযুক্তি, শিক্ষা,
+            এবং অন্যান্য গুরুত্বপূর্ণ বিষয় সম্পর্কে জানুন।
+          </CardDescription>
+        </CardHeader>
       </div>
 
       {/* Article Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {latestArticles.map((article) => (
-          <div
-            key={article._id}
-            className="transform hover:scale-105 transition duration-300 ease-in-out"
-          >
-            <ArticleCard article={article} />
-          </div>
+          <ArticleCard key={article._id} article={article} />
         ))}
       </div>
 
-      {/* Read More Button */}
-      <div className="my-10 text-end">
+      {/* View More Button */}
+      <div className="mt-12 text-center">
         <Link href="/articles">
-          <Button className="px-6 py-3">
+          <Button variant="outline" className="px-8 py-5 gap-2">
             আরও প্রবন্ধ পড়ুন
-            <ArrowRight className="ml-2" />
+            <ArrowRight className="h-4 w-4" />
           </Button>
         </Link>
       </div>

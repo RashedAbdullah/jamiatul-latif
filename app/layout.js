@@ -1,4 +1,4 @@
-import { Tiro_Bangla } from "next/font/google";
+import { Tiro_Bangla, Hind_Siliguri } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "@/components/headers/navbar";
 import Footer from "@/components/footer/footer";
@@ -6,8 +6,10 @@ import { auth } from "@/auth";
 import { Analytics } from "@vercel/analytics/react";
 import AboutSchemaScript from "@/meta/about-madrasha-meta";
 import { getActiveNotices } from "@/actions/notice";
+import { Toaster } from "@/components/ui/toaster";
 
 const bengali = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
+const hind = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
 
 export const metadata = {
   title: "জামিয়াতুল লতিফ রূপগঞ্জ",
@@ -49,7 +51,6 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await auth();
-  const latestNotice = await getActiveNotices();
 
   return (
     <html lang="bn">
@@ -69,17 +70,18 @@ export default async function RootLayout({ children }) {
         ></script>
       </head>
       <body
-        className={`${bengali.className} bg-gradient-to-br from-indigo-100 to-blue-50 text-[#083042] min-h-screen`}
+        className={`${hind.className} bg-gradient-to-br from-indigo-100 to-blue-50 text-[#083042] min-h-screen`}
       >
         <amp-auto-ads
           type="adsense"
           data-ad-client="ca-pub-6921856465558245"
         ></amp-auto-ads>
         <AboutSchemaScript />
-        <Navbar user={session?.user} />
+        {/* <Navbar user={session?.user} /> */}
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
         <Analytics />
+        <Toaster />
       </body>
     </html>
   );

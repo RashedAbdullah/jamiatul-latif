@@ -1,6 +1,15 @@
 import { getInfo } from "@/actions/info";
 import AnimateNumbers from "./animate-numbers";
-import { Fragment } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { GraduationCap, Users, BookOpen, Award } from "lucide-react";
+
+
+const iconMap = {
+  students: <Users className="w-6 h-6 text-emerald-600" />,
+  teachers: <GraduationCap className="w-6 h-6 text-amber-600" />,
+  courses: <BookOpen className="w-6 h-6 text-blue-600" />,
+  awards: <Award className="w-6 h-6 text-rose-600" />,
+};
 
 const BesicMadrashaInfo = async () => {
   let infos = [];
@@ -13,36 +22,51 @@ const BesicMadrashaInfo = async () => {
     error = "তথ্য লোড করা সম্ভব হচ্ছে না। অনুগ্রহ করে পরে আবার চেষ্টা করুন।";
   }
 
-  // Error handling: if error exists, display error message
   if (error) {
     return (
-      <div className="p-4 text-red-500">
-        {error}
-      </div>
+      <Card className="bg-rose-50 border-rose-200">
+        <CardContent className="p-4 text-rose-600 text-center">
+          {error}
+        </CardContent>
+      </Card>
     );
   }
 
-  // Handle no data
   if (!infos || infos.length === 0) {
     return (
-      <div className="p-4 text-gray-500">
-        কোন তথ্য পাওয়া যায়নি।
-      </div>
+      <Card className="bg-gray-50 border-gray-200">
+        <CardContent className="p-4 text-gray-500 text-center">
+          কোন তথ্য পাওয়া যায়নি।
+        </CardContent>
+      </Card>
     );
   }
 
   return (
-    <div className="lg:flex justify-between">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {infos.map((info) => (
-        <Fragment key={info._id}>
-          <div className="p-4">
-            <h3 className="text-4xl font-NotoSerifBengali">
-              <AnimateNumbers number={info.count} />+
-            </h3>
-            <h3>{info.title}</h3>
-          </div>
-          <div className="lg:border-r-2 border-b-2"></div>
-        </Fragment>
+        <div
+          key={info._id}
+         
+        >
+          <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow bg-gradient-to-br from-white to-gray-50/50">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg font-medium text-gray-600">
+                {info.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex items-end justify-between">
+              <div>
+                <div className="text-4xl font-bold text-gray-800 font-NotoSerifBengali">
+                  <AnimateNumbers number={info.count} />+
+                </div>
+              </div>
+              <div className="p-3 rounded-full bg-gray-100">
+                {iconMap[info.icon] || iconMap.students}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       ))}
     </div>
   );

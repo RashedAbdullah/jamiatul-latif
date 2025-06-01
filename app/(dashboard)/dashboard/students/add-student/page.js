@@ -1,159 +1,214 @@
 import { getClasses } from "@/actions/classes";
 import { createNewStudent } from "@/actions/students";
 import { getYear } from "@/actions/year";
-import DashInput from "@/app/(dashboard)/_components/dash-input";
-import SubTitle from "@/components/sub-title";
-import { Button } from "@/components/ui/button";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const DashboardAddStudentPage = async () => {
   const years = await getYear();
   const classes = await getClasses();
 
-  const handleNewStudent = async (e) => {
+  const handleNewStudent = async (formData) => {
     "use server";
     try {
       const newStudent = {
-        name: e.get("name"),
-        father: e.get("father"),
-        academicYearId: e.get("yearId"),
-        dakhila: e.get("dakhila"),
-        classNameId: e.get("classId"),
-        image: e.get("image"),
-        address: e.get("address"),
-        contact: e.get("contact"),
-        report: e.get("report"),
+        name: formData.get("name"),
+        father: formData.get("father"),
+        academicYearId: formData.get("yearId"),
+        dakhila: formData.get("dakhila"),
+        classNameId: formData.get("classId"),
+        image: formData.get("image"),
+        address: formData.get("address"),
+        contact: formData.get("contact"),
+        report: formData.get("report"),
       };
 
-      createNewStudent(newStudent);
+      await createNewStudent(newStudent);
       revalidatePath("/students");
       redirect("/students");
     } catch (err) {
-      console.log(err.message);
+      console.error(err);
+      redirect("/error");
     }
   };
 
   return (
-    <div className="min-h-screen flex justify-center mt-5 container">
-      <div className="w-full p-8 max-w-4xl bg-white shadow-lg rounded-lg transform transition duration-700 ease-in-out opacity-0 translate-y-6 animate-fade-in">
-        <SubTitle>নতুন ছাত্র যুক্ত করুন</SubTitle>
-        <form
-          action={handleNewStudent}
-          className="w-full grid grid-cols-2 gap-10"
-        >
-          <div>
-            {/* Academic Year Select */}
-            <div className="mt-5">
-              <label
-                htmlFor="yearId"
-                className="block text-lg font-medium mb-2"
-              >
-                শিক্ষাবর্ষ সিলেক্ট করুন
-              </label>
-              <select
-                required
-                name="yearId"
-                id="yearId"
-                className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-slate-800 focus:outline-none"
-              >
-                <option value="">শিক্ষাবর্ষ সিলেক্ট করুন</option>
-                {years.map((year) => (
-                  <option key={year.id} value={year.id}>
-                    {year.academicYear}
-                  </option>
-                ))}
-              </select>
+    <div className="container mx-auto py-8">
+      <Card className="max-w-3xl mx-auto">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold text-gray-800">
+            নতুন ছাত্র যুক্ত করুন
+          </CardTitle>
+          <CardDescription className="text-gray-600">
+            নিচের ফর্মটি পূরণ করে নতুন ছাত্র যুক্ত করুন
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form action={handleNewStudent} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Name */}
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-gray-700">
+                  ছাত্র/ছাত্রীর নাম
+                </Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="ছাত্র/ছাত্রীর নাম লিখুন"
+                  required
+                />
+              </div>
+
+              {/* Father's Name */}
+              <div className="space-y-2">
+                <Label htmlFor="father" className="text-gray-700">
+                  পিতার নাম
+                </Label>
+                <Input
+                  id="father"
+                  name="father"
+                  type="text"
+                  placeholder="পিতার নাম লিখুন"
+                  required
+                />
+              </div>
+
+              {/* Academic Year */}
+              <div className="space-y-2">
+                <Label htmlFor="yearId" className="text-gray-700">
+                  শিক্ষাবর্ষ
+                </Label>
+                <Select name="yearId" required>
+                  <SelectTrigger>
+                    <SelectValue placeholder="শিক্ষাবর্ষ নির্বাচন করুন" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {years.map((year) => (
+                      <SelectItem key={year.id} value={year.id}>
+                        {year.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Class */}
+              <div className="space-y-2">
+                <Label htmlFor="classId" className="text-gray-700">
+                  শ্রেণী
+                </Label>
+                <Select name="classId" required>
+                  <SelectTrigger>
+                    <SelectValue placeholder="শ্রেণী নির্বাচন করুন" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {classes.map((cls) => (
+                      <SelectItem key={cls.id} value={cls.id}>
+                        {cls.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Dakhila Number */}
+              <div className="space-y-2">
+                <Label htmlFor="dakhila" className="text-gray-700">
+                  দাখিলা নম্বর
+                </Label>
+                <Input
+                  id="dakhila"
+                  name="dakhila"
+                  type="text"
+                  placeholder="দাখিলা নম্বর লিখুন"
+                  required
+                />
+              </div>
+
+              {/* Contact */}
+              <div className="space-y-2">
+                <Label htmlFor="contact" className="text-gray-700">
+                  যোগাযোগ নম্বর
+                </Label>
+                <Input
+                  id="contact"
+                  name="contact"
+                  type="tel"
+                  placeholder="মোবাইল নম্বর লিখুন"
+                  required
+                />
+              </div>
+
+              {/* Address */}
+              <div className="md:col-span-2 space-y-2">
+                <Label htmlFor="address" className="text-gray-700">
+                  ঠিকানা
+                </Label>
+                <Input
+                  id="address"
+                  name="address"
+                  type="text"
+                  placeholder="পূর্ণ ঠিকানা লিখুন"
+                  required
+                />
+              </div>
+
+              {/* Image */}
+              <div className="md:col-span-2 space-y-2">
+                <Label htmlFor="image" className="text-gray-700">
+                  ছবি (Image URL)
+                </Label>
+                <Input
+                  id="image"
+                  name="image"
+                  type="url"
+                  placeholder="ছবির URL লিখুন"
+                />
+              </div>
+
+              {/* Report */}
+              <div className="md:col-span-2 space-y-2">
+                <Label htmlFor="report" className="text-gray-700">
+                  বিশেষ নোট (যদি থাকে)
+                </Label>
+                <Input
+                  id="report"
+                  name="report"
+                  type="text"
+                  placeholder="বিশেষ নোট লিখুন"
+                />
+              </div>
             </div>
-            {/* Class Select */}
-            <div className="mt-5">
-              <label
-                htmlFor="classId"
-                className="block text-lg font-medium mb-2"
+
+            <div className="flex justify-end">
+              <Button
+                type="submit"
+                className="bg-green-600 hover:bg-green-700 text-white"
               >
-                ক্লাস সিলেক্ট করুন
-              </label>
-              <select
-                required
-                name="classId"
-                id="classId"
-                className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-slate-800 focus:outline-none"
-              >
-                <option value="">ক্লাস সিলেক্ট করুন</option>
-                {classes.map((cls) => (
-                  <option key={cls.id} value={cls.id}>
-                    {cls.class}
-                  </option>
-                ))}
-              </select>
+                ছাত্র/ছাত্রী যুক্ত করুন
+              </Button>
             </div>
-            {/* Name of student */}
-            <DashInput
-              req={true}
-              name={"name"}
-              title={"শিক্ষার্থীর নাম লিখুন"}
-              type={"text"}
-            />
-            {/* Father of student */}
-            <DashInput
-              name={"father"}
-              title={"পিতার নাম লিখুন"}
-              type={"text"}
-              req={true}
-            />
-          </div>
-
-          <div>
-            {/* Dakhila of student */}
-            <DashInput
-              name={"dakhila"}
-              title={"দাখিলা নাম্বার লিখুন"}
-              type={"number"}
-              req={true}
-            />
-            {/* Address of student */}
-            <DashInput
-              name={"address"}
-              title={"ঠিকানা লিখুন (থানা ও জেলা)"}
-              type={"text"}
-              req={true}
-            />
-            {/* Image url of student */}
-            <DashInput name={"image"} title={"পিকচার URL"} type={"text"} />
-            {/* Contact of student */}
-            <DashInput
-              name={"contact"}
-              title={"ফোন নাম্বার"}
-              type={"text"}
-              req={true}
-            />
-          </div>
-
-          {/* Report of student */}
-          <div className="col-span-2">
-            <label htmlFor="report" className="block text-lg font-medium mb-2">
-              রিপোর্ট লিখুন
-            </label>
-            <textarea
-              type="number"
-              placeholder="রিপোর্ট লিখুন . . ."
-              name="report"
-              id="report"
-              className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-slate-800 focus:outline-none"
-            ></textarea>
-          </div>
-
-          {/* Submit Button */}
-          <div className="text-center col-span-2">
-            <Button
-              type="submit"
-              className="w-full py-3 text-white rounded-lg hover:bg-slate-700 transition-all"
-            >
-              তথ্য সাবমিট করুন
-            </Button>
-          </div>
-        </form>
-      </div>
+          </form>
+        </CardContent>
+      </Card>
     </div>
   );
 };

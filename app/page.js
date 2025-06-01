@@ -4,11 +4,8 @@ import DarulIftaHome from "./_components/darul-ifta-home";
 import HomePageTeachers from "./_components/teachers";
 import HomeArticles from "./_components/home-articles";
 import HomeFatwas from "./_components/home-fatwas";
-import { auth } from "@/auth";
-import { getUserWithRole } from "@/utils/user-with-role";
 
 export default async function Home() {
-  const user = await getUserWithRole();
 
   return (
     <>

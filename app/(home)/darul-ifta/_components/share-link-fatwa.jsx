@@ -1,36 +1,55 @@
 "use client";
 
 import { useState } from "react";
-import { ClipboardCheckIcon, ClipboardIcon } from "lucide-react";
+import { ClipboardCheck, Clipboard } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
-const CopyLinkButton = ({ fatwaId , categoryId}) => {
+const CopyLinkButton = ({ fatwaId, categoryId }) => {
   const [isCopied, setIsCopied] = useState(false);
+  const { toast } = useToast();
 
   const handleCopyLink = () => {
     const fatwaLink = `${window.location.origin}/darul-ifta/${categoryId}/${fatwaId}`;
-    navigator.clipboard.writeText(fatwaLink).then(() => {
-      setIsCopied(true);
-      setTimeout(() => setIsCopied(false), 2000);
-    });
+    navigator.clipboard
+      .writeText(fatwaLink)
+      .then(() => {
+        setIsCopied(true);
+        toast({
+          title: "লিঙ্ক কপি হয়েছে",
+          description: "ফতোয়ার লিঙ্ক ক্লিপবোর্ডে কপি করা হয়েছে",
+          duration: 2000,
+        });
+        setTimeout(() => setIsCopied(false), 2000);
+      })
+      .catch(() => {
+        toast({
+          title: "ত্রুটি",
+          description: "লিঙ্ক কপি করতে সমস্যা হয়েছে",
+          variant: "destructive",
+        });
+      });
   };
 
   return (
-    <button
+    <Button
+      variant="ghost"
+      size="sm"
       onClick={handleCopyLink}
-      className="flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+      className="gap-2 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
     >
       {isCopied ? (
         <>
-          <ClipboardCheckIcon className="w-5 h-5 text-green-600" />
-          লিঙ্ক কপি হয়েছে
+          <ClipboardCheck className="h-4 w-4 text-green-600" />
+          <span>কপি হয়েছে</span>
         </>
       ) : (
         <>
-          <ClipboardIcon className="w-5 h-5" />
-          লিঙ্ক কপি করুন
+          <Clipboard className="h-4 w-4" />
+          <span>লিঙ্ক কপি করুন</span>
         </>
       )}
-    </button>
+    </Button>
   );
 };
 
